@@ -24,6 +24,8 @@ const NewsArticlePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {articleSchema && <JsonLd data={articleSchema} />}
+      {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />
       <main className="pt-40 md:pt-48">
         <section className="editorial-section">

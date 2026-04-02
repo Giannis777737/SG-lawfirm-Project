@@ -24,6 +24,8 @@ const PracticeAreaPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {serviceSchema && <JsonLd data={serviceSchema} />}
+      {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />
       <main className="pt-40 md:pt-48">
         <section className="editorial-section">
