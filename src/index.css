@@ -1,0 +1,245 @@
+/* Fonts loaded via index.html <link> tags for non-render-blocking delivery */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 40% 13%;
+
+    --card: 210 20% 98%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 210 20% 98%;
+    --popover-foreground: 220 40% 13%;
+
+    --primary: 220 40% 13%;
+    --primary-foreground: 45 60% 70%;
+
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 220 40% 13%;
+
+    /* WCAG AA: muted-foreground contrast compliant */
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 15% 40%;
+
+    --accent: 45 60% 52%;
+    --accent-foreground: 220 40% 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 87%;
+    --input: 220 15% 87%;
+    --ring: 220 40% 13%;
+
+    /* WCAG AA: focus ring color */
+    --focus-ring: 220 90% 50%;
+
+    /* Luxury palette tokens */
+    --navy: 210 60% 42%;
+    --navy-light: 210 50% 52%;
+    --navy-muted: 210 40% 60%;
+    --gold: 45 60% 52%;
+    --gold-light: 45 50% 70%;
+    --gold-muted: 45 30% 80%;
+
+    --radius: 0px;
+
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 210 15% 80%;
+    --sidebar-primary: 45 60% 52%;
+    --sidebar-primary-foreground: 220 40% 13%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 45 60% 52%;
+
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --section-padding: 8rem;
+    --content-max-width: 1400px;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 210 20% 95%;
+    --card: 220 35% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 45 60% 52%;
+    --primary-foreground: 220 40% 8%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 210 15% 60%;
+    --accent: 45 60% 52%;
+    --accent-foreground: 220 40% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 95%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 45 60% 52%;
+    --focus-ring: 45 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  /* WCAG AA: Visible focus indicators for all interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid hsl(var(--focus-ring));
+    outline-offset: 2px;
+  }
+
+  /* Skip-to-content link */
+  .skip-to-content {
+    @apply sr-only;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .skip-to-content:focus {
+    @apply not-sr-only;
+    @apply bg-primary text-primary-foreground px-6 py-3;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Ensure minimum touch target size (44x44px) for WCAG 2.1 AA */
+  @media (pointer: coarse) {
+    a, button, input, select, textarea {
+      min-height: 44px;
+    }
+  }
+
+  /* Respect user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* CSS-based scroll animations (replaces framer-motion) */
+  .animated-section {
+    /* Container that triggers children animation on visibility */
+  }
+
+  .animated-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .animated-visible > .animated-item,
+  .animated-visible.animated-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger children */
+  .animated-visible > .animated-item:nth-child(2) { transition-delay: 0.1s; }
+  .animated-visible > .animated-item:nth-child(3) { transition-delay: 0.2s; }
+  .animated-visible > .animated-item:nth-child(4) { transition-delay: 0.3s; }
+  .animated-visible > .animated-item:nth-child(5) { transition-delay: 0.4s; }
+  .animated-visible > .animated-item:nth-child(6) { transition-delay: 0.5s; }
+  .animated-visible > .animated-item:nth-child(7) { transition-delay: 0.6s; }
+  .animated-visible > .animated-item:nth-child(8) { transition-delay: 0.7s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animated-item {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+@layer components {
+  .editorial-section {
+    @apply border-b border-border;
+    padding: var(--section-padding) 0;
+  }
+
+  .editorial-container {
+    max-width: var(--content-max-width);
+    @apply mx-auto px-8 md:px-16;
+  }
+
+  .editorial-label {
+    font-family: var(--font-body);
+    @apply text-sm tracking-widest uppercase text-muted-foreground mb-6;
+    letter-spacing: 0.15em;
+  }
+
+  .editorial-heading {
+    font-family: var(--font-heading);
+    @apply text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight text-foreground;
+  }
+
+  .editorial-heading-sm {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-foreground;
+  }
+
+  .editorial-body {
+    font-family: var(--font-body);
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground max-w-2xl;
+  }
+
+  .editorial-link {
+    font-family: var(--font-body);
+    @apply inline-flex items-center gap-2 text-sm tracking-widest uppercase text-foreground;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  .editorial-link:hover {
+    @apply opacity-60;
+  }
+
+  .editorial-btn {
+    @apply inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm uppercase tracking-widest;
+    font-family: var(--font-body);
+    letter-spacing: 0.15em;
+    transition: opacity 0.3s ease;
+  }
+
+  .editorial-btn:hover {
+    @apply opacity-80;
+  }
+}
