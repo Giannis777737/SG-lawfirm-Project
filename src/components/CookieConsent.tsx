@@ -37,9 +37,20 @@ const CookieConsent = () => {
     if (!consent) {
       setVisible(true);
     } else {
-      // Re-apply consent on load for returning visitors
       manageTrackingScripts(consent as "accepted" | "rejected");
     }
+  }, []);
+
+  // Listen for reset events (e.g. from "Manage Cookies" link)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail.consent === null) {
+        setVisible(true);
+      }
+    };
+    window.addEventListener("cookie-consent-change", handler);
+    return () => window.removeEventListener("cookie-consent-change", handler);
   }, []);
 
   useEffect(() => {

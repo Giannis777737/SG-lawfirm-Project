@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
 
 const Footer = () => {
+  const { resetConsent } = useCookieConsent();
+
   return (
     <footer className="bg-navy py-16" role="contentinfo">
       <div className="editorial-container">
@@ -68,6 +71,14 @@ const Footer = () => {
                   <Link to="/cookie-policy" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
                     Cookie Policy
                   </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={resetConsent}
+                    className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300 text-left"
+                  >
+                    Manage Cookies
+                  </button>
                 </li>
               </ul>
             </nav>
