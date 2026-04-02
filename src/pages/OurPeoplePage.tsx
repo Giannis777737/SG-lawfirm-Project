@@ -1,11 +1,19 @@
+import { useMemo } from "react";
 import { people } from "@/data/people";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import JsonLd from "@/components/JsonLd";
+import { getOurPeopleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const OurPeoplePage = () => {
   useDocumentTitle("Our People");
+  const peopleSchema = useMemo(() => getOurPeopleSchema(people), []);
+  const breadcrumbSchema = useMemo(() => getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Our People", url: "/our-people" },
+  ]), []);
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
