@@ -72,6 +72,14 @@ const Footer = () => {
                     Cookie Policy
                   </Link>
                 </li>
+                <li>
+                  <button
+                    onClick={resetConsent}
+                    className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300 text-left"
+                  >
+                    Manage Cookies
+                  </button>
+                </li>
               </ul>
             </nav>
           </div>
