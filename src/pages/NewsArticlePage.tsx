@@ -1,14 +1,24 @@
+import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { newsArticles } from "@/data/newsArticles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import JsonLd from "@/components/JsonLd";
+import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const NewsArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = newsArticles.find((a) => a.slug === slug);
   useDocumentTitle(article?.title);
+
+  const articleSchema = useMemo(() => article ? getNewsArticleSchema(article) : null, [article]);
+  const breadcrumbSchema = useMemo(() => article ? getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "News & Publications", url: "/#news" },
+    { name: article.title, url: `/news/${article.slug}` },
+  ]) : null, [article]);
 
   if (!article) return <NotFound />;
 
