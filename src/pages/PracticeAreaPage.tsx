@@ -1,19 +1,31 @@
+import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { practiceAreas } from "@/data/practiceAreas";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import JsonLd from "@/components/JsonLd";
+import { getPracticeAreaSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const PracticeAreaPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const area = practiceAreas.find((a) => a.slug === slug);
   useDocumentTitle(area?.title);
 
+  const serviceSchema = useMemo(() => area ? getPracticeAreaSchema(area) : null, [area]);
+  const breadcrumbSchema = useMemo(() => area ? getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Areas of Expertise", url: "/#areas-of-expertise" },
+    { name: area.title, url: `/${area.slug}` },
+  ]) : null, [area]);
+
   if (!area) return <NotFound />;
 
   return (
     <div className="min-h-screen bg-background">
+      {serviceSchema && <JsonLd data={serviceSchema} />}
+      {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />
       <main className="pt-40 md:pt-48">
         <section className="editorial-section">
