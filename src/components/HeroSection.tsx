@@ -1,5 +1,13 @@
-import { Link } from "react-router-dom";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const offset = 112;
+    const top = Math.max(el.getBoundingClientRect().top + window.scrollY - offset, 0);
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
 
 const HeroSection = () => {
   return (
