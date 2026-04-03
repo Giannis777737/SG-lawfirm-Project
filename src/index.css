@@ -132,7 +132,7 @@
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
 
-    --section-padding: 8rem;
+    --section-padding: 4rem;
     --content-max-width: 1400px;
   }
 
@@ -205,6 +205,18 @@
     letter-spacing: 0.1em;
   }
 
+  /* Responsive section padding */
+  @media (min-width: 768px) {
+    :root {
+      --section-padding: 6rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --section-padding: 8rem;
+    }
+  }
+
   /* Ensure minimum touch target size (44x44px) for WCAG 2.1 AA */
   @media (pointer: coarse) {
     a, button, input, select, textarea {
@@ -266,7 +278,7 @@
 
   .editorial-container {
     max-width: var(--content-max-width);
-    @apply mx-auto px-8 md:px-16;
+    @apply mx-auto px-5 sm:px-8 md:px-16;
   }
 
   .editorial-label {
@@ -277,12 +289,12 @@
 
   .editorial-heading {
     font-family: var(--font-heading);
-    @apply text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight text-foreground;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight tracking-tight text-foreground;
   }
 
   .editorial-heading-sm {
     font-family: var(--font-heading);
-    @apply text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-foreground;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-foreground;
   }
 
   .editorial-body {

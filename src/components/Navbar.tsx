@@ -43,13 +43,13 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
-      <div className="editorial-container flex items-center justify-between py-8">
+      <div className="editorial-container flex items-center justify-between py-4 sm:py-6 md:py-8">
         <Link
           to="/"
           className="flex-shrink-0"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-10 md:h-12 w-auto brightness-0 invert" />
+          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">

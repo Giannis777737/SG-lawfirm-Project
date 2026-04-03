@@ -3,14 +3,14 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const HeroSection = () => {
   return (
-    <section className="editorial-section pt-40 md:pt-48" aria-labelledby="hero-heading">
+    <section className="editorial-section pt-28 sm:pt-36 md:pt-48" aria-labelledby="hero-heading">
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedItem className="order-2 lg:order-1 overflow-hidden">
             <img
               src={heroImage}
               alt="Panoramic view of the Acropolis of Athens illuminated at dusk, representing our Greek legal heritage"
-              className="w-full h-[500px] lg:h-[700px] object-cover"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[700px] object-cover"
               width={700}
               height={700}
               fetchPriority="high"

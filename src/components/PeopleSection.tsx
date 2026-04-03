@@ -15,7 +15,7 @@ const PeopleSection = () => {
               <img
                 src={teamImage}
                 alt="Selekos Gouskou legal team collaborating around a conference table"
-                 className="w-full h-[500px] lg:h-[700px] object-cover mb-12"
+                 className="w-full h-[300px] sm:h-[400px] lg:h-[700px] object-cover mb-12"
                 width={700}
                 height={700}
                 loading="lazy"

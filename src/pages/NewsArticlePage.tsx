@@ -27,7 +27,7 @@ const NewsArticlePage = () => {
       {articleSchema && <JsonLd data={articleSchema} />}
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />
-      <main className="pt-40 md:pt-48">
+      <main className="pt-28 sm:pt-36 md:pt-48">
         <section className="editorial-section">
           <div className="editorial-container">
             <Link

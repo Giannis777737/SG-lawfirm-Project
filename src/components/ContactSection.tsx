@@ -68,7 +68,7 @@ const ContactSection = () => {
 
           <AnimatedSection>
             <AnimatedItem>
-              <div ref={mapRef} className="w-full h-[400px] lg:h-[500px] bg-muted">
+              <div ref={mapRef} className="w-full h-[300px] sm:h-[400px] lg:h-[500px] bg-muted">
                 {mapsAllowed && mapLoaded ? (
                   <iframe
                     title="Selekos Gouskou & Co Law Offices location on Google Maps"

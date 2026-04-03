@@ -47,7 +47,7 @@ const AboutSection = () => {
             <img
               src={officeImage}
               alt="Modern interior of the Selekos Gouskou law office with natural lighting"
-              className="w-full h-[500px] lg:h-[600px] object-cover"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover"
               width={700}
               height={600}
               loading="lazy"
