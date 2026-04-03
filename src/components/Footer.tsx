@@ -33,14 +33,14 @@ const Footer = () => {
             <nav aria-label="Footer navigation">
               <ul className="flex flex-col gap-3" role="list">
                 <li>
-                  <a href="/#about-us" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
+                  <Link to="/#about-us" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#areas-of-expertise" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
+                  <Link to="/#areas-of-expertise" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
                     Our Expertise
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/our-people" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
@@ -48,9 +48,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="/#news" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
+                  <Link to="/#news" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
                     News &amp; Publications
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
