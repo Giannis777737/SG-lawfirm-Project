@@ -144,7 +144,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  6. Data Retention
+                  7. Data Retention
                 </h2>
                 <p className="editorial-body">
                   Cookie data is retained only for the duration necessary to
