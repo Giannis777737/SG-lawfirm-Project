@@ -1,4 +1,4 @@
-import officeImage from "@/assets/office-interior.jpg";
+import officeImage from "@/assets/office-interior.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const AboutSection = () => {
