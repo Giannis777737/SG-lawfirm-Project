@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import officePhoto from "@/assets/office2.webp";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { Link } from "react-router-dom";
 
