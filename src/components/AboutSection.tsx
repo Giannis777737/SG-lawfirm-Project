@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import officeImage from "@/assets/office-interior.webp";
+import officeImage from "@/assets/office1.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const AboutSection = () => {
