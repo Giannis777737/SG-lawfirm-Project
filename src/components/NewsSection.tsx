@@ -9,7 +9,7 @@ const NewsSection = () => {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("news_articles")
-        .select("slug, date, iso_date, category, title, excerpt")
+        .select("slug, date, iso_date, category, title, excerpt, external_url")
         .order("iso_date", { ascending: false });
       if (error) throw error;
       return data;
@@ -33,37 +33,66 @@ const NewsSection = () => {
             <div className="py-10 text-center text-muted-foreground">Loading…</div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0" role="list">
-              {newsArticles.map((item, index) => (
-                <AnimatedItem key={item.slug}>
-                  <article
-                    className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
-                    role="listitem"
-                  >
-                    <Link
-                      to={`/news/${item.slug}`}
-                      className="group block"
-                      aria-label={`${item.title} — ${item.date}`}
+              {newsArticles.map((item) => {
+                const isExternal = !!item.external_url;
+                const linkProps = isExternal
+                  ? { href: item.external_url!, target: "_blank" as const, rel: "noopener noreferrer" }
+                  : {};
+
+                const content = (
+                  <>
+                    <div className="flex items-center gap-4 mb-4">
+                      <time className="font-body text-xs text-muted-foreground" dateTime={item.iso_date}>
+                        {item.date}
+                      </time>
+                      <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
+                        {item.category}
+                      </span>
+                    </div>
+
+                    <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:opacity-60 transition-opacity duration-300">
+                      {item.title}
+                    </h3>
+
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                      {item.excerpt}
+                    </p>
+
+                    {isExternal && (
+                      <span className="inline-flex items-center gap-1 mt-3 font-body text-xs text-muted-foreground">
+                        ↗ External article
+                      </span>
+                    )}
+                  </>
+                );
+
+                return (
+                  <AnimatedItem key={item.slug}>
+                    <article
+                      className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
+                      role="listitem"
                     >
-                      <div className="flex items-center gap-4 mb-4">
-                        <time className="font-body text-xs text-muted-foreground" dateTime={item.iso_date}>
-                          {item.date}
-                        </time>
-                        <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
-                          {item.category}
-                        </span>
-                      </div>
-
-                      <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:opacity-60 transition-opacity duration-300">
-                        {item.title}
-                      </h3>
-
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                        {item.excerpt}
-                      </p>
-                    </Link>
-                  </article>
-                </AnimatedItem>
-              ))}
+                      {isExternal ? (
+                        <a
+                          {...linkProps}
+                          className="group block"
+                          aria-label={`${item.title} — ${item.date}`}
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <Link
+                          to={`/news/${item.slug}`}
+                          className="group block"
+                          aria-label={`${item.title} — ${item.date}`}
+                        >
+                          {content}
+                        </Link>
+                      )}
+                    </article>
+                  </AnimatedItem>
+                );
+              })}
             </div>
           )}
         </AnimatedSection>
