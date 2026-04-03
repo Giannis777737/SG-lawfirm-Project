@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import { newsArticles } from "@/data/newsArticles";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
@@ -10,15 +11,56 @@ import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas"
 
 const NewsArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = newsArticles.find((a) => a.slug === slug);
+
+  const { data: article, isLoading } = useQuery({
+    queryKey: ["news-article", slug],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("news_articles")
+        .select("*")
+        .eq("slug", slug!)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+    enabled: !!slug,
+  });
+
   useDocumentTitle(article?.title);
 
-  const articleSchema = useMemo(() => article ? getNewsArticleSchema(article) : null, [article]);
-  const breadcrumbSchema = useMemo(() => article ? getBreadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "News & Publications", url: "/#news" },
-    { name: article.title, url: `/news/${article.slug}` },
-  ]) : null, [article]);
+  const articleForSchema = article
+    ? { ...article, isoDate: article.iso_date }
+    : null;
+
+  const articleSchema = useMemo(
+    () => (articleForSchema ? getNewsArticleSchema(articleForSchema) : null),
+    [articleForSchema]
+  );
+  const breadcrumbSchema = useMemo(
+    () =>
+      articleForSchema
+        ? getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "News & Publications", url: "/#news" },
+            { name: articleForSchema.title, url: `/news/${articleForSchema.slug}` },
+          ])
+        : null,
+    [articleForSchema]
+  );
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main className="pt-28 sm:pt-36 md:pt-48">
+          <div className="editorial-section">
+            <div className="editorial-container text-center text-muted-foreground">Loading…</div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!article) return <NotFound />;
 
@@ -38,7 +80,7 @@ const NewsArticlePage = () => {
             </Link>
 
             <div className="flex items-center gap-4 mb-6">
-              <time className="font-body text-xs text-muted-foreground" dateTime={article.isoDate}>
+              <time className="font-body text-xs text-muted-foreground" dateTime={article.iso_date}>
                 {article.date}
               </time>
               <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
