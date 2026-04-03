@@ -277,12 +277,12 @@
 
   .editorial-heading {
     font-family: var(--font-heading);
-    @apply text-5xl md:text-6xl lg:text-7xl font-normal leading-tight tracking-tight text-foreground;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight tracking-tight text-foreground;
   }
 
   .editorial-heading-sm {
     font-family: var(--font-heading);
-    @apply text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-foreground;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-foreground;
   }
 
   .editorial-body {
