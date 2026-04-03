@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const HeroSection = () => {
@@ -39,10 +40,10 @@ const HeroSection = () => {
 
           <AnimatedItem>
             <div className="pt-4">
-              <a href="#about-us" className="editorial-btn bg-navy text-gold font-bold hover:bg-navy-light">
+                <Link to="/#about-us" className="editorial-btn bg-navy text-gold font-bold hover:bg-navy-light">
                 find out more
                 <span aria-hidden="true" className="text-lg">→</span>
-              </a>
+                </Link>
             </div>
           </AnimatedItem>
         </AnimatedSection>

@@ -19,14 +19,14 @@ const Navbar = () => {
   const renderLink = (link: { label: string; href: string }, onClick?: () => void) => {
     if (isHashLink(link.href)) {
       return (
-        <a
+        <Link
           key={link.href}
-          href={link.href}
+          to={link.href}
           className="font-body text-sm font-semibold text-gold-muted hover:text-gold transition-colors duration-300 tracking-wide uppercase relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
           onClick={onClick}
         >
           {link.label}
-        </a>
+        </Link>
       );
     }
     return (

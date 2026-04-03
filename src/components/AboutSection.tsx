@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import officeImage from "@/assets/office-interior.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
@@ -35,10 +36,10 @@ const AboutSection = () => {
 
             <AnimatedItem>
               <div className="pt-4">
-                <a href="#areas-of-expertise" className="editorial-link">
+                <Link to="/#areas-of-expertise" className="editorial-link">
                   read more <span aria-hidden="true">→</span>
                   <span className="sr-only">about our areas of expertise</span>
-                </a>
+                </Link>
               </div>
             </AnimatedItem>
           </AnimatedSection>
