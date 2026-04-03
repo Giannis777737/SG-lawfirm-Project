@@ -44,10 +44,12 @@ const ExpertiseSection = () => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        <div className="flex items-baseline gap-4">
-                          <span className="font-body text-xs text-white/30 tabular-nums" aria-hidden="true">
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
+                        <div className="flex items-center gap-4">
+                          <Scale
+                            size={14}
+                            className="text-gold/50 shrink-0 group-hover:text-gold transition-colors duration-300"
+                            aria-hidden="true"
+                          />
                           <span className="font-body text-base md:text-lg text-white/90 group-hover:text-gold transition-colors duration-300">
                             {area.title}
                           </span>
