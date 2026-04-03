@@ -1,20 +1,11 @@
 import { Link } from "react-router-dom";
 import { practiceAreas } from "@/data/practiceAreas";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
-import bgImage from "@/assets/athens-lycabettus.webp";
 
 const ExpertiseSection = () => {
   return (
-    <section id="areas-of-expertise" className="editorial-section relative overflow-hidden" aria-labelledby="expertise-heading">
-      {/* Animated background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center animate-ken-burns"
-        style={{ backgroundImage: `url(${bgImage})` }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
-
-      <div className="editorial-container relative z-10">
+    <section id="areas-of-expertise" className="editorial-section bg-foreground" aria-labelledby="expertise-heading">
+      <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
