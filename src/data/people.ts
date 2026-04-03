@@ -1,3 +1,9 @@
+import petrosPhoto from "@/assets/people/petros-selekos.avif";
+import angelikaPhoto from "@/assets/people/angelika-gouskou.avif";
+import ioannisPhoto from "@/assets/people/ioannis-tsionis.avif";
+import vickyPhoto from "@/assets/people/vicky-tsapara.avif";
+import mariaPhoto from "@/assets/people/maria-antoniou.avif";
+
 export interface Person {
   id: string;
   name: string;
@@ -8,6 +14,7 @@ export interface Person {
   memberships?: string[];
   education?: string[];
   languages: string;
+  photo?: string;
 }
 
 export const people: Person[] = [
@@ -21,6 +28,7 @@ export const people: Person[] = [
     fullBio:
       "Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.",
     languages: "Greek · English",
+    photo: petrosPhoto,
   },
   {
     id: "angelika-gouskou",
@@ -32,6 +40,7 @@ export const people: Person[] = [
     fullBio:
       "Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.",
     languages: "Greek · English",
+    photo: angelikaPhoto,
   },
   {
     id: "katerina-malliari",
@@ -55,6 +64,7 @@ export const people: Person[] = [
       "Ioannis is an Associate since 2016 specializing in Civil, real estate sale, purchase, financing and development. He possesses substantial experience in litigation on real estate and a broad spectrum of civil disputes, including contractual breaches, corporate and shareholder conflicts, and tort-related claims. His practice extends to advising clients on the negotiation and drafting of commercial agreements and complex business and estate transactions. Ioannis represents clients before all levels of the Greek Courts.",
     memberships: ["Athens Bar Association"],
     languages: "Greek · English",
+    photo: ioannisPhoto,
   },
   {
     id: "maria-antoniou",
@@ -71,6 +81,7 @@ export const people: Person[] = [
       "University of Athens, Faculty of Laws – LL.B., 2016",
     ],
     languages: "Greek · English · French",
+    photo: mariaPhoto,
   },
   {
     id: "vicky-tsapara",
@@ -87,6 +98,7 @@ export const people: Person[] = [
       "University of Athens, Faculty of Laws – LL.B., 2016",
     ],
     languages: "Greek · English · French",
+    photo: vickyPhoto,
   },
   {
     id: "dimitris-selekos",

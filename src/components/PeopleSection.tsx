@@ -49,18 +49,28 @@ const PeopleSection = () => {
                   <li key={person.id}>
                     <Link
                       to={`/our-people#${person.id}`}
-                      className="border-b border-border py-6 first:border-t group block"
+                      className="border-b border-border py-6 first:border-t group flex gap-4 items-start"
                       aria-label={`${person.name}, ${person.role}`}
                     >
-                      <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                        {person.role}
-                      </p>
-                      <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2 group-hover:opacity-60 transition-opacity duration-300">
-                        {person.name}
-                      </h3>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                        {person.description}
-                      </p>
+                      {person.photo && (
+                        <img
+                          src={person.photo}
+                          alt={person.name}
+                          className="w-14 h-14 object-cover rounded-sm shrink-0 mt-1"
+                          loading="lazy"
+                        />
+                      )}
+                      <div>
+                        <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                          {person.role}
+                        </p>
+                        <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2 group-hover:opacity-60 transition-opacity duration-300">
+                          {person.name}
+                        </h3>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                          {person.description}
+                        </p>
+                      </div>
                     </Link>
                   </li>
                 ))}
