@@ -57,6 +57,7 @@ const ContactSection = () => {
   const onSubmit = async (data: ContactFormData) => {
     setSubmitting(true);
     try {
+      // Save to database
       const { error } = await supabase.from("contact_submissions").insert({
         name: data.name,
         email: data.email,
@@ -65,6 +66,19 @@ const ContactSection = () => {
       });
 
       if (error) throw error;
+
+      // Send email notification via EmailJS
+      await emailjs.send(
+        "service_1tuzskp",
+        "template_21ckded",
+        {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone || "N/A",
+          message: data.message,
+        },
+        "k2S_zC0UVY_kntXZb"
+      );
 
       toast({
         title: "Message sent",
