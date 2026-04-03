@@ -41,6 +41,42 @@ export type Database = {
         }
         Relationships: []
       }
+      news_articles: {
+        Row: {
+          category: string
+          content: string[]
+          created_at: string
+          date: string
+          excerpt: string
+          id: string
+          iso_date: string
+          slug: string
+          title: string
+        }
+        Insert: {
+          category?: string
+          content?: string[]
+          created_at?: string
+          date: string
+          excerpt: string
+          id?: string
+          iso_date: string
+          slug: string
+          title: string
+        }
+        Update: {
+          category?: string
+          content?: string[]
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          iso_date?: string
+          slug?: string
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

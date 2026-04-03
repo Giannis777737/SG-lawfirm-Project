@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
-import { newsArticles } from "@/data/newsArticles";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const NewsSection = () => {
+  const { data: newsArticles = [], isLoading } = useQuery({
+    queryKey: ["news-articles"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("news_articles")
+        .select("slug, date, iso_date, category, title, excerpt")
+        .order("iso_date", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+  });
+
   return (
     <section id="news" className="editorial-section" aria-labelledby="news-heading">
       <div className="editorial-container">
@@ -16,39 +29,43 @@ const NewsSection = () => {
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0" role="list">
-            {newsArticles.map((item, index) => (
-              <AnimatedItem key={index}>
-                <article
-                  className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
-                  role="listitem"
-                >
-                  <Link
-                    to={`/news/${item.slug}`}
-                    className="group block"
-                    aria-label={`${item.title} — ${item.date}`}
+          {isLoading ? (
+            <div className="py-10 text-center text-muted-foreground">Loading…</div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0" role="list">
+              {newsArticles.map((item, index) => (
+                <AnimatedItem key={item.slug}>
+                  <article
+                    className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
+                    role="listitem"
                   >
-                    <div className="flex items-center gap-4 mb-4">
-                      <time className="font-body text-xs text-muted-foreground" dateTime={item.isoDate}>
-                        {item.date}
-                      </time>
-                      <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
-                        {item.category}
-                      </span>
-                    </div>
+                    <Link
+                      to={`/news/${item.slug}`}
+                      className="group block"
+                      aria-label={`${item.title} — ${item.date}`}
+                    >
+                      <div className="flex items-center gap-4 mb-4">
+                        <time className="font-body text-xs text-muted-foreground" dateTime={item.iso_date}>
+                          {item.date}
+                        </time>
+                        <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
+                          {item.category}
+                        </span>
+                      </div>
 
-                    <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:opacity-60 transition-opacity duration-300">
-                      {item.title}
-                    </h3>
+                      <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:opacity-60 transition-opacity duration-300">
+                        {item.title}
+                      </h3>
 
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      {item.excerpt}
-                    </p>
-                  </Link>
-                </article>
-              </AnimatedItem>
-            ))}
-          </div>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                        {item.excerpt}
+                      </p>
+                    </Link>
+                  </article>
+                </AnimatedItem>
+              ))}
+            </div>
+          )}
         </AnimatedSection>
       </div>
     </section>
