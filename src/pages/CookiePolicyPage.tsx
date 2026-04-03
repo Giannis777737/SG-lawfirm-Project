@@ -186,7 +186,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  9. Contact
+                  10. Contact
                 </h2>
                 <p className="editorial-body">
                   For questions about our use of cookies, contact us at{" "}
