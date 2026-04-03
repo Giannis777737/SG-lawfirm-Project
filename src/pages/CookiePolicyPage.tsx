@@ -175,7 +175,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  8. Changes to This Policy
+                  9. Changes to This Policy
                 </h2>
                 <p className="editorial-body">
                   We may update this Cookie Policy from time to time. Any changes
