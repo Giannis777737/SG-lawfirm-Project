@@ -34,7 +34,7 @@ export const practiceAreas: PracticeArea[] = [
   },
   {
     slug: "eu-competition-law",
-    title: "EU & Competition Law",
+    title: "EU, Competition Law & Anti-Trust",
     content: [
       "We advise on all aspects of EU law, often in collaboration with Brussels-based law firms, as they affect the interests of our clients. We not only advise in relation to a particular case or transaction, but also give more general assistance in relation to developments in particular fields.",
       "We have particular expertise with respect to the application of Greek competition (anti-trust) law to mergers, cartel and abuse of dominance/monopolisation, antitrust disputes including judicial review and private damages, compliance and counselling, sector regulation and market investigations, public procurement and competitive tendering, and state aid. We also advise on the application of EU competition law to individual agreements, mergers and acquisitions, procurement, state aid and intellectual property rights.",
@@ -70,32 +70,35 @@ export const practiceAreas: PracticeArea[] = [
     slug: "litigation-arbitration",
     title: "Litigation & Arbitration",
     content: [
-      "Our litigation team has extensive experience in representing clients before all levels of the Greek courts, as well as in domestic and international arbitration proceedings. We handle complex commercial disputes, corporate conflicts, banking litigation, and real estate cases.",
-      "We provide strategic advice on dispute resolution, including negotiation, mediation, and arbitration, always aiming to achieve the best possible outcome for our clients while managing risk effectively.",
+      "Our firm represents high value global businesses on litigation, arbitration and mediation matters.",
+      "Professor Petros Selekos, has acted as president of the Arbitral Tribunal in numerous institutional arbitrations. Under his surveillance, our team of highly qualified lawyers has participated in the arbitration procedures.",
+      "We have broad experience in corporate risk and conflict management, and our team understands the importance of finding practical commercial solutions for their clients and are committed to understand their business and objectives. This enables us to view the issues in their entirety and especially from the business point of view and to provide a high level representation combined with high-quality strategic advice on the handling of the case.",
+      "Our main priority is to resolve disputes quickly and effectively with as little disruption to business as possible – recognition of this is central to how we approach any matter.",
     ],
   },
   {
     slug: "privatization",
     title: "Privatization",
     content: [
-      "We have been involved in major privatization projects in Greece and have advised both governmental bodies and private investors on legal aspects of privatization transactions.",
-      "Our team provides comprehensive legal support throughout the privatization process, including regulatory compliance, transaction structuring, due diligence, and post-transaction advisory.",
+      "We advise international organisations, governments and their agencies. Over the past years we have advised the Greek government's privatization program in mainly the energy program, we are recognized as specialized in the energy field, drafting legislation and advising generally on privatization.",
     ],
   },
   {
     slug: "real-estate",
     title: "Real Estate",
     content: [
-      "Our real estate practice covers the full spectrum of property transactions, including acquisitions, dispositions, financing, development, leasing, and property management.",
-      "We advise domestic and international clients on complex real estate matters, including due diligence, title examination, zoning and planning issues, construction contracts, and environmental compliance.",
+      "We provide advanced and intelligent advice that complements the way our clients work. We counsel on and participate actively in all aspects relating to the development, construction and transaction of commercial property and public works.",
+      "Our clients include investors, developers, landlords, tenants and professionals engaged in construction projects, buyers, sellers, institutional and non-institutional lenders, developers, sponsors, public and private funds general and limited partners, and preferred and subordinated equity investors. They rely on our deep experience for their investments in a wide range of real estate-related businesses and asset classes, which have included industrial, office, retail, multi-family, hotel, data center, resort, residential, senior and student housing, timber and agricultural, recreational and mixed-use properties.",
+      "We have the commercial and litigation capacity and expertise to handle a diverse range of problems including the preparation and submission of tenders, lease renewals, rent reviews, service charge disputes, planning appeals, construction disputes and professional negligence claims.",
     ],
   },
   {
     slug: "telecommunications-law",
-    title: "Telecommunications Law",
+    title: "Telecommunication Law",
     content: [
-      "We advise telecommunications operators, service providers, and technology companies on regulatory matters, licensing, spectrum management, interconnection agreements, and competition issues in the telecommunications sector.",
-      "Our team stays at the forefront of the rapidly evolving telecommunications regulatory landscape, providing practical and commercially-focused legal advice.",
+      "We have a wealth of experience in advising telecommunications operators on day-to-day telecoms matters and related commercial agreements and corporate affairs, in a wide variety of matters, as well as in advising operators, the State and regulators on law, policy, regulatory and licensing matters. We have an extensive expertise handling telecoms complaints, and before courts in litigation, including litigation between operators.",
+      "Our team benefits from experience acquired not only in private practice but also in-house at leading telecommunication companies and on corporate and regulatory bodies.",
+      "We provide industry-focused advice, delivered promptly and quickly, ensuring that we add value from day one.",
     ],
   },
 ];
