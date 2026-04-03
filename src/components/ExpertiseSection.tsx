@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Scale } from "lucide-react";
 import { practiceAreas } from "@/data/practiceAreas";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
