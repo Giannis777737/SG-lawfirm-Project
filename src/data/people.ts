@@ -40,6 +40,7 @@ export const people: Person[] = [
     fullBio:
       "Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.",
     languages: "Greek · English",
+    photo: angelikaPhoto,
   },
   {
     id: "katerina-malliari",
