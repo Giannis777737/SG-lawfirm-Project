@@ -48,6 +48,7 @@ export type Database = {
           created_at: string
           date: string
           excerpt: string
+          external_url: string | null
           id: string
           iso_date: string
           slug: string
@@ -59,6 +60,7 @@ export type Database = {
           created_at?: string
           date: string
           excerpt: string
+          external_url?: string | null
           id?: string
           iso_date: string
           slug: string
@@ -70,6 +72,7 @@ export type Database = {
           created_at?: string
           date?: string
           excerpt?: string
+          external_url?: string | null
           id?: string
           iso_date?: string
           slug?: string
