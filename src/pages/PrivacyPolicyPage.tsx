@@ -123,7 +123,21 @@ const PrivacyPolicyPage = () => {
                   We do not sell your personal data. We may share data with
                   trusted third-party service providers who process data on our
                   behalf under Data Processing Agreements (DPAs) compliant with
-                  Article 28 GDPR. If data is transferred outside the EEA, we
+                  Article 28 GDPR. These providers include:
+                </p>
+                <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
+                  <li className="font-body text-base text-muted-foreground">
+                    <strong>Email delivery services</strong> (e.g., EmailJS) — used solely to forward contact form submissions to our office
+                  </li>
+                  <li className="font-body text-base text-muted-foreground">
+                    <strong>Hosting & database providers</strong> — used to securely store and serve website data
+                  </li>
+                  <li className="font-body text-base text-muted-foreground">
+                    <strong>Embedded map services</strong> (Google Maps) — loaded only with your explicit consent
+                  </li>
+                </ul>
+                <p className="editorial-body mt-3">
+                  If data is transferred outside the EEA, we
                   ensure adequate safeguards are in place, such as Standard
                   Contractual Clauses (SCCs) approved by the European Commission.
                 </p>
