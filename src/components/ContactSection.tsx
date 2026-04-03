@@ -72,8 +72,9 @@ const ContactSection = () => {
         "service_1tuzskp",
         "template_21ckded",
         {
-          from_name: data.name,
-          from_email: data.email,
+          name: data.name,
+          email: data.email,
+          title: data.message,
           phone: data.phone || "N/A",
           message: data.message,
         },
