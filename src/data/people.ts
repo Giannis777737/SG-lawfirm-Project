@@ -1,3 +1,9 @@
+import petrosPhoto from "@/assets/people/petros-selekos.avif";
+import angelikaPhoto from "@/assets/people/angelika-gouskou.avif";
+import ioannisPhoto from "@/assets/people/ioannis-tsionis.avif";
+import vickyPhoto from "@/assets/people/vicky-tsapara.avif";
+import mariaPhoto from "@/assets/people/maria-antoniou.avif";
+
 export interface Person {
   id: string;
   name: string;
@@ -8,6 +14,7 @@ export interface Person {
   memberships?: string[];
   education?: string[];
   languages: string;
+  photo?: string;
 }
 
 export const people: Person[] = [
