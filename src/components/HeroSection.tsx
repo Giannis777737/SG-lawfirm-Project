@@ -3,7 +3,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const HeroSection = () => {
   return (
-    <section className="editorial-section pt-40 md:pt-48" aria-labelledby="hero-heading">
+    <section className="editorial-section pt-28 sm:pt-36 md:pt-48" aria-labelledby="hero-heading">
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedItem className="order-2 lg:order-1 overflow-hidden">
