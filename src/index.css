@@ -205,6 +205,18 @@
     letter-spacing: 0.1em;
   }
 
+  /* Responsive section padding */
+  @media (min-width: 768px) {
+    :root {
+      --section-padding: 6rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --section-padding: 8rem;
+    }
+  }
+
   /* Ensure minimum touch target size (44x44px) for WCAG 2.1 AA */
   @media (pointer: coarse) {
     a, button, input, select, textarea {
