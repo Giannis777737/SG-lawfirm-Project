@@ -12,6 +12,7 @@ const HeroSection = () => {
         muted
         loop
         playsInline
+        preload="auto"
         aria-hidden="true"
       />
       {/* Dark overlay */}
