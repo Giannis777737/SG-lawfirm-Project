@@ -44,11 +44,20 @@ const OurPeoplePage = () => {
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
                     <div className="flex flex-col items-start gap-3">
-                      <div className="w-16 h-16 bg-muted flex items-center justify-center">
-                        <span className="font-heading text-xl text-muted-foreground">
-                          {person.initials}
-                        </span>
-                      </div>
+                      {person.photo ? (
+                        <img
+                          src={person.photo}
+                          alt={person.name}
+                          className="w-24 h-24 object-cover rounded-sm"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-16 h-16 bg-muted flex items-center justify-center">
+                          <span className="font-heading text-xl text-muted-foreground">
+                            {person.initials}
+                          </span>
+                        </div>
+                      )}
                       <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">
                         {person.role}
                       </p>
