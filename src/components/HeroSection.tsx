@@ -1,5 +1,13 @@
-import { Link } from "react-router-dom";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const offset = 112;
+    const top = Math.max(el.getBoundingClientRect().top + window.scrollY - offset, 0);
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
 
 const HeroSection = () => {
   return (
@@ -41,10 +49,10 @@ const HeroSection = () => {
 
           <AnimatedItem>
             <div className="pt-4">
-                <Link to="/#about-us" className="editorial-btn bg-navy text-gold font-bold hover:bg-navy-light">
+                <button onClick={() => scrollToSection("about-us")} className="editorial-btn bg-navy text-gold font-bold hover:bg-navy-light">
                 find out more
                 <span aria-hidden="true" className="text-lg">→</span>
-                </Link>
+                </button>
             </div>
           </AnimatedItem>
         </AnimatedSection>
