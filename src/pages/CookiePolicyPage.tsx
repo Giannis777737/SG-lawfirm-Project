@@ -157,7 +157,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  7. Your Rights
+                  8. Your Rights
                 </h2>
                 <p className="editorial-body">
                   Under the GDPR, you have the right to access, rectify, erase,
