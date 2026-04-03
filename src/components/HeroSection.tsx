@@ -10,7 +10,7 @@ const HeroSection = () => {
             <img
               src={heroImage}
               alt="Panoramic view of the Acropolis of Athens illuminated at dusk, representing our Greek legal heritage"
-              className="w-full h-[500px] lg:h-[700px] object-cover"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[700px] object-cover"
               width={700}
               height={700}
               fetchPriority="high"

@@ -49,7 +49,7 @@ const Navbar = () => {
           className="flex-shrink-0"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-10 md:h-12 w-auto brightness-0 invert" />
+          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">

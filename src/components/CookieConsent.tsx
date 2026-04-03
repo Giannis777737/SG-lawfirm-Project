@@ -77,13 +77,13 @@ const CookieConsent = () => {
   return (
     <div
       ref={bannerRef}
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-8"
+      className="fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4 md:p-8 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:pb-[calc(1rem+env(safe-area-inset-bottom))] md:pb-[calc(2rem+env(safe-area-inset-bottom))]"
       role="dialog"
       aria-label="Cookie consent"
       aria-describedby="cookie-desc"
     >
       <div className="editorial-container">
-        <div className="bg-card border border-border p-8 md:p-10 max-w-2xl ml-auto shadow-lg">
+        <div className="bg-card border border-border p-5 sm:p-8 md:p-10 max-w-2xl ml-auto shadow-lg">
           <h3 className="font-heading text-xl text-foreground mb-3">
             We respect your privacy
           </h3>
