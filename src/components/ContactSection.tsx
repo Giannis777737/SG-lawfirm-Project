@@ -1,13 +1,42 @@
 import { useState, useRef, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
+import { Link } from "react-router-dom";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name.").max(100, "Name must be under 100 characters."),
+  email: z.string().trim().email("Please enter a valid email address.").max(255, "Email must be under 255 characters."),
+  phone: z.string().trim().max(30, "Phone number is too long.").optional().or(z.literal("")),
+  message: z.string().trim().min(1, "Please enter your message.").max(2000, "Message must be under 2000 characters."),
+  gdprConsent: z.literal(true, {
+    errorMap: () => ({ message: "You must consent to the processing of your data." }),
+  }),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const ContactSection = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
   const { consent } = useCookieConsent();
 
   const mapsAllowed = consent === "accepted";
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: { name: "", email: "", phone: "", message: "", gdprConsent: undefined as unknown as true },
+  });
 
   useEffect(() => {
     if (!mapsAllowed || !mapRef.current) return;
@@ -24,10 +53,40 @@ const ContactSection = () => {
     return () => observer.disconnect();
   }, [mapsAllowed]);
 
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.from("contact_submissions").insert({
+        name: data.name,
+        email: data.email,
+        phone: data.phone || null,
+        message: data.message,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent",
+        description: "Thank you for reaching out. We will get back to you shortly.",
+      });
+      reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly by email.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="editorial-section" aria-labelledby="contact-heading">
       <div className="editorial-container">
+        {/* Contact form + office info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          {/* Left: Office details */}
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
               <p className="editorial-label" aria-hidden="true">find us</p>
@@ -66,6 +125,116 @@ const ContactSection = () => {
             </AnimatedItem>
           </AnimatedSection>
 
+          {/* Right: Contact form */}
+          <AnimatedSection className="flex flex-col gap-8">
+            <AnimatedItem>
+              <p className="editorial-label" aria-hidden="true">get in touch</p>
+            </AnimatedItem>
+
+            <AnimatedItem>
+              <h3 className="editorial-heading-sm">Send Us a Message</h3>
+            </AnimatedItem>
+
+            <AnimatedItem>
+              <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
+                {/* Name */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="contact-name" className="font-body text-sm text-muted-foreground">
+                    Full Name <span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    autoComplete="name"
+                    className="w-full border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-foreground/30 transition-colors"
+                    placeholder="Your full name"
+                    {...register("name")}
+                  />
+                  {errors.name && <p className="font-body text-xs text-destructive">{errors.name.message}</p>}
+                </div>
+
+                {/* Email */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="contact-email" className="font-body text-sm text-muted-foreground">
+                    Email Address <span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    autoComplete="email"
+                    className="w-full border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-foreground/30 transition-colors"
+                    placeholder="your@email.com"
+                    {...register("email")}
+                  />
+                  {errors.email && <p className="font-body text-xs text-destructive">{errors.email.message}</p>}
+                </div>
+
+                {/* Phone */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="contact-phone" className="font-body text-sm text-muted-foreground">
+                    Phone <span className="text-muted-foreground/50">(optional)</span>
+                  </label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    autoComplete="tel"
+                    className="w-full border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-foreground/30 transition-colors"
+                    placeholder="+30 210 000 0000"
+                    {...register("phone")}
+                  />
+                  {errors.phone && <p className="font-body text-xs text-destructive">{errors.phone.message}</p>}
+                </div>
+
+                {/* Message */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="contact-message" className="font-body text-sm text-muted-foreground">
+                    Message <span aria-hidden="true">*</span>
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    rows={5}
+                    className="w-full border border-border bg-background px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-foreground/30 transition-colors resize-y"
+                    placeholder="How can we help you?"
+                    {...register("message")}
+                  />
+                  {errors.message && <p className="font-body text-xs text-destructive">{errors.message.message}</p>}
+                </div>
+
+                {/* GDPR Consent */}
+                <div className="flex items-start gap-3">
+                  <input
+                    id="contact-gdpr"
+                    type="checkbox"
+                    className="mt-1 h-4 w-4 shrink-0 border border-border accent-foreground"
+                    {...register("gdprConsent")}
+                  />
+                  <label htmlFor="contact-gdpr" className="font-body text-xs text-muted-foreground leading-relaxed">
+                    I consent to the processing of my personal data in accordance with the{" "}
+                    <Link to="/privacy-policy" className="text-foreground underline">
+                      Privacy Policy
+                    </Link>
+                    . My data will be used solely to respond to my inquiry and will not be shared with third parties.{" "}
+                    <span aria-hidden="true">*</span>
+                  </label>
+                </div>
+                {errors.gdprConsent && (
+                  <p className="font-body text-xs text-destructive -mt-3">{errors.gdprConsent.message}</p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="editorial-btn self-start disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {submitting ? "Sending…" : "Send Message"}
+                </button>
+              </form>
+            </AnimatedItem>
+          </AnimatedSection>
+        </div>
+
+        {/* Map */}
+        <div className="mt-16 lg:mt-24">
           <AnimatedSection>
             <AnimatedItem>
               <div ref={mapRef} className="w-full h-[300px] sm:h-[400px] lg:h-[500px] bg-muted">
