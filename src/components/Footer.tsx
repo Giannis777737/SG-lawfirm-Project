@@ -5,7 +5,7 @@ const Footer = () => {
   const { resetConsent } = useCookieConsent();
 
   return (
-    <footer className="bg-navy py-16" role="contentinfo">
+    <footer className="bg-navy py-10 sm:py-16 pb-[calc(2.5rem+env(safe-area-inset-bottom))] sm:pb-[calc(4rem+env(safe-area-inset-bottom))]" role="contentinfo">
       <div className="editorial-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
