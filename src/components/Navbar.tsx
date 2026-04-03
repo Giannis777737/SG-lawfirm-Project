@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
-      <div className="editorial-container flex items-center justify-between py-8">
+      <div className="editorial-container flex items-center justify-between py-4 sm:py-6 md:py-8">
         <Link
           to="/"
           className="flex-shrink-0"
