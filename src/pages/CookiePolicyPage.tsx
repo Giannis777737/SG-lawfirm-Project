@@ -131,7 +131,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  5. Third-Party Cookies
+                  6. Third-Party Cookies
                 </h2>
                 <p className="editorial-body">
                   Some cookies may be placed by third-party services we use
