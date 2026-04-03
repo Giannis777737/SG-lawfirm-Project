@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-athens.jpg";
+import heroImage from "@/assets/hero-athens.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const HeroSection = () => {

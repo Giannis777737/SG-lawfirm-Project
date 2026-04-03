@@ -1,8 +1,8 @@
-import petrosPhoto from "@/assets/people/petros-selekos.avif";
-import angelikaPhoto from "@/assets/people/angelika-gouskou.avif";
-import ioannisPhoto from "@/assets/people/ioannis-tsionis.avif";
-import vickyPhoto from "@/assets/people/vicky-tsapara.avif";
-import mariaPhoto from "@/assets/people/maria-antoniou.avif";
+import petrosPhoto from "@/assets/people/petros-selekos.webp";
+import angelikaPhoto from "@/assets/people/angelika-gouskou.webp";
+import ioannisPhoto from "@/assets/people/ioannis-tsionis.webp";
+import vickyPhoto from "@/assets/people/vicky-tsapara.webp";
+import mariaPhoto from "@/assets/people/maria-antoniou.webp";
 
 export interface Person {
   id: string;

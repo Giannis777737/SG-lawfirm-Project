@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { practiceAreas } from "@/data/practiceAreas";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
-import bgImage from "@/assets/athens-lycabettus.jpg";
+import bgImage from "@/assets/athens-lycabettus.webp";
 
 const ExpertiseSection = () => {
   return (
