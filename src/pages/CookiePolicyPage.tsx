@@ -82,7 +82,45 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  4. Managing Cookies
+                  4. Cookies We Use
+                </h2>
+                <div className="overflow-x-auto">
+                  <table className="w-full font-body text-sm text-muted-foreground border border-border">
+                    <thead>
+                      <tr className="border-b border-border bg-muted/30">
+                        <th className="text-left px-4 py-3 text-foreground font-semibold">Name</th>
+                        <th className="text-left px-4 py-3 text-foreground font-semibold">Type</th>
+                        <th className="text-left px-4 py-3 text-foreground font-semibold">Purpose</th>
+                        <th className="text-left px-4 py-3 text-foreground font-semibold">Duration</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-border">
+                        <td className="px-4 py-3"><code className="text-xs">cookie-consent</code></td>
+                        <td className="px-4 py-3">Strictly Necessary</td>
+                        <td className="px-4 py-3">Stores your cookie consent preference (accepted/rejected)</td>
+                        <td className="px-4 py-3">Persistent (until cleared)</td>
+                      </tr>
+                      <tr className="border-b border-border">
+                        <td className="px-4 py-3"><code className="text-xs">sb-*</code></td>
+                        <td className="px-4 py-3">Strictly Necessary</td>
+                        <td className="px-4 py-3">Session management for website functionality</td>
+                        <td className="px-4 py-3">Session</td>
+                      </tr>
+                      <tr className="border-b border-border">
+                        <td className="px-4 py-3"><code className="text-xs">NID, CONSENT</code></td>
+                        <td className="px-4 py-3">Third-party (Google Maps)</td>
+                        <td className="px-4 py-3">Set by Google when the embedded map is loaded (only with your consent)</td>
+                        <td className="px-4 py-3">6–12 months</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-heading text-2xl text-foreground mb-4">
+                  5. Managing Cookies
                 </h2>
                 <p className="editorial-body mb-4">
                   You can control and delete cookies through your browser
@@ -93,7 +131,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  5. Third-Party Cookies
+                  6. Third-Party Cookies
                 </h2>
                 <p className="editorial-body">
                   Some cookies may be placed by third-party services we use
@@ -106,7 +144,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  6. Data Retention
+                  7. Data Retention
                 </h2>
                 <p className="editorial-body">
                   Cookie data is retained only for the duration necessary to
@@ -119,7 +157,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  7. Your Rights
+                  8. Your Rights
                 </h2>
                 <p className="editorial-body">
                   Under the GDPR, you have the right to access, rectify, erase,
@@ -137,7 +175,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  8. Changes to This Policy
+                  9. Changes to This Policy
                 </h2>
                 <p className="editorial-body">
                   We may update this Cookie Policy from time to time. Any changes
@@ -148,7 +186,7 @@ const CookiePolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">
-                  9. Contact
+                  10. Contact
                 </h2>
                 <p className="editorial-body">
                   For questions about our use of cookies, contact us at{" "}
