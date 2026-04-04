@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import teamImage from "@/assets/team-meeting.webp";
+
 import { people } from "@/data/people";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
@@ -11,17 +11,8 @@ const PeopleSection = () => {
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <AnimatedSection>
-            <AnimatedItem className="overflow-hidden">
-              <img
-                src={teamImage}
-                alt="Selekos Gouskou legal team collaborating around a conference table"
-                 className="w-full h-[300px] sm:h-[400px] lg:h-[700px] object-cover mb-12"
-                width={700}
-                height={700}
-                loading="lazy"
-                decoding="async"
-              />
-            </AnimatedItem>
+
+
 
             <AnimatedItem>
               <p className="editorial-body">
