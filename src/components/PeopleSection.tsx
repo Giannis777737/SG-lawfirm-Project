@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import teamImage from "@/assets/team-meeting.webp";
+
 import { people } from "@/data/people";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
