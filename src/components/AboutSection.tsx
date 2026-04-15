@@ -4,26 +4,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const AboutSection = () => {
   return (
-    <section id="about-us" aria-labelledby="about-heading">
-      {/* Blue banner with angular logo shape */}
-      <div className="relative bg-primary overflow-hidden py-10 sm:py-14 md:py-16">
-        <svg
-          className="absolute left-0 top-0 h-full w-auto opacity-20"
-          viewBox="0 0 120 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path d="M0 0 L60 100 L0 200 L40 200 L100 100 L40 0 Z" fill="white" />
-        </svg>
-        <div className="editorial-container relative z-10">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white">
-            What we do
-          </h2>
-        </div>
-      </div>
-
-      <div className="editorial-section">
+    <section id="about-us" className="editorial-section" aria-labelledby="about-heading">
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedSection className="flex flex-col gap-8">
@@ -77,7 +58,6 @@ const AboutSection = () => {
             </AnimatedItem>
           </AnimatedSection>
         </div>
-      </div>
       </div>
     </section>
   );

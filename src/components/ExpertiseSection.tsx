@@ -8,30 +8,14 @@ const ExpertiseSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="areas-of-expertise" className="bg-foreground" aria-labelledby="expertise-heading">
-      {/* Blue banner with angular logo shape */}
-      <div className="relative bg-primary overflow-hidden py-10 sm:py-14 md:py-16">
-        <svg
-          className="absolute left-0 top-0 h-full w-auto opacity-20"
-          viewBox="0 0 120 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path d="M0 0 L60 100 L0 200 L40 200 L100 100 L40 0 Z" fill="white" />
-        </svg>
-        <div className="editorial-container relative z-10">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white">
-            Areas of Expertise
-          </h2>
-        </div>
-      </div>
-
-      <div className="editorial-section">
-        <div className="editorial-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Left column - heading */}
-            <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+    <section id="areas-of-expertise" className="editorial-section bg-foreground" aria-labelledby="expertise-heading">
+      <div className="editorial-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          {/* Left column - heading */}
+          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+            <AnimatedItem>
+              <p className="editorial-label text-gold font-semibold" aria-hidden="true">Areas of Expertise</p>
+            </AnimatedItem>
 
             <AnimatedItem>
               <h2 id="expertise-heading" className="editorial-heading-sm text-white">
@@ -86,7 +70,6 @@ const ExpertiseSection = () => {
               </ul>
             </nav>
           </AnimatedSection>
-          </div>
         </div>
       </div>
     </section>

@@ -46,16 +46,10 @@ const Navbar = () => {
       <div className="editorial-container flex items-center justify-between py-4 sm:py-6 md:py-8">
         <Link
           to="/"
-          className="flex-shrink-0 flex flex-col items-center"
+          className="flex-shrink-0"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
           <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
-          <span className="font-body text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.25em] text-gold-light uppercase mt-1 whitespace-nowrap">
-            SELEKOS_GOUSKOU & CO
-          </span>
-          <span className="font-body text-[6px] sm:text-[7px] md:text-[8px] tracking-[0.35em] text-gold-muted uppercase whitespace-nowrap">
-            LAW OFFICES
-          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
