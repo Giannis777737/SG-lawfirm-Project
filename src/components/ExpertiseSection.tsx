@@ -86,6 +86,7 @@ const ExpertiseSection = () => {
               </ul>
             </nav>
           </AnimatedSection>
+          </div>
         </div>
       </div>
     </section>
