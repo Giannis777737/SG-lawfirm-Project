@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.webp";
+import LogoSymbol from "@/components/LogoSymbol";
 
 const navLinks = [
   { label: "about us", href: "/#about-us" },
@@ -42,22 +42,26 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
-      <div className="editorial-container flex items-center justify-between py-4 sm:py-6 md:py-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white" role="banner">
+      {/* Mobile: centered logo block */}
+      <div className="md:hidden flex flex-col items-center py-6 px-4">
         <Link
           to="/"
-          className="flex-shrink-0"
+          className="flex flex-col items-center gap-3"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
+          <LogoSymbol className="w-10 h-14 text-white" />
+          <div className="text-center">
+            <p className="text-sm tracking-[0.25em] font-semibold text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              SELEKOS_GOUSKOU & CO
+            </p>
+            <p className="text-[10px] tracking-[0.35em] text-white/80 mt-0.5" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              LAW OFFICES
+            </p>
+          </div>
         </Link>
-
-        <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
-          {navLinks.map((link) => renderLink(link))}
-        </nav>
-
         <button
-          className="md:hidden text-gold-light"
+          className="mt-4 text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
@@ -65,6 +69,29 @@ const Navbar = () => {
         >
           {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
+      </div>
+
+      {/* Desktop: horizontal layout */}
+      <div className="hidden md:flex editorial-container items-center justify-between py-6 lg:py-8">
+        <Link
+          to="/"
+          className="flex items-center gap-4 flex-shrink-0"
+          aria-label="Selekos Gouskou & Co Law Offices — Home"
+        >
+          <LogoSymbol className="w-8 h-10 text-white" />
+          <div>
+            <p className="text-sm tracking-[0.2em] font-semibold text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              SELEKOS_GOUSKOU & CO
+            </p>
+            <p className="text-[9px] tracking-[0.3em] text-white/80" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              LAW OFFICES
+            </p>
+          </div>
+        </Link>
+
+        <nav className="flex items-center gap-10" aria-label="Main navigation">
+          {navLinks.map((link) => renderLink(link))}
+        </nav>
       </div>
 
       {mobileOpen && (
@@ -76,7 +103,7 @@ const Navbar = () => {
           />
           <nav
             id="mobile-nav"
-            className="md:hidden border-t border-navy-light bg-navy relative z-50"
+            className="md:hidden border-t border-white/10 bg-black relative z-50"
             aria-label="Mobile navigation"
           >
             <div className="editorial-container py-8 flex flex-col gap-6">
@@ -86,7 +113,7 @@ const Navbar = () => {
         </>
       )}
 
-      <div className="border-b border-navy-light" aria-hidden="true" />
+      <div className="border-b border-white/10" aria-hidden="true" />
     </header>
   );
 };
