@@ -4,7 +4,7 @@ interface SectionBannerProps {
 
 const SectionBanner = ({ title }: SectionBannerProps) => {
   return (
-    <div className="w-full bg-accent relative overflow-hidden mb-12 md:mb-16">
+    <div className="w-full bg-navy-light relative overflow-hidden mb-12 md:mb-16">
       <div className="flex items-center min-h-[100px] md:min-h-[120px]">
         {/* Geometric hourglass/double-arc motif as white SVG overlay */}
         <div className="relative w-[80px] md:w-[120px] h-[100px] md:h-[120px] flex-shrink-0">
