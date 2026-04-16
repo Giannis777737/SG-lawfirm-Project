@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionBanner from "@/components/SectionBanner";
 import officePhoto from "@/assets/office2.webp";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { Link } from "react-router-dom";
@@ -100,6 +101,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="editorial-section" aria-labelledby="contact-heading">
+      <SectionBanner title="Contact" />
       <div className="editorial-container">
         {/* Contact form + office info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">

@@ -3,20 +3,18 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Scale } from "lucide-react";
 import { practiceAreas } from "@/data/practiceAreas";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionBanner from "@/components/SectionBanner";
 
 const ExpertiseSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section id="areas-of-expertise" className="editorial-section bg-foreground" aria-labelledby="expertise-heading">
+      <SectionBanner title="Areas of Expertise" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - heading */}
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
-            <AnimatedItem>
-              <p className="editorial-label text-gold font-semibold" aria-hidden="true">Areas of Expertise</p>
-            </AnimatedItem>
-
             <AnimatedItem>
               <h2 id="expertise-heading" className="editorial-heading-sm text-white">
                 Specialized legal counsel across key practice areas
