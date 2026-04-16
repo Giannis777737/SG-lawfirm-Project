@@ -10,6 +10,7 @@ const AboutSection = () => {
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedSection className="flex flex-col gap-8">
+
             <AnimatedItem>
               <h2 id="about-heading" className="editorial-heading-sm">
                 A Greek law firm with a unique international orientation

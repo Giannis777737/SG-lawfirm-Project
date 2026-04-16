@@ -107,6 +107,9 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left: Office details */}
           <AnimatedSection className="flex flex-col gap-8">
+            <AnimatedItem>
+              <p className="editorial-label" aria-hidden="true">find us</p>
+            </AnimatedItem>
 
             <AnimatedItem>
               <h2 id="contact-heading" className="editorial-heading-sm">
@@ -155,6 +158,9 @@ const ContactSection = () => {
 
           {/* Right: Contact form */}
           <AnimatedSection className="flex flex-col gap-8">
+            <AnimatedItem>
+              <p className="editorial-label" aria-hidden="true">get in touch</p>
+            </AnimatedItem>
 
             <AnimatedItem>
               <h3 className="editorial-heading-sm">Send Us a Message</h3>
