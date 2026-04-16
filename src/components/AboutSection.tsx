@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import officeImage from "@/assets/office1.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
-import SectionBanner from "@/components/SectionBanner";
 
 const AboutSection = () => {
   return (
     <section id="about-us" className="editorial-section" aria-labelledby="about-heading">
-      <SectionBanner title="About Us" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedSection className="flex flex-col gap-8">
+            <AnimatedItem>
+              <p className="editorial-label" aria-hidden="true">about us</p>
+            </AnimatedItem>
 
             <AnimatedItem>
               <h2 id="about-heading" className="editorial-heading-sm">
