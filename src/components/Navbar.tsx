@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.webp";
+import logoFull from "@/assets/logo-full.png";
 
 const navLinks = [
   { label: "about us", href: "/#about-us" },
@@ -43,21 +43,16 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
-      <div className="editorial-container flex items-center justify-between py-4 sm:py-6 md:py-8">
+      {/* Mobile: centered logo + hamburger below */}
+      <div className="md:hidden flex flex-col items-center py-4">
         <Link
           to="/"
-          className="flex-shrink-0"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logo} alt="Selekos Gouskou & Co Law Offices" className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 w-auto brightness-0 invert" />
         </Link>
-
-        <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
-          {navLinks.map((link) => renderLink(link))}
-        </nav>
-
         <button
-          className="md:hidden text-gold-light"
+          className="mt-3 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
@@ -65,6 +60,21 @@ const Navbar = () => {
         >
           {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
+      </div>
+
+      {/* Desktop: logo left, nav right */}
+      <div className="hidden md:flex editorial-container items-center justify-between py-6 md:py-8">
+        <Link
+          to="/"
+          className="flex-shrink-0"
+          aria-label="Selekos Gouskou & Co Law Offices — Home"
+        >
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 lg:h-16 w-auto brightness-0 invert" />
+        </Link>
+
+        <nav className="flex items-center gap-10" aria-label="Main navigation">
+          {navLinks.map((link) => renderLink(link))}
+        </nav>
       </div>
 
       {mobileOpen && (
