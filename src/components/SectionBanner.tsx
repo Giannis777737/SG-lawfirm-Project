@@ -27,9 +27,9 @@ const SectionBanner = ({ title }: SectionBannerProps) => {
         </div>
 
         {/* Section title */}
-        <h2 className="font-heading text-xl md:text-2xl lg:text-3xl text-white tracking-wide pl-4 md:pl-8">
+        <span className="font-body text-xl md:text-2xl lg:text-3xl text-white tracking-wide font-light pl-4 md:pl-8">
           {title}
-        </h2>
+        </span>
       </div>
     </div>
   );
