@@ -69,7 +69,7 @@ const NewsSection = () => {
                 return (
                   <AnimatedItem key={item.slug}>
                     <article
-                      className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
+                      className="py-4"
                       role="listitem"
                     >
                       {isExternal ? (
