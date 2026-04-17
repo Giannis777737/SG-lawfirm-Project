@@ -50,7 +50,6 @@ const AboutSection = () => {
           </AnimatedSection>
         </div>
       </div>
-      </div>
     </section>
   );
 };
