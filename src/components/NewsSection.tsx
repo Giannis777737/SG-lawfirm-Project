@@ -32,7 +32,7 @@ const NewsSection = () => {
           {isLoading ? (
             <div className="py-10 text-center text-muted-foreground">Loading…</div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0" role="list">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" role="list">
               {newsArticles.map((item) => {
                 const isExternal = !!item.external_url;
                 const linkProps = isExternal
@@ -69,7 +69,7 @@ const NewsSection = () => {
                 return (
                   <AnimatedItem key={item.slug}>
                     <article
-                      className="border-b border-border md:odd:border-r py-10 md:odd:pr-12 md:even:pl-12"
+                      className="py-4"
                       role="listitem"
                     >
                       {isExternal ? (

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import officeImage from "@/assets/office1.webp";
 import firmLogo from "@/assets/firm-logo.png";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
@@ -57,14 +56,6 @@ const AboutSection = () => {
               </p>
             </AnimatedItem>
 
-            <AnimatedItem>
-              <div className="pt-4">
-                <Link to="/#areas-of-expertise" className="editorial-link">
-                  read more <span aria-hidden="true">→</span>
-                  <span className="sr-only">about our areas of expertise</span>
-                </Link>
-              </div>
-            </AnimatedItem>
           </AnimatedSection>
 
           <AnimatedSection className="overflow-hidden">
