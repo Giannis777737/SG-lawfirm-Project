@@ -47,14 +47,6 @@ const HeroSection = () => {
             </p>
           </AnimatedItem>
 
-          <AnimatedItem>
-            <div className="pt-4">
-                <button onClick={() => scrollToSection("about-us")} className="editorial-btn bg-navy text-gold font-bold hover:bg-navy-light">
-                find out more
-                <span aria-hidden="true" className="text-lg">→</span>
-                </button>
-            </div>
-          </AnimatedItem>
         </AnimatedSection>
       </div>
     </section>
