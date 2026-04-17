@@ -57,14 +57,6 @@ const AboutSection = () => {
               </p>
             </AnimatedItem>
 
-            <AnimatedItem>
-              <div className="pt-4">
-                <Link to="/#areas-of-expertise" className="editorial-link">
-                  read more <span aria-hidden="true">→</span>
-                  <span className="sr-only">about our areas of expertise</span>
-                </Link>
-              </div>
-            </AnimatedItem>
           </AnimatedSection>
 
           <AnimatedSection className="overflow-hidden">
