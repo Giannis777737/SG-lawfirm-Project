@@ -32,7 +32,7 @@ const NewsSection = () => {
           {isLoading ? (
             <div className="py-10 text-center text-muted-foreground">Loading…</div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0" role="list">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" role="list">
               {newsArticles.map((item) => {
                 const isExternal = !!item.external_url;
                 const linkProps = isExternal
