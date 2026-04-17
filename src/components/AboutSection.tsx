@@ -1,10 +1,33 @@
 import { Link } from "react-router-dom";
 import officeImage from "@/assets/office1.webp";
+import firmLogo from "@/assets/firm-logo.png";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 const AboutSection = () => {
   return (
-    <section id="about-us" className="editorial-section" aria-labelledby="about-heading">
+    <section id="about-us" aria-labelledby="about-heading">
+      {/* "What we do" blue banner with geometric X-logo overlay */}
+      <div
+        className="relative w-full overflow-hidden bg-[hsl(220_85%_55%)] flex items-center"
+        style={{ minHeight: "180px" }}
+        aria-hidden="false"
+      >
+        {/* Decorative oversized faded logo on the left (creates the triangle/X look) */}
+        <img
+          src={firmLogo}
+          alt=""
+          aria-hidden="true"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-[260%] w-auto opacity-90 pointer-events-none select-none"
+          style={{ filter: "brightness(0) invert(1)", left: "-2%" }}
+        />
+        <div className="editorial-container relative z-10 w-full">
+          <h2 className="font-heading text-white text-4xl sm:text-5xl md:text-6xl font-normal text-center tracking-tight">
+            What we do
+          </h2>
+        </div>
+      </div>
+
+      <div className="editorial-section">
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedSection className="flex flex-col gap-8">
@@ -58,6 +81,7 @@ const AboutSection = () => {
             </AnimatedItem>
           </AnimatedSection>
         </div>
+      </div>
       </div>
     </section>
   );
