@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import officeImage from "@/assets/office1.webp";
 import firmLogo from "@/assets/firm-logo.png";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
