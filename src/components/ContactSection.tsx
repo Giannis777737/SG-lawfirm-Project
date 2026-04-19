@@ -107,8 +107,7 @@ const ContactSection = () => {
           {/* Left: Office details */}
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
-              <SectionLogo />
-              <p className="editorial-label" aria-hidden="true">find us</p>
+              <SectionLogo title="Find Us" />
             </AnimatedItem>
 
             <AnimatedItem>

@@ -22,8 +22,7 @@ const NewsSection = () => {
       <div className="editorial-container">
         <AnimatedSection className="mb-16">
           <AnimatedItem>
-            <SectionLogo />
-            <p className="editorial-label" aria-hidden="true">News & Publications</p>
+            <SectionLogo title="News & Publications" />
           </AnimatedItem>
           <AnimatedItem>
             <h2 id="news-heading" className="editorial-heading-sm">Latest Updates</h2>
