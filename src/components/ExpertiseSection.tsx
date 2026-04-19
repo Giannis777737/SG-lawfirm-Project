@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Scale } from "lucide-react";
 import { practiceAreas } from "@/data/practiceAreas";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionLogo from "@/components/SectionLogo";
 
 const ExpertiseSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -14,6 +15,7 @@ const ExpertiseSection = () => {
           {/* Left column - heading */}
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
+              <SectionLogo className="brightness-0 invert" />
               <p className="editorial-label text-gold font-semibold" aria-hidden="true">Areas of Expertise</p>
             </AnimatedItem>
 

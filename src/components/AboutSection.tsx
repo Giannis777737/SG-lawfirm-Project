@@ -1,5 +1,6 @@
 import officeImage from "@/assets/office1.webp";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionLogo from "@/components/SectionLogo";
 
 const AboutSection = () => {
   return (
@@ -8,6 +9,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
+              <SectionLogo />
               <p className="editorial-label" aria-hidden="true">about us</p>
             </AnimatedItem>
 

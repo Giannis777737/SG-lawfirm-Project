@@ -9,6 +9,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import officePhoto from "@/assets/office2.webp";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { Link } from "react-router-dom";
+import SectionLogo from "@/components/SectionLogo";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name.").max(100, "Name must be under 100 characters."),
@@ -106,6 +107,7 @@ const ContactSection = () => {
           {/* Left: Office details */}
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
+              <SectionLogo />
               <p className="editorial-label" aria-hidden="true">find us</p>
             </AnimatedItem>
 

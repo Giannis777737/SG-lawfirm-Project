@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionLogo from "@/components/SectionLogo";
 
 const NewsSection = () => {
   const { data: newsArticles = [], isLoading } = useQuery({
@@ -21,6 +22,7 @@ const NewsSection = () => {
       <div className="editorial-container">
         <AnimatedSection className="mb-16">
           <AnimatedItem>
+            <SectionLogo />
             <p className="editorial-label" aria-hidden="true">News & Publications</p>
           </AnimatedItem>
           <AnimatedItem>
