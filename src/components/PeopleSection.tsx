@@ -26,8 +26,7 @@ const PeopleSection = () => {
 
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
-              <SectionLogo />
-              <p className="editorial-label" aria-hidden="true">Our People</p>
+              <SectionLogo title="Our People" />
             </AnimatedItem>
 
             <AnimatedItem>
