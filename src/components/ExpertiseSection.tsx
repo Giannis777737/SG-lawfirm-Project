@@ -10,14 +10,11 @@ const ExpertiseSection = () => {
 
   return (
     <section id="areas-of-expertise" className="editorial-section bg-foreground" aria-labelledby="expertise-heading">
+      <SectionLogo title="Areas of Expertise" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - heading */}
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
-            <AnimatedItem>
-              <SectionLogo title="Areas of Expertise" />
-            </AnimatedItem>
-
             <AnimatedItem>
               <h2 id="expertise-heading" className="editorial-heading-sm text-white">
                 Specialized legal counsel across key practice areas

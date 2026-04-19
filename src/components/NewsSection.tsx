@@ -19,11 +19,9 @@ const NewsSection = () => {
 
   return (
     <section id="news" className="editorial-section" aria-labelledby="news-heading">
+      <SectionLogo title="News & Publications" />
       <div className="editorial-container">
         <AnimatedSection className="mb-16">
-          <AnimatedItem>
-            <SectionLogo title="News & Publications" />
-          </AnimatedItem>
           <AnimatedItem>
             <h2 id="news-heading" className="editorial-heading-sm">Latest Updates</h2>
           </AnimatedItem>
