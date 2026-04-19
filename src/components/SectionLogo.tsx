@@ -19,7 +19,7 @@ const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
         src={sectionLogo}
         alt=""
         aria-hidden="true"
-        className="h-12 md:h-14 w-auto select-none pointer-events-none brightness-0 invert"
+        className="h-12 md:h-14 w-auto select-none pointer-events-none"
         loading="lazy"
         decoding="async"
       />
