@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { people } from "@/data/people";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import SectionLogo from "@/components/SectionLogo";
 
 const PeopleSection = () => {
   const displayPeople = people.slice(0, 5);
@@ -25,6 +26,7 @@ const PeopleSection = () => {
 
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
+              <SectionLogo />
               <p className="editorial-label" aria-hidden="true">Our People</p>
             </AnimatedItem>
 
