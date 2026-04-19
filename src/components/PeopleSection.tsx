@@ -9,12 +9,10 @@ const PeopleSection = () => {
 
   return (
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
+      <SectionLogo title="Our People" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <AnimatedSection>
-
-
-
             <AnimatedItem>
               <p className="editorial-body">
                 Most of our Attorneys-at-law have trained or worked abroad, earned law degrees 
@@ -25,10 +23,6 @@ const PeopleSection = () => {
           </AnimatedSection>
 
           <AnimatedSection className="flex flex-col gap-8">
-            <AnimatedItem>
-              <SectionLogo title="Our People" />
-            </AnimatedItem>
-
             <AnimatedItem>
               <h2 id="people-heading" className="editorial-heading-sm">
                 A highly qualified team of legal experts

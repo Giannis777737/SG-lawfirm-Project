@@ -101,15 +101,12 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="editorial-section" aria-labelledby="contact-heading">
+      <SectionLogo title="Contact" />
       <div className="editorial-container">
         {/* Contact form + office info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left: Office details */}
           <AnimatedSection className="flex flex-col gap-8">
-            <AnimatedItem>
-              <SectionLogo title="Find Us" />
-            </AnimatedItem>
-
             <AnimatedItem>
               <h2 id="contact-heading" className="editorial-heading-sm">
                 Our Office
