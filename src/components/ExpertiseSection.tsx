@@ -15,7 +15,7 @@ const ExpertiseSection = () => {
           {/* Left column - heading */}
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
-              <SectionLogo className="brightness-0 invert" />
+              <SectionLogo className="opacity-80 [filter:brightness(0)_saturate(100%)_invert(72%)_sepia(38%)_saturate(638%)_hue-rotate(7deg)_brightness(92%)_contrast(88%)]" />
               <p className="editorial-label text-gold font-semibold" aria-hidden="true">Areas of Expertise</p>
             </AnimatedItem>
 
