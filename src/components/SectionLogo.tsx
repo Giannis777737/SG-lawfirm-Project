@@ -1,19 +1,19 @@
 import sectionLogo from "@/assets/section-logo.png";
 
 interface SectionLogoProps {
-  /** The section title shown next to the logo, e.g. "About Us". */
+  /** The section name shown under the logo, e.g. "About Us". */
   title: string;
   className?: string;
 }
 
 /**
- * Blue banner with the cropped logo mark on the left and the section title
- * on the right — matches the original site styling.
+ * Full-width navy banner with the centered logo mark on top and the section
+ * name underneath — matches the original site styling.
  */
 const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
   return (
     <div
-      className={`inline-flex items-stretch bg-navy text-white rounded-r-full overflow-hidden mb-8 shadow-sm ${className}`}
+      className={`w-full bg-navy text-white flex flex-col items-center justify-center py-8 md:py-10 mb-12 ${className}`}
     >
       <img
         src={sectionLogo}
@@ -23,7 +23,7 @@ const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
         loading="lazy"
         decoding="async"
       />
-      <span className="font-heading text-xl md:text-2xl pr-8 pl-3 self-center leading-none">
+      <span className="font-body text-xs md:text-sm tracking-[0.25em] uppercase mt-3">
         {title}
       </span>
     </div>
