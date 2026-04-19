@@ -12,13 +12,13 @@ interface SectionLogoProps {
  */
 const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
   return (
-    <div className={`w-full bg-navy text-white mb-12 ${className}`}>
-      <div className="flex items-stretch">
+    <div className={`w-full bg-navy text-white mb-12 h-20 md:h-24 ${className}`}>
+      <div className="flex items-stretch h-full">
         <img
           src={sectionLogo}
           alt=""
           aria-hidden="true"
-          className="h-20 md:h-24 w-auto select-none pointer-events-none block"
+          className="h-full w-auto select-none pointer-events-none block object-cover"
           loading="lazy"
           decoding="async"
         />
