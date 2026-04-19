@@ -12,20 +12,20 @@ interface SectionLogoProps {
  */
 const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
   return (
-    <div
-      className={`w-full bg-navy text-white flex flex-col items-center justify-center py-8 md:py-10 mb-12 ${className}`}
-    >
-      <img
-        src={sectionLogo}
-        alt=""
-        aria-hidden="true"
-        className="h-12 md:h-14 w-auto select-none pointer-events-none"
-        loading="lazy"
-        decoding="async"
-      />
-      <span className="font-body text-xs md:text-sm tracking-[0.25em] uppercase mt-3">
-        {title}
-      </span>
+    <div className={`mb-12 ${className}`}>
+      <div className="inline-flex items-stretch bg-navy text-white rounded-r-[3rem] overflow-hidden pr-10 md:pr-16 shadow-sm">
+        <img
+          src={sectionLogo}
+          alt=""
+          aria-hidden="true"
+          className="h-20 md:h-24 w-auto select-none pointer-events-none block"
+          loading="lazy"
+          decoding="async"
+        />
+        <span className="font-heading text-2xl md:text-3xl self-center pl-4 leading-none">
+          {title}
+        </span>
+      </div>
     </div>
   );
 };
