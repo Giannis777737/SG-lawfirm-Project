@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
-import officePhoto from "@/assets/office2.webp";
+
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { Link } from "react-router-dom";
 import SectionLogo from "@/components/SectionLogo";
@@ -139,17 +139,6 @@ const ContactSection = () => {
               </div>
             </AnimatedItem>
 
-            <AnimatedItem className="mt-4">
-              <img
-                src={officePhoto}
-                alt="Interior of Selekos Gouskou law office"
-                className="w-full h-[250px] sm:h-[300px] object-cover"
-                width={600}
-                height={300}
-                loading="lazy"
-                decoding="async"
-              />
-            </AnimatedItem>
           </AnimatedSection>
 
           {/* Right: Contact form */}
