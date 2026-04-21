@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
+import geoFigure from "@/assets/sg-geometric.png";
 
 const navLinks = [
   { label: "about us", href: "/#about-us" },
@@ -43,8 +44,16 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
+      {/* Geometric figure flush to the top-left corner, full header height */}
+      <img
+        src={geoFigure}
+        alt=""
+        aria-hidden="true"
+        className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none object-cover z-10"
+      />
+
       {/* Mobile: centered logo + hamburger below */}
-      <div className="md:hidden flex flex-col items-center py-4">
+      <div className="md:hidden flex flex-col items-center py-4 relative z-20">
         <Link
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
@@ -63,7 +72,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop: logo left, nav right */}
-      <div className="hidden md:flex editorial-container items-center justify-between py-6 md:py-8">
+      <div className="hidden md:flex editorial-container items-center justify-between py-6 md:py-8 relative z-20">
         <Link
           to="/"
           className="flex-shrink-0"
