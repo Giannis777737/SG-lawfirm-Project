@@ -1,6 +1,8 @@
 export interface PracticeArea {
   slug: string;
   title: string;
+  /** Short SEO description (max ~160 chars) used for meta description on the practice area page. */
+  description: string;
   content: string[];
   listItems?: string[];
 }
