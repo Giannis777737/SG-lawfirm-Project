@@ -43,15 +43,17 @@ export const people: Person[] = [
     photo: angelikaPhoto,
   },
   {
-    id: "katerina-malliari",
-    name: "Katerina Malliari",
-    initials: "KM",
-    role: "Head of IT and Administrating",
+    id: "ioannis-tsionis",
+    name: "Ioannis Tsionis",
+    initials: "IT",
+    role: "Associate · Head of Litigation and Real Estate dep.",
     description:
-      "Oversees the firm's digital transformation initiatives and ensures seamless coordination and operational efficiency.",
+      "Specialized in commercial litigation and corporate advisory with international experience.",
     fullBio:
-      "Katerina has provided high-level Executive Support to the firm's partners and management since 2015, ensuring seamless coordination and operational efficiency. She manages key projects, oversees HR and administrating, and ensures alignment and smooth collaboration across all departments. She oversees the firm's digital transformation initiatives, including the responsible integration of Artificial Intelligence tools. Her responsibilities also encompass Compliance and Security, with a focus on GDPR and Cybersecurity, areas in which she holds specialized certification. She brings technical expertise, such as file decryption, supporting effective risk mitigation and ensuring the integrity and confidentiality of the firm's critical information.",
+      "Ioannis is an Associate since 2016 specializing in Civil, real estate sale, purchase, financing and development. He possesses substantial experience in litigation on real estate and a broad spectrum of civil disputes, including contractual breaches, corporate and shareholder conflicts, and tort-related claims. His practice extends to advising clients on the negotiation and drafting of commercial agreements and complex business and estate transactions. Ioannis represents clients before all levels of the Greek Courts.",
+    memberships: ["Athens Bar Association"],
     languages: "Greek · English",
+    photo: ioannisPhoto,
   },
   {
     id: "ioannis-tsionis",
