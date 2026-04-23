@@ -131,6 +131,13 @@ const ContactSection = () => {
                   +30 210 72 56 523
                 </a>
                 <a
+                  href="tel:+302107256522"
+                  className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-300"
+                  aria-label="Call our office at +30 210 72 56 522"
+                >
+                  +30 210 72 56 522
+                </a>
+                <a
                   href="mailto:info@selekos-gouskou.gr"
                   className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-300"
                 >
