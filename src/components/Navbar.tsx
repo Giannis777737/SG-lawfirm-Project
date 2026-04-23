@@ -80,7 +80,7 @@ const Navbar = () => {
           />
           <nav
             id="mobile-nav"
-            className="border-t border-navy-light bg-navy relative z-50"
+            className="absolute left-0 right-0 top-full border-t border-navy-light bg-navy z-50"
             aria-label="Main navigation"
           >
             <div className="editorial-container py-8 flex flex-col gap-6 items-center">
@@ -90,7 +90,7 @@ const Navbar = () => {
         </>
       )}
 
-      <div className="border-b border-navy-light" aria-hidden="true" />
+      <div className="absolute left-0 right-0 bottom-0 border-b border-navy-light" aria-hidden="true" />
     </header>
   );
 };
