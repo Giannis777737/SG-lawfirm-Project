@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import JsonLd from "@/components/JsonLd";
+import MetaTags from "@/components/MetaTags";
 import { getOurPeopleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const OurPeoplePage = () => {
@@ -16,6 +17,10 @@ const OurPeoplePage = () => {
   ]), []);
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        description="Meet the highly qualified team behind Selekos-Gouskou & Co Law Offices — attorneys with international training and deep expertise across Greek and EU law."
+        title="Our People | Selekos-Gouskou & Co Law Offices"
+      />
       <JsonLd data={peopleSchema} />
       <JsonLd data={breadcrumbSchema} />
       <Navbar />

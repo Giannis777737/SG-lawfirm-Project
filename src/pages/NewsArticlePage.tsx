@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import JsonLd from "@/components/JsonLd";
+import MetaTags from "@/components/MetaTags";
 import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const NewsArticlePage = () => {
@@ -66,6 +67,11 @@ const NewsArticlePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        description={article.excerpt}
+        title={`${article.title} | Selekos-Gouskou & Co Law Offices`}
+        ogType="article"
+      />
       {articleSchema && <JsonLd data={articleSchema} />}
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />
