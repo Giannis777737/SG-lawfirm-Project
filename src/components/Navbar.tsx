@@ -43,31 +43,31 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-24 md:h-28" role="banner">
       {/* Geometric figure flush to the top-left corner, full header height */}
       <img
         src={geoFigure}
         alt=""
         aria-hidden="true"
-        className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none object-cover z-10"
+        className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none block object-cover z-10"
       />
 
-      {/* Centered logo + hamburger below (all viewports) */}
-      <div className="flex flex-col items-center py-4 md:py-6 relative z-20">
+      {/* Centered logo + hamburger (all viewports) */}
+      <div className="flex flex-col items-center justify-center h-full relative z-20">
         <Link
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 md:h-16 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-12 md:h-14 w-auto brightness-0 invert" />
         </Link>
         <button
-          className="mt-3 text-gold-light"
+          className="mt-2 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
         >
-          {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+          {mobileOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
       </div>
 
