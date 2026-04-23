@@ -74,16 +74,16 @@ const Navbar = () => {
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 bg-foreground/60 z-40 md:hidden"
+            className="fixed inset-0 bg-foreground/60 z-40"
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
           <nav
             id="mobile-nav"
-            className="md:hidden border-t border-navy-light bg-navy relative z-50"
-            aria-label="Mobile navigation"
+            className="border-t border-navy-light bg-navy relative z-50"
+            aria-label="Main navigation"
           >
-            <div className="editorial-container py-8 flex flex-col gap-6">
+            <div className="editorial-container py-8 flex flex-col gap-6 items-center">
               {navLinks.map((link) => renderLink(link, () => setMobileOpen(false)))}
             </div>
           </nav>
