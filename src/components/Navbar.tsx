@@ -52,13 +52,13 @@ const Navbar = () => {
         className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none object-cover z-10"
       />
 
-      {/* Mobile: centered logo + hamburger below */}
-      <div className="md:hidden flex flex-col items-center py-4 relative z-20">
+      {/* Centered logo + hamburger below (all viewports) */}
+      <div className="flex flex-col items-center py-4 md:py-6 relative z-20">
         <Link
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 md:h-16 w-auto brightness-0 invert" />
         </Link>
         <button
           className="mt-3 text-gold-light"
@@ -71,34 +71,19 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Desktop: logo left, nav right */}
-      <div className="hidden md:flex editorial-container items-center justify-between py-6 md:py-8 relative z-20">
-        <Link
-          to="/"
-          className="flex-shrink-0"
-          aria-label="Selekos Gouskou & Co Law Offices — Home"
-        >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 lg:h-16 w-auto brightness-0 invert" />
-        </Link>
-
-        <nav className="flex items-center gap-10" aria-label="Main navigation">
-          {navLinks.map((link) => renderLink(link))}
-        </nav>
-      </div>
-
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 bg-foreground/60 z-40 md:hidden"
+            className="fixed inset-0 bg-foreground/60 z-40"
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
           <nav
             id="mobile-nav"
-            className="md:hidden border-t border-navy-light bg-navy relative z-50"
-            aria-label="Mobile navigation"
+            className="border-t border-navy-light bg-navy relative z-50"
+            aria-label="Main navigation"
           >
-            <div className="editorial-container py-8 flex flex-col gap-6">
+            <div className="editorial-container py-8 flex flex-col gap-6 items-center">
               {navLinks.map((link) => renderLink(link, () => setMobileOpen(false)))}
             </div>
           </nav>
