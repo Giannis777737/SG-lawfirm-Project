@@ -2,11 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import MetaTags from "@/components/MetaTags";
 
 const PrivacyPolicyPage = () => {
   useDocumentTitle("Privacy Policy");
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        description="Privacy Policy of Selekos-Gouskou & Co Law Offices: how we collect, use and protect personal data in compliance with the GDPR."
+        title="Privacy Policy | Selekos-Gouskou & Co Law Offices"
+      />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
         <section className="editorial-section">

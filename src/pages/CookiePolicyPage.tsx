@@ -2,11 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import MetaTags from "@/components/MetaTags";
 
 const CookiePolicyPage = () => {
   useDocumentTitle("Cookie Policy");
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        description="Cookie Policy of Selekos-Gouskou & Co Law Offices: which cookies we use, why we use them and how you can manage your preferences."
+        title="Cookie Policy | Selekos-Gouskou & Co Law Offices"
+      />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
         <section className="editorial-section">
