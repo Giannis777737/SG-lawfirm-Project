@@ -52,13 +52,13 @@ const Navbar = () => {
         className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none object-cover z-10"
       />
 
-      {/* Mobile: centered logo + hamburger below */}
-      <div className="md:hidden flex flex-col items-center py-4 relative z-20">
+      {/* Centered logo + hamburger below (all viewports) */}
+      <div className="flex flex-col items-center py-4 md:py-6 relative z-20">
         <Link
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 md:h-16 w-auto brightness-0 invert" />
         </Link>
         <button
           className="mt-3 text-gold-light"
@@ -69,21 +69,6 @@ const Navbar = () => {
         >
           {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
-      </div>
-
-      {/* Desktop: logo left, nav right */}
-      <div className="hidden md:flex editorial-container items-center justify-between py-6 md:py-8 relative z-20">
-        <Link
-          to="/"
-          className="flex-shrink-0"
-          aria-label="Selekos Gouskou & Co Law Offices — Home"
-        >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-14 lg:h-16 w-auto brightness-0 invert" />
-        </Link>
-
-        <nav className="flex items-center gap-10" aria-label="Main navigation">
-          {navLinks.map((link) => renderLink(link))}
-        </nav>
       </div>
 
       {mobileOpen && (
