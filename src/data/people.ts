@@ -43,17 +43,6 @@ export const people: Person[] = [
     photo: angelikaPhoto,
   },
   {
-    id: "katerina-malliari",
-    name: "Katerina Malliari",
-    initials: "KM",
-    role: "Head of IT and Administrating",
-    description:
-      "Oversees the firm's digital transformation initiatives and ensures seamless coordination and operational efficiency.",
-    fullBio:
-      "Katerina has provided high-level Executive Support to the firm's partners and management since 2015, ensuring seamless coordination and operational efficiency. She manages key projects, oversees HR and administrating, and ensures alignment and smooth collaboration across all departments. She oversees the firm's digital transformation initiatives, including the responsible integration of Artificial Intelligence tools. Her responsibilities also encompass Compliance and Security, with a focus on GDPR and Cybersecurity, areas in which she holds specialized certification. She brings technical expertise, such as file decryption, supporting effective risk mitigation and ensuring the integrity and confidentiality of the firm's critical information.",
-    languages: "Greek · English",
-  },
-  {
     id: "ioannis-tsionis",
     name: "Ioannis Tsionis",
     initials: "IT",
@@ -116,4 +105,14 @@ export const people: Person[] = [
     ],
     languages: "Greek · English",
   },
-];
+  {
+    id: "katerina-malliari",
+    name: "Katerina Malliari",
+    initials: "KM",
+    role: "Head of IT and Administrating",
+    description:
+      "Oversees the firm's digital transformation initiatives and ensures seamless coordination and operational efficiency.",
+    fullBio:
+      "Katerina has provided high-level Executive Support to the firm's partners and management since 2015, ensuring seamless coordination and operational efficiency. She manages key projects, oversees HR and administrating, and ensures alignment and smooth collaboration across all departments. She oversees the firm's digital transformation initiatives, including the responsible integration of Artificial Intelligence tools. Her responsibilities also encompass Compliance and Security, with a focus on GDPR and Cybersecurity, areas in which she holds specialized certification. She brings technical expertise, such as file decryption, supporting effective risk mitigation and ensuring the integrity and confidentiality of the firm's critical information.",
+    languages: "Greek · English",
+  },
