@@ -49,7 +49,7 @@ const Navbar = () => {
         src={geoFigure}
         alt=""
         aria-hidden="true"
-        className="absolute left-0 top-0 bottom-0 h-full w-auto select-none pointer-events-none object-fill block z-10"
+        className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none object-cover z-10"
       />
 
       {/* Centered logo + hamburger below (all viewports) */}
