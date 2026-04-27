@@ -1,8 +1,9 @@
 import petrosPhoto from "@/assets/people/petros-selekos.png";
-import angelikaPhoto from "@/assets/people/angelika-gouskou.webp";
-import ioannisPhoto from "@/assets/people/ioannis-tsionis.webp";
-import vickyPhoto from "@/assets/people/vicky-tsapara.webp";
-import mariaPhoto from "@/assets/people/maria-antoniou.webp";
+import angelikaPhoto from "@/assets/people/angelika-gouskou.png";
+import ioannisPhoto from "@/assets/people/ioannis-tsionis.png";
+import vickyPhoto from "@/assets/people/vicky-tsapara.png";
+import mariaPhoto from "@/assets/people/maria-antoniou.png";
+import dimitrisPhoto from "@/assets/people/dimitris-selekos.png";
 import katerinaPhoto from "@/assets/people/katerina-malliari.png";
 
 export interface Person {
