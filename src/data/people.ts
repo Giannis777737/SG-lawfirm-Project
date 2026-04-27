@@ -3,6 +3,7 @@ import angelikaPhoto from "@/assets/people/angelika-gouskou.webp";
 import ioannisPhoto from "@/assets/people/ioannis-tsionis.webp";
 import vickyPhoto from "@/assets/people/vicky-tsapara.webp";
 import mariaPhoto from "@/assets/people/maria-antoniou.webp";
+import katerinaPhoto from "@/assets/people/katerina-malliari.png";
 
 export interface Person {
   id: string;
