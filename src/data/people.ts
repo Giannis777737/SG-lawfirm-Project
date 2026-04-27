@@ -3,6 +3,7 @@ import angelikaPhoto from "@/assets/people/angelika-gouskou.webp";
 import ioannisPhoto from "@/assets/people/ioannis-tsionis.webp";
 import vickyPhoto from "@/assets/people/vicky-tsapara.webp";
 import mariaPhoto from "@/assets/people/maria-antoniou.webp";
+import katerinaPhoto from "@/assets/people/katerina-malliari.png";
 
 export interface Person {
   id: string;
@@ -115,5 +116,6 @@ export const people: Person[] = [
     fullBio:
       "Katerina has provided high-level Executive Support to the firm's partners and management since 2015, ensuring seamless coordination and operational efficiency. She manages key projects, oversees HR and administrating, and ensures alignment and smooth collaboration across all departments. She oversees the firm's digital transformation initiatives, including the responsible integration of Artificial Intelligence tools. Her responsibilities also encompass Compliance and Security, with a focus on GDPR and Cybersecurity, areas in which she holds specialized certification. She brings technical expertise, such as file decryption, supporting effective risk mitigation and ensuring the integrity and confidentiality of the firm's critical information.",
     languages: "Greek · English",
+    photo: katerinaPhoto,
   },
 ];
