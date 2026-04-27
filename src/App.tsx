@@ -13,6 +13,7 @@ import Index from "./pages/Index.tsx";
 // Lazy load non-critical routes
 const PracticeAreaPage = lazy(() => import("./pages/PracticeAreaPage.tsx"));
 const OurPeoplePage = lazy(() => import("./pages/OurPeoplePage.tsx"));
+const PersonPage = lazy(() => import("./pages/PersonPage.tsx"));
 const NewsArticlePage = lazy(() => import("./pages/NewsArticlePage.tsx"));
 const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage.tsx"));
 const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage.tsx"));
@@ -33,6 +34,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/our-people" element={<OurPeoplePage />} />
+              <Route path="/our-people/:id" element={<PersonPage />} />
               <Route path="/news/:slug" element={<NewsArticlePage />} />
               <Route path="/cookie-policy" element={<CookiePolicyPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
