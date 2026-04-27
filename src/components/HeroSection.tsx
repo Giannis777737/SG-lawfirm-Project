@@ -34,16 +34,17 @@ const HeroSection = () => {
 
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
-              A Dynamic Niche
+              Selekos &amp; Gouskou
               <br />
-              Culture Law Firm
+              Law Offices
             </h1>
           </AnimatedItem>
 
           <AnimatedItem>
             <p className="editorial-body text-white/85">
-              Established in 1998 with the aim to be a dynamic, "niche" culture law firm, 
-              Selekos-Gouskou &amp; Co has since grown steadily into a trusted name in Greek legal practice.
+              Founded in 1998, Selekos &amp; Gouskou Law Offices has established itself as a
+              dynamic and specialized firm, providing high-quality legal services across a
+              wide range of sectors.
             </p>
           </AnimatedItem>
 
