@@ -48,13 +48,13 @@ const OurPeoplePage = () => {
                   id={person.id}
                   className="border-b border-border py-12 first:border-t scroll-mt-32"
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
+                  <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-8 lg:gap-16">
                     <div className="flex flex-col items-start gap-3">
                       {person.photo ? (
                         <img
                           src={person.photo}
                           alt={person.name}
-                          className="w-24 h-24 object-cover rounded-sm"
+                          className="w-40 h-40 md:w-48 md:h-48 object-cover object-top rounded-sm"
                           loading="lazy"
                         />
                       ) : (
