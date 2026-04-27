@@ -34,10 +34,11 @@ const OurPeoplePage = () => {
             </h1>
 
             <p className="editorial-body mb-16">
-              Most of our Attorneys-at-law have trained or worked abroad, earned
-              law degrees and post graduate degrees from foreign universities and
-              have a thorough understanding of the laws and practices of
-              countries outside Greece.
+              The firm's team comprises highly qualified lawyers with international
+              education and professional backgrounds. Our members possess advanced
+              degrees from prestigious universities abroad, enabling us to provide
+              cross-border legal support and navigate complex international
+              frameworks effectively.
             </p>
 
             <div className="flex flex-col">

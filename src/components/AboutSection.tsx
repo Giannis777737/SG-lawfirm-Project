@@ -11,23 +11,26 @@ const AboutSection = () => {
           <AnimatedSection className="flex flex-col gap-8">
             <AnimatedItem>
               <h2 id="about-heading" className="editorial-heading-sm">
-                A Greek law firm with a unique international orientation
+                About the Firm
               </h2>
             </AnimatedItem>
 
             <AnimatedItem>
               <p className="editorial-body">
-                Selekos-Gouskou &amp; Co Law Offices was established in 1998 with the aim to be a
-                dynamic, "niche" culture law firm and has since grown steadily.
+                Founded in 1998, Selekos &amp; Gouskou Law Offices has established itself as a
+                dynamic and specialized firm, providing high-quality legal services across a wide
+                range of sectors. Combining deep academic knowledge with commercial awareness,
+                the firm offers strategic legal solutions tailored to the needs of each client.
+                Our team advises corporations, institutions, and private entities operating in
+                both domestic and international markets.
               </p>
             </AnimatedItem>
 
             <AnimatedItem>
               <p className="editorial-body">
-                Our clients operate in many different fields, notably financial services, 
-                international trade and commodities, manufacturing and broadcasting. They include 
-                large public corporations, Greek private corporations, institutions, private 
-                foundations and individuals as well as companies with international activities.
+                The firm's philosophy is based on professionalism, integrity, and continuous
+                development. We focus on building long-term relationships with our clients,
+                ensuring consistency, discretion, and efficiency in every case.
               </p>
             </AnimatedItem>
 

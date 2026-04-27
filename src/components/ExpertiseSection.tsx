@@ -17,14 +17,15 @@ const ExpertiseSection = () => {
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
               <h2 id="expertise-heading" className="editorial-heading-sm">
-                Specialized legal counsel across key practice areas
+                Fields of Practice
               </h2>
             </AnimatedItem>
 
             <AnimatedItem>
               <p className="editorial-body">
-                Our lawyers are leading experts in Greek commercial law, recognised for their
-                expertise in delivering innovative customised solutions to complex legal matters.
+                We offer specialized legal counsel across a comprehensive range of practice
+                areas, combining deep academic knowledge with commercial awareness to deliver
+                strategic legal solutions tailored to the needs of each client.
               </p>
             </AnimatedItem>
           </AnimatedSection>
