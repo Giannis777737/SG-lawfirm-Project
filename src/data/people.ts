@@ -1,4 +1,4 @@
-import petrosPhoto from "@/assets/people/petros-selekos.webp";
+import petrosPhoto from "@/assets/people/petros-selekos.png";
 import angelikaPhoto from "@/assets/people/angelika-gouskou.webp";
 import ioannisPhoto from "@/assets/people/ioannis-tsionis.webp";
 import vickyPhoto from "@/assets/people/vicky-tsapara.webp";
