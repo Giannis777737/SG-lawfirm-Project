@@ -36,18 +36,18 @@ const PeopleSection = () => {
                   <li key={person.id}>
                     <Link
                       to={`/our-people#${person.id}`}
-                      className="border-b border-border py-6 first:border-t group flex gap-4 items-start"
+                      className="border-b border-border py-6 first:border-t group flex gap-6 items-start"
                       aria-label={`${person.name}, ${person.role}`}
                     >
                       {person.photo && (
                         <img
                           src={person.photo}
                           alt={person.name}
-                          className="w-14 h-14 object-cover rounded-sm shrink-0 mt-1"
+                          className="w-24 h-24 md:w-28 md:h-28 object-cover object-top rounded-sm shrink-0 mt-1"
                           loading="lazy"
                         />
                       )}
-                      <div>
+                      <div className="flex-1">
                         <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
                           {person.role}
                         </p>
