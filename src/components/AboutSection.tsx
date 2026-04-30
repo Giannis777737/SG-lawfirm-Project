@@ -36,17 +36,19 @@ const AboutSection = () => {
 
           </AnimatedSection>
 
-          <AnimatedSection className="overflow-hidden">
+          <AnimatedSection className="overflow-hidden group">
             <AnimatedItem>
-              <img
-                src={officeImage}
-                alt="Modern interior of the Selekos Gouskou law office with natural lighting"
-                className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover"
-                width={700}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="overflow-hidden w-full h-[300px] sm:h-[400px] lg:h-[600px]">
+                <img
+                  src={officeImage}
+                  alt="Modern interior of the Selekos Gouskou law office with natural lighting"
+                  className="w-full h-full object-cover animate-ken-burns motion-reduce:animate-none transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
+                  width={700}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </AnimatedItem>
           </AnimatedSection>
         </div>
