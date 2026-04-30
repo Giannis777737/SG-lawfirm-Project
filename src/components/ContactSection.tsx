@@ -71,8 +71,8 @@ const ContactSection = () => {
 
       // Send email notification via EmailJS
       await emailjs.send(
-        "service_1tuzskp",
-        "template_21ckded",
+        "service_u26bevl",
+        "template_a8cwoaw",
         {
           name: data.name,
           email: data.email,
@@ -80,7 +80,7 @@ const ContactSection = () => {
           phone: data.phone || "N/A",
           message: data.message,
         },
-        "k2S_zC0UVY_kntXZb"
+        "Bx6H2nfGVrhymSKdB"
       );
 
       toast({
