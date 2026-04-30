@@ -11,8 +11,15 @@ const PeopleSection = () => {
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
       <SectionLogo title="Our People" />
       <div className="editorial-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          <AnimatedSection>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          {/* Left column - sticky heading + intro */}
+          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+            <AnimatedItem>
+              <h2 id="people-heading" className="editorial-heading-sm">
+                Counsel &amp; Associates
+              </h2>
+            </AnimatedItem>
+
             <AnimatedItem>
               <p className="editorial-body">
                 The firm's team comprises highly qualified lawyers with international education
@@ -23,15 +30,10 @@ const PeopleSection = () => {
             </AnimatedItem>
           </AnimatedSection>
 
-          <AnimatedSection className="flex flex-col gap-8">
+          {/* Right column - team list */}
+          <AnimatedSection delay={0.2} className="flex flex-col gap-8">
             <AnimatedItem>
-              <h2 id="people-heading" className="editorial-heading-sm">
-                A highly qualified team of legal experts
-              </h2>
-            </AnimatedItem>
-
-            <AnimatedItem>
-              <ul className="flex flex-col mt-4" role="list">
+              <ul className="flex flex-col" role="list">
                 {displayPeople.map((person) => (
                   <li key={person.id}>
                     <Link
