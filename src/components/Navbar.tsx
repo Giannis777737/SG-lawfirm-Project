@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-32 md:h-36" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-24 md:h-28" role="banner">
       {/* Geometric figure flush to the top-left corner, full header height */}
       <img
         src={geoFigure}
@@ -58,7 +58,7 @@ const Navbar = () => {
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-16 md:h-20 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-12 md:h-14 w-auto brightness-0 invert" />
         </Link>
         <button
           className="text-gold-light"
@@ -67,7 +67,7 @@ const Navbar = () => {
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
         >
-          {mobileOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+          {mobileOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
         </button>
       </div>
 
