@@ -53,21 +53,22 @@ const Navbar = () => {
       />
 
       {/* Centered logo + hamburger (all viewports) */}
-      <div className="flex flex-col items-center justify-center h-full relative z-20 gap-1">
-        <Link
-          to="/"
-          aria-label="Selekos Gouskou & Co Law Offices — Home"
-        >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-12 md:h-14 w-auto brightness-0 invert" />
+      <div className="flex flex-col items-center justify-center h-full relative z-20">
+        <Link to="/" aria-label="Selekos Gouskou & Co Law Offices — Home">
+          <img
+            src={logoFull}
+            alt="Selekos Gouskou & Co Law Offices"
+            className="h-16 md:h-20 w-auto brightness-0 invert"
+          />
         </Link>
         <button
-          className="text-gold-light"
+          className="mt-2 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
         >
-          {mobileOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
+          {mobileOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
       </div>
 
