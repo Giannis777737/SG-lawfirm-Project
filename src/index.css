@@ -112,8 +112,8 @@
     --sidebar-border: 220 25% 20%;
     --sidebar-ring: 45 60% 52%;
 
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
+    --font-body: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
 
     --section-padding: 4rem;
     --content-max-width: 1400px;
