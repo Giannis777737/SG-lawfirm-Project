@@ -58,7 +58,7 @@ const Navbar = () => {
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-12 md:h-14 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-20 md:h-24 w-auto brightness-0 invert" />
         </Link>
         <button
           className="mt-2 text-gold-light"
