@@ -168,8 +168,13 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  em, i, address, cite, dfn, var {
+    font-style: normal;
   }
 
   h1, h2, h3, h4, h5, h6 {
