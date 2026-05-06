@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-24 md:h-28" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-32 md:h-36" role="banner">
       {/* Geometric figure flush to the top-left corner, full header height */}
       <img
         src={geoFigure}
@@ -53,15 +53,15 @@ const Navbar = () => {
       />
 
       {/* Centered logo + hamburger (all viewports) */}
-      <div className="flex flex-col items-center justify-center h-full relative z-20">
+      <div className="flex flex-col items-center justify-center h-full relative z-20 gap-1">
         <Link
           to="/"
           aria-label="Selekos Gouskou & Co Law Offices — Home"
         >
-          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-20 md:h-24 w-auto brightness-0 invert" />
+          <img src={logoFull} alt="Selekos Gouskou & Co Law Offices" className="h-16 md:h-20 w-auto brightness-0 invert" />
         </Link>
         <button
-          className="mt-2 text-gold-light"
+          className="text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
