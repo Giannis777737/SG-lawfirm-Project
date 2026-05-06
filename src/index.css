@@ -36,39 +36,22 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF;
 }
 
+/* Mulish — Muller-like geometric sans, self-hosted (GDPR-safe) */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: 'Mulish';
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('./assets/fonts/dm-sans-variable-latin.woff2') format('woff2');
+  src: url('./assets/fonts/mulish-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'DM Sans';
+  font-family: 'Mulish';
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400 700;
   font-display: swap;
-  src: url('./assets/fonts/dm-sans-variable-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF;
-}
-
-@font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/dm-sans-italic-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/dm-sans-italic-latin-ext.woff2') format('woff2');
+  src: url('./assets/fonts/mulish-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF;
 }
 
@@ -129,8 +112,8 @@
     --sidebar-border: 220 25% 20%;
     --sidebar-ring: 45 60% 52%;
 
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
+    --font-body: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
 
     --section-padding: 4rem;
     --content-max-width: 1400px;
@@ -169,6 +152,7 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     font-style: normal;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
