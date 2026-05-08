@@ -1,7 +1,7 @@
 import ioannisPhoto from "@/assets/people/ioannis-tsionis.png";
 import vickyPhoto from "@/assets/people/vicky-tsapara.png";
 import mariaPhoto from "@/assets/people/maria-antoniou.png";
-import dimitrisPhoto from "@/assets/people/dimitris-selekos.png";
+
 import katerinaPhoto from "@/assets/people/katerina-malliari.png";
 
 export interface Person {
@@ -102,7 +102,7 @@ export const people: Person[] = [
       "University of Athens, Faculty of Law – LL.B., 2020",
     ],
     languages: "Greek · English",
-    photo: dimitrisPhoto,
+    
   },
   {
     id: "katerina-malliari",
