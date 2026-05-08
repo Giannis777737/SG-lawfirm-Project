@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-24 md:h-28" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32" role="banner">
       {/* Geometric figure flush to the top-left corner, full header height */}
       <img
         src={geoFigure}
@@ -58,7 +58,7 @@ const Navbar = () => {
           <img
             src={logoFull}
             alt="Selekos Gouskou & Co Law Offices"
-            className="h-[72px] md:h-24 w-auto brightness-0 invert"
+            className="h-20 md:h-28 w-auto brightness-0 invert"
           />
         </Link>
         <button
