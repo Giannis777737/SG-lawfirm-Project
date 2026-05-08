@@ -58,11 +58,11 @@ const Navbar = () => {
           <img
             src={logoFull}
             alt="Selekos Gouskou & Co Law Offices"
-            className="h-20 md:h-30 w-auto brightness-0 invert"
+            className="h-16 md:h-20 w-auto brightness-0 invert"
           />
         </Link>
         <button
-          className="mt-2 text-gold-light"
+          className="mt-1 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
