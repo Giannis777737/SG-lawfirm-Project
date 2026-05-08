@@ -1,5 +1,3 @@
-import petrosPhoto from "@/assets/people/petros-selekos.png";
-import angelikaPhoto from "@/assets/people/angelika-gouskou.png";
 import ioannisPhoto from "@/assets/people/ioannis-tsionis.png";
 import vickyPhoto from "@/assets/people/vicky-tsapara.png";
 import mariaPhoto from "@/assets/people/maria-antoniou.png";
@@ -30,7 +28,6 @@ export const people: Person[] = [
     fullBio:
       "Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.",
     languages: "Greek · English · German",
-    photo: petrosPhoto,
   },
   {
     id: "angelika-gouskou",
@@ -42,7 +39,6 @@ export const people: Person[] = [
     fullBio:
       "Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.",
     languages: "Greek · English · French",
-    photo: angelikaPhoto,
   },
   {
     id: "ioannis-tsionis",
