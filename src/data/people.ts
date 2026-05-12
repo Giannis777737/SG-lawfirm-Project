@@ -107,7 +107,7 @@ export const people: Person[] = [
       "University of Athens, Faculty of Law – LL.B., 2020",
     ],
     languages: "Greek · English",
-    
+    photo: dimitrisPhoto,
   },
   {
     id: "katerina-malliari",
