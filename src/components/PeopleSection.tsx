@@ -45,7 +45,7 @@ const PeopleSection = () => {
                         <img
                           src={person.photo}
                           alt={person.name}
-                          className={`w-24 h-24 md:w-28 md:h-28 ${person.id === "petros-selekos" ? "object-contain" : "object-cover object-top"} rounded-sm shrink-0 mt-1 bg-muted`}
+                          className="w-24 h-24 md:w-28 md:h-28 object-cover object-top rounded-sm shrink-0 mt-1"
                           loading="lazy"
                         />
                       )}
