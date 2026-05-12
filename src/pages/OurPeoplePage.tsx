@@ -54,7 +54,7 @@ const OurPeoplePage = () => {
                         <img
                           src={person.photo}
                           alt={person.name}
-                          className="w-40 h-40 md:w-48 md:h-48 object-cover object-top rounded-sm"
+                          className={`w-40 h-40 md:w-48 md:h-48 ${person.id === "petros-selekos" ? "object-contain" : "object-cover object-top"} rounded-sm bg-muted`}
                           loading="lazy"
                         />
                       ) : (
