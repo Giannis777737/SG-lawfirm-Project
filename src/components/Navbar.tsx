@@ -58,7 +58,7 @@ const Navbar = () => {
           <img
             src={logoFull}
             alt="Selekos Gouskou & Co Law Offices"
-            className="h-20 md:h-24 w-auto brightness-0 invert"
+            className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
           />
         </Link>
         <button
