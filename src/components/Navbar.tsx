@@ -5,11 +5,11 @@ import logoFull from "@/assets/logo-full.png";
 import geoFigure from "@/assets/section-logo.png";
 
 const navLinks = [
-  { label: "about us", href: "/#about-us" },
-  { label: "our expertise", href: "/#areas-of-expertise" },
+  { label: "about us", href: "/about" },
+  { label: "our expertise", href: "/expertise" },
   { label: "our people", href: "/our-people" },
-  { label: "news & publications", href: "/#news" },
-  { label: "contact", href: "/#contact" },
+  { label: "news & publications", href: "/news" },
+  { label: "contact", href: "/contact" },
 ];
 
 const Navbar = () => {

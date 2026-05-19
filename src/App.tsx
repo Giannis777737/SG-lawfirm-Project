@@ -17,6 +17,10 @@ const PersonPage = lazy(() => import("./pages/PersonPage.tsx"));
 const NewsArticlePage = lazy(() => import("./pages/NewsArticlePage.tsx"));
 const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage.tsx"));
 const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage.tsx"));
+const AboutPage = lazy(() => import("./pages/AboutPage.tsx"));
+const ExpertisePage = lazy(() => import("./pages/ExpertisePage.tsx"));
+const NewsPage = lazy(() => import("./pages/NewsPage.tsx"));
+const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -33,6 +37,10 @@ const App = () => (
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/expertise" element={<ExpertisePage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
               <Route path="/our-people" element={<OurPeoplePage />} />
               <Route path="/our-people/:id" element={<PersonPage />} />
               <Route path="/news/:slug" element={<NewsArticlePage />} />
