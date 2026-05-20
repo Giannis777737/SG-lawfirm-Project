@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" preserveAspectRatio="xMidYMid meet">
   <g fill="#ffffff">
-    <!-- Left: hourglass / bowtie shape -->
-    <path d="M 20 10 L 95 10 L 25 240 L 100 240 L 100 235 L 30 235 L 100 15 L 20 15 Z"/>
-    <!-- Cleaner bowtie: two triangles meeting at center -->
-  </g>
-  <g fill="#ffffff">
-    <!-- Left hourglass -->
-    <polygon points="20,10 95,10 57,125 95,240 20,240 57,125"/>
-    <!-- Right column with curved inner edge -->
-    <path d="M 180 10 L 105 10 Q 130 125 105 240 L 180 240 Z"/>
+    <!-- Left: bowtie / hourglass — two triangles meeting at center point -->
+    <polygon points="22,8 95,8 60,125 95,242 22,242 57,125"/>
+    <!-- Right: column with curved (concave) inner edge -->
+    <path d="M 178 8 L 105 8 Q 130 125 105 242 L 178 242 Z"/>
   </g>
 </svg>
