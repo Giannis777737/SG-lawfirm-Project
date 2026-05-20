@@ -9,7 +9,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { Link } from "react-router-dom";
-
+import SectionLogo from "@/components/SectionLogo";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name.").max(100, "Name must be under 100 characters."),
@@ -101,7 +101,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="editorial-section" aria-labelledby="contact-heading">
-      
+      <SectionLogo title="Contact" />
       <div className="editorial-container">
         {/* Contact form + office info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
