@@ -1,5 +1,4 @@
 import sectionLogo from "@/assets/section-logo.png";
-import logoFull from "@/assets/logo-full.png";
 
 interface SectionLogoProps {
   /** The section name shown next to the logo, e.g. "About Us". */
@@ -8,8 +7,8 @@ interface SectionLogoProps {
 }
 
 /**
- * Full-width navy bar with the geometric figure flush-left (full height), the
- * section title beside it, and the firm logo centered.
+ * Full-width navy bar with the geometric figure flush-left (full height)
+ * and the section title beside it.
  */
 const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
   return (
@@ -27,13 +26,6 @@ const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
           {title}
         </span>
       </div>
-      <img
-        src={logoFull}
-        alt="Selekos Gouskou & Co Law Offices"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[4.5rem] md:h-[5.5rem] w-auto brightness-0 invert pointer-events-none select-none z-0"
-        loading="lazy"
-        decoding="async"
-      />
     </div>
   );
 };
