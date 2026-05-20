@@ -1,4 +1,4 @@
-import sectionLogo from "@/assets/section-logo.jpg";
+import sectionLogo from "@/assets/section-logo.png";
 import logoFull from "@/assets/logo-full.png";
 
 interface SectionLogoProps {
