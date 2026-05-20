@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
-import geoFigure from "@/assets/section-logo.svg";
+import geoFigure from "@/assets/section-logo.png";
 
 const navLinks = [
   { label: "about us", href: "/about" },
