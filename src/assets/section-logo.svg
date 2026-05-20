@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice">
-  <rect width="200" height="160" fill="#3a73a8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" preserveAspectRatio="xMidYMid meet">
   <g fill="#ffffff">
-    <!-- Left column: wider at top, tapering toward bottom with curved inner edge -->
-    <path d="M 72 28 L 96 28 Q 90 80 88 132 L 76 132 Q 70 80 72 28 Z"/>
-    <!-- Right column: mirror -->
-    <path d="M 128 28 L 104 28 Q 110 80 112 132 L 124 132 Q 130 80 128 28 Z"/>
+    <!-- Left: bowtie / hourglass — two triangles meeting at center point -->
+    <polygon points="22,8 95,8 60,125 95,242 22,242 57,125"/>
+    <!-- Right: column with curved (concave) inner edge -->
+    <path d="M 178 8 L 105 8 Q 130 125 105 242 L 178 242 Z"/>
   </g>
 </svg>
