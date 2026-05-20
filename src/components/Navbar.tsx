@@ -94,7 +94,7 @@ const Navbar = () => {
         </>
       )}
 
-      <div className="absolute left-0 right-0 bottom-0 border-b border-navy-light" aria-hidden="true" />
+      
     </header>
   );
 };
