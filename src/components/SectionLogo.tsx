@@ -12,17 +12,17 @@ interface SectionLogoProps {
  */
 const SectionLogo = ({ title, className = "" }: SectionLogoProps) => {
   return (
-    <div className={`relative w-full bg-navy text-white mb-12 h-20 md:h-24 ${className}`}>
-      <div className="flex items-stretch h-full overflow-hidden">
+    <div className={`relative w-full bg-navy text-white mb-12 h-20 md:h-24 overflow-hidden ${className}`}>
+      <div className="flex items-stretch h-full">
         <img
           src={sectionLogo}
           alt=""
           aria-hidden="true"
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-[calc(100%+14px)] w-auto select-none pointer-events-none block object-cover z-10"
+          className="w-auto select-none pointer-events-none block object-cover relative z-10 my-[-7px] h-[calc(100%+14px)]"
           loading="lazy"
           decoding="async"
         />
-        <span className="font-heading text-2xl md:text-3xl self-center leading-none relative z-10" style={{ paddingLeft: 'calc((100% + 14px) * 0 + 4.5rem)' }}>
+        <span className="font-heading text-2xl md:text-3xl self-center pl-4 leading-none relative z-10">
           {title}
         </span>
       </div>
