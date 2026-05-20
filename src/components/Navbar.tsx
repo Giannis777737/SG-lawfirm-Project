@@ -43,13 +43,13 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32 overflow-hidden" role="banner">
       {/* Geometric figure flush to the top-left corner, full header height */}
       <img
         src={geoFigure}
         alt=""
         aria-hidden="true"
-        className="absolute left-0 top-0 h-full w-auto select-none pointer-events-none block object-cover z-10"
+        className="absolute left-0 top-1/2 h-[calc(100%+14px)] w-auto -translate-y-1/2 select-none pointer-events-none block object-cover z-10"
       />
 
       {/* Centered logo + hamburger (all viewports) */}
