@@ -111,9 +111,9 @@ export const people: Person[] = [
   },
   {
     id: "katerina-malliari",
-    name: "Katerina Malliari",
+    name: "Katerina Maliari",
     initials: "KM",
-    role: "Head of IT and Administrating",
+    role: "Head of IT and Administration",
     description:
       "Oversees the firm's digital transformation initiatives and ensures seamless coordination and operational efficiency.",
     fullBio:
