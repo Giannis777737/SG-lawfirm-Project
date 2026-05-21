@@ -96,11 +96,11 @@ export const people: Person[] = [
     id: "dimitris-selekos",
     name: "Dimitris Selekos",
     initials: "DS",
-    role: "Associate · Head of Industry Regulation and Antitrust Law",
+    role: "Associate · Head of Industry Regulation and Anti–Trust Law",
     description:
-      "Specializes in Competition Law, Industrial Property Law, and Corporate Law.",
+      "Specialized in Anti-Trust Law, Industrial Property Law, Enforcement and Insolvency.",
     fullBio:
-      "Dimitris is an Associate at our firm, specializing in Competition Law, Industrial Property Law, and Corporate Law. He first joined the firm in 2020 and has since been involved in a wide range of cases, to ensure fair and responsible operators, protect consumers, employers and the environment including commercial and real estate transactions, proceedings before the Hellenic Competition Commission, and arbitration matters. Dimitris also practices litigation and advises clients on enforcement proceedings.",
+      "Dimitris is an Associate at our Law Firm. Having joined the firm in 2020 as a trainee lawyer, Dimitris has developed a comprehensive practice across a wide range of legal matters, specialized in Anti-Trust Law, Industrial Property Law, Enforcement and Insolvency. He has further contributed to numerous due diligence projects and has advised on public sector investment projects, tender/public procurement, and legislative codification initiatives. Dimitris is also active in litigation.",
     memberships: ["Athens Bar Association"],
     education: [
       "University of Athens, Faculty of Law – LL.M. in Industrial Property and Competition Law, 2023",
