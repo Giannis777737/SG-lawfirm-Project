@@ -83,7 +83,7 @@ export const people: Person[] = [
     description:
       "Expertise in EU competition law, intellectual property and cross-border transactions.",
     fullBio:
-      "Vicky first joined our law firm in 2016, and she is now a key member of our corporate law team with professional qualifications and international working experience in corporate governance. Vicky advises our firm's clients on commercial law matters, including drafting commercial agreements, and day-to-day legal compliance. She also advises on governance investment law matters; civil law cases. In addition, her practice extends to public procurement law, where she provides guidance on regulatory compliance and supports clients throughout the procurement process. She personally handles matters for a diverse range of clients, including one of the largest listed utility services providers and a manufacturer of personal hygiene products with international operations and complex client requirements, reflecting the scope and impact of her practice.",
+      "Vicky first joined our Law Firm in 2016, and she is now a key member of our corporate law team with professional qualifications and international working experience in corporate governance. Vicky advises our firm's clients on commercial law matters, including drafting commercial agreements, and day-to-day legal compliance. She also advises on governance investment law matters; civil law cases. In addition, her practice extends to public procurement law, where she provides guidance on regulatory compliance and supports clients throughout the procurement process. She personally handles matters for a diverse range of clients, including one of the largest listed utility services providers and a manufacturer of personal hygiene products with international operations and complex client requirements, reflecting the scope and impact of her practice.",
     memberships: ["Athens Bar Association"],
     education: [
       "University College of London (UCL) – LL.M. in Corporate Law, 2019",
@@ -111,9 +111,9 @@ export const people: Person[] = [
   },
   {
     id: "katerina-malliari",
-    name: "Katerina Malliari",
+    name: "Katerina Maliari",
     initials: "KM",
-    role: "Head of IT and Administrating",
+    role: "Head of IT and Administration",
     description:
       "Oversees the firm's digital transformation initiatives and ensures seamless coordination and operational efficiency.",
     fullBio:
