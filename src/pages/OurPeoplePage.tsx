@@ -88,12 +88,9 @@ const OurPeoplePage = () => {
                     </div>
 
                     <div className="flex flex-col gap-6">
-                      <Link
-                        to={`/our-people/${person.id}`}
-                        className="font-heading text-2xl md:text-3xl text-foreground hover:opacity-60 transition-opacity duration-300"
-                      >
+                      <h2 className="font-heading text-2xl md:text-3xl text-foreground">
                         {person.name}
-                      </Link>
+                      </h2>
 
                       <p className="editorial-body">{person.fullBio}</p>
 
