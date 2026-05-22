@@ -44,16 +44,15 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32" role="banner">
       {/* Geometric symbol on the left, cropped from the full logo */}
-      <div className="absolute left-3 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none z-10 h-14 w-10 md:h-16 md:w-12">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none z-10 h-20 w-16 md:h-24 md:w-20">
         <img
           src={logoFull}
           alt=""
           aria-hidden="true"
-          className="h-full w-auto max-w-none select-none block brightness-0 invert object-left object-cover"
+          className="w-full brightness-0 invert select-none block"
+          style={{ transform: "scale(1.8)", transformOrigin: "top center" }}
         />
       </div>
-
-
 
       {/* Centered logo + hamburger (all viewports) */}
       <div className="flex flex-col items-center justify-center h-full relative z-20">
@@ -93,8 +92,6 @@ const Navbar = () => {
           </nav>
         </>
       )}
-
-      
     </header>
   );
 };
