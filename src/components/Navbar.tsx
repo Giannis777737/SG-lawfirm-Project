@@ -50,7 +50,7 @@ const Navbar = () => {
           alt=""
           aria-hidden="true"
           className="w-full brightness-0 invert select-none block"
-          style={{ transform: "scale(3.2)", transformOrigin: "top center" }}
+          style={{ transform: "scale(4.0)", transformOrigin: "top center" }}
         />
       </div>
 
