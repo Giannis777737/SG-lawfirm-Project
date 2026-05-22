@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
-import geoFigure from "@/assets/section-logo.png";
 
 const navLinks = [
   { label: "about us", href: "/about" },
@@ -44,15 +43,16 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32" role="banner">
-      {/* Geometric figure flush to the top-left corner, full header height */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+      {/* Geometric symbol on the left, cropped from the full logo */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none z-10 h-16 w-16 md:h-16 md:w-20">
         <img
-          src={geoFigure}
+          src={logoFull}
           alt=""
           aria-hidden="true"
-          className="absolute left-0 top-1/2 h-[calc(100%+14px)] w-auto -translate-y-1/2 select-none block object-cover"
+          className="h-full w-auto max-w-none select-none block brightness-0 invert object-left object-cover"
         />
       </div>
+
 
 
       {/* Centered logo + hamburger (all viewports) */}
