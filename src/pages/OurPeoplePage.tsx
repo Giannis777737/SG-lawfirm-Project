@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import { people } from "@/data/people";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +11,23 @@ import { getOurPeopleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
 
 const OurPeoplePage = () => {
   useDocumentTitle("Our People");
+  const location = useLocation();
+  const { id: paramId } = useParams<{ id: string }>();
+  const targetId = paramId || location.hash.replace("#", "");
+
+  useEffect(() => {
+    if (!targetId) return;
+    const tryScroll = (attempts = 0) => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (attempts < 10) {
+        setTimeout(() => tryScroll(attempts + 1), 100);
+      }
+    };
+    tryScroll();
+  }, [targetId]);
+
   const peopleSchema = useMemo(() => getOurPeopleSchema(people), []);
   const breadcrumbSchema = useMemo(() => getBreadcrumbSchema([
     { name: "Home", url: "/" },
@@ -70,12 +88,9 @@ const OurPeoplePage = () => {
                     </div>
 
                     <div className="flex flex-col gap-6">
-                      <Link
-                        to={`/our-people/${person.id}`}
-                        className="font-heading text-2xl md:text-3xl text-foreground hover:opacity-60 transition-opacity duration-300"
-                      >
+                      <h2 className="font-heading text-2xl md:text-3xl text-foreground">
                         {person.name}
-                      </Link>
+                      </h2>
 
                       <p className="editorial-body">{person.fullBio}</p>
 

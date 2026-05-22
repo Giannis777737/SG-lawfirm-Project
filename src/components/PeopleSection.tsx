@@ -37,7 +37,7 @@ const PeopleSection = () => {
                 {displayPeople.map((person) => (
                   <li key={person.id}>
                     <Link
-                      to={`/our-people/${person.id}`}
+                      to={`/our-people#${person.id}`}
                       className="border-b border-border py-6 first:border-t group flex gap-6 items-start"
                       aria-label={`${person.name}, ${person.role}`}
                     >
