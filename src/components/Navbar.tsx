@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy text-gold-light h-28 md:h-32" role="banner">
       {/* Geometric symbol on the left, cropped from the full logo */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none z-10 h-16 w-16 md:h-16 md:w-20">
+      <div className="absolute left-3 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none z-10 h-14 w-10 md:h-16 md:w-12">
         <img
           src={logoFull}
           alt=""
