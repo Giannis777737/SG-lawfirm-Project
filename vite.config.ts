@@ -19,6 +19,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "react-hook-form", "@hookform/resolvers/zod"],
+    include: ["react", "react-dom", "react-hook-form", "@hookform/resolvers/zod", "react-ga4"],
   },
 }));
