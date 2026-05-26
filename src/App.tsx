@@ -49,6 +49,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnalyticsTracker />
         <ScrollToTop />
         <CanonicalTag />
         <PageTransition>
