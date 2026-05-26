@@ -24,6 +24,25 @@ const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
+const AnalyticsTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    if (gaId) {
+      import("react-ga4").then((ReactGA) => {
+        ReactGA.default.send({
+          hitType: "pageview",
+          page: location.pathname + location.search,
+          title: document.title,
+        });
+      });
+    }
+  }, [location]);
+
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
