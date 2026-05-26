@@ -264,7 +264,7 @@ const ContactSection = () => {
                 {mapsAllowed && mapLoaded ? (
                   <iframe
                     title="Selekos Gouskou & Co Law Offices location on Google Maps"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.2!2d23.7358!3d37.9795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3ce79b1a0d%3A0x2c9e5e0f1a3b5c7d!2sSkoufa%205%2C%20Athina%20106%2073%2C%20Greece!5e0!3m2!1sen!2sgr!4v1700000000000"
+                    src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY}&q=Skoufa+5,+Athina+10673,+Greece&zoom=16&language=en&region=GR`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
