@@ -6,7 +6,7 @@ const BASE_URL = "https://www.selekos-gouskou.gr";
 
 const orgBase = {
   "@type": "LegalService",
-  name: "Demo Company",
+  name: "Selekos-Gouskou & Co",
   url: BASE_URL,
   logo: `${BASE_URL}/favicon.png`,
   telephone: "+302107256523",
@@ -56,7 +56,7 @@ export function getNewsArticleSchema(article: NewsArticle) {
     author: orgBase,
     publisher: {
       "@type": "Organization",
-      name: "Demo Company",
+      name: "Selekos-Gouskou & Co",
       logo: { "@type": "ImageObject", url: `${BASE_URL}/favicon.png` },
     },
   };
@@ -80,7 +80,7 @@ export function getOurPeopleSchema(people: Person[]) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Our People — Demo Company",
+    name: "Our People — Selekos-Gouskou & Co",
     url: `${BASE_URL}/our-people`,
     description: "Meet our highly qualified team of legal experts.",
     mainEntity: {

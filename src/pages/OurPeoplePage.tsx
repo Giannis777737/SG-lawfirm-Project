@@ -36,8 +36,8 @@ const OurPeoplePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        description="Meet the highly qualified team behind Demo Company — attorneys with international training and deep expertise across Greek and EU law."
-        title="Our People | Demo Company"
+        description="Meet the highly qualified team behind Selekos-Gouskou & Co — attorneys with international training and deep expertise across Greek and EU law."
+        title="Our People | Selekos-Gouskou & Co"
       />
       <JsonLd data={peopleSchema} />
       <JsonLd data={breadcrumbSchema} />

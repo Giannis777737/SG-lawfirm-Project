@@ -141,7 +141,7 @@ const ContactSection = () => {
                   href="mailto:info@selekos-gouskou.gr"
                   className="font-body text-base text-foreground hover:text-muted-foreground transition-colors duration-300"
                 >
-                  info@demo-company.gr
+                  info@selekos-gouskou.gr
                 </a>
               </div>
             </AnimatedItem>
@@ -263,7 +263,7 @@ const ContactSection = () => {
               <div ref={mapRef} className="w-full h-[300px] sm:h-[400px] lg:h-[500px] bg-muted">
                 {mapsAllowed && mapLoaded ? (
                   <iframe
-                    title="Demo Company location on Google Maps"
+                    title="Selekos-Gouskou & Co location on Google Maps"
                     src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY}&q=Skoufa+5,+Athina+10673,+Greece&zoom=16&language=en&region=GR`}
                     width="100%"
                     height="100%"
