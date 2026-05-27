@@ -263,7 +263,6 @@
 
 @layer components {
   .editorial-section {
-    @apply border-b border-border;
     padding: var(--section-padding) 0;
   }
 
