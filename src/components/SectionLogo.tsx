@@ -30,7 +30,7 @@ const SectionLogo = ({ title, className = "", variant = "navy" }: SectionLogoPro
             <span className="font-heading text-sm md:text-base uppercase tracking-[0.4em] text-white">
               {title}
             </span>
-            <span className="ml-auto hidden md:block h-px w-32 bg-gold" aria-hidden="true" />
+            
           </div>
         </div>
       </div>
