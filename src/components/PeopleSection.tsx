@@ -9,7 +9,7 @@ const PeopleSection = () => {
 
   return (
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
-      <SectionLogo title="Our People" />
+      <SectionLogo title="Leadership Profiles" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - sticky heading + intro */}
