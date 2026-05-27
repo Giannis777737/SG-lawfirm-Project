@@ -7,7 +7,7 @@ const navLinks = [
   { label: "about us", href: "/about" },
   { label: "our expertise", href: "/expertise" },
   { label: "our people", href: "/our-people" },
-  { label: "news & publications", href: "/news" },
+  { label: "news & insights", href: "/news" },
   { label: "contact", href: "/contact" },
 ];
 
