@@ -68,7 +68,7 @@ const PeopleSection = () => {
 
 
           {/* Right column - team list */}
-          <AnimatedSection delay={0.2} className="flex flex-col gap-8">
+          <AnimatedSection delay={0.2} className="flex flex-col gap-8 lg:sticky lg:top-32 lg:self-start lg:max-h-[calc(100vh-10rem)]">
             <AnimatedItem>
               <ul className="flex flex-col" role="list">
                 {displayPeople.map((person) => (
