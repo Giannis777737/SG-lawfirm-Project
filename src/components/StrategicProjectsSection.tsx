@@ -16,7 +16,7 @@ const StrategicProjectsSection = () => {
   return (
     <section
       id="strategic-projects"
-      className="editorial-section bg-ivory"
+      className="editorial-section-dark"
       aria-labelledby="strategic-projects-heading"
     >
       <SectionLogo title="Strategic Projects" variant="elegant" />
