@@ -5,9 +5,9 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import SectionLogo from "@/components/SectionLogo";
 
 const PeopleSection = () => {
-  const founderIds = ["petros-selekos", "angelika-gouskou"];
-  const founders = people.filter((p) => founderIds.includes(p.id));
-  const displayPeople = people.filter((p) => !founderIds.includes(p.id)).slice(0, 5);
+  const displayPeople = people
+    .filter((p) => !["petros-selekos", "angelika-gouskou"].includes(p.id))
+    .slice(0, 5);
 
   return (
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
