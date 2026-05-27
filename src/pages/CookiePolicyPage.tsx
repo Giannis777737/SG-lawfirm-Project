@@ -9,8 +9,8 @@ const CookiePolicyPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        description="Cookie Policy of Selekos-Gouskou & Co Law Offices: which cookies we use, why we use them and how you can manage your preferences."
-        title="Cookie Policy | Selekos-Gouskou & Co Law Offices"
+        description="Cookie Policy of Demo Company: which cookies we use, why we use them and how you can manage your preferences."
+        title="Cookie Policy | Demo Company"
       />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
@@ -199,7 +199,7 @@ const CookiePolicyPage = () => {
                     href="mailto:info@selekos-gouskou.gr"
                     className="text-foreground underline"
                   >
-                    info@selekos-gouskou.gr
+                    info@demo-company.gr
                   </a>
                   .
                 </p>
