@@ -28,7 +28,7 @@ const AboutSection = () => {
 
             <AnimatedItem>
               <p className="editorial-body">
-                The firm's philosophy is based on professionalism, integrity, and continuous
+                The firm’s philosophy is based on professionalism, integrity, and continuous
                 development. We focus on building long-term relationships with our clients,
                 ensuring consistency, discretion, and efficiency in every case.
               </p>
