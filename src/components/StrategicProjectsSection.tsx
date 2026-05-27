@@ -16,10 +16,10 @@ const StrategicProjectsSection = () => {
   return (
     <section
       id="strategic-projects"
-      className="editorial-section-dark"
+      className="editorial-section"
       aria-labelledby="strategic-projects-heading"
     >
-      <SectionLogo title="Strategic Projects" variant="elegant" />
+      <SectionLogo title="Strategic Projects" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - heading */}
