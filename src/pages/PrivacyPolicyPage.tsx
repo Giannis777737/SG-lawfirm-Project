@@ -1,233 +1,196 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import MetaTags from "@/components/MetaTags";
 
 const PrivacyPolicyPage = () => {
-  useDocumentTitle("Πολιτική Απορρήτου");
+  useDocumentTitle("Privacy Policy");
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        description="Πολιτική Απορρήτου του Δικηγορικού Γραφείου Σελέκου – Γκούσκου: πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα προσωπικά σας δεδομένα σύμφωνα με τον ΓΚΠΔ."
-        title="Πολιτική Απορρήτου | Σελέκος – Γκούσκου & Συνεργάτες"
+        title="Privacy Policy | Selekos-Gouskou & Co Law Offices"
+        description="Privacy Policy of Selekos-Gouskou & Co Law Offices: how we collect, use, and safeguard your personal data in compliance with the GDPR."
       />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
         <section className="editorial-section">
           <div className="editorial-container">
             <p className="editorial-label">Legal</p>
-            <h1 className="editorial-heading mb-12">Πολιτική Απορρήτου</h1>
+            <h1 className="editorial-heading mb-12">Privacy Policy</h1>
 
             <div className="max-w-3xl flex flex-col gap-8">
               <p className="font-body text-base text-muted-foreground">
-                Το Δικηγορικό Γραφείο Selekos_Gouskou & Co («εμείς», «μας», «εμάς») δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα και να σέβεται το απόρρητό σας.
+                Selekos_Gouskou & Co Law Offices (“we”, “our”, “us”) is committed to protecting your personal data and respecting your privacy.
               </p>
 
               <p className="font-body text-base text-muted-foreground">
-                Αυτή η Πολιτική Απορρήτου εξηγεί πώς συλλέγουμε, χρησιμοποιούμε, αποθηκεύουμε και προστατεύουμε τα στοιχεία σας όταν αλληλεπιδράτε με τον ιστότοπό μας και όταν παρέχουμε τις νομικές μας υπηρεσίες.
+                This Privacy Policy explains how we collect, use, store, and safeguard your information when you interact with our website and when we provide our legal services.
               </p>
 
               <p className="font-body text-base text-muted-foreground">
-                Συμμορφωνόμαστε με τον Γενικό Κανονισμό για την Προστασία Δεδομένων (ΕΕ) 2016/679 («ΓΚΠΔ»), τον Ελληνικό Νόμο 4624/2019 και τις επαγγελματικές υποχρεώσεις που ορίζει ο Δικηγορικός Σύλλογος Ελλάδος.
+                We comply with the General Data Protection Regulation (EU) 2016/679 (“GDPR”), Greek Law 4624/2019, and the professional obligations set by the Hellenic Bar Association.
               </p>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Υπεύθυνος Επεξεργασίας Δεδομένων
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Data Controller</h2>
+                <p className="editorial-body">Selekos – Gouskou Law Office</p>
+                <p className="editorial-body">Skoufa 5-7, Athens, 10673, Attica</p>
+                <p className="editorial-body">Tel: +30 210 72 56 523</p>
                 <p className="editorial-body">
-                  Δικηγορικό Γραφείο Σελέκου – Γκούσκου
-                </p>
-                <p className="editorial-body">
-                  Σκουφά 5-7, Αθήνα, 10673, Αττική
-                </p>
-                <p className="editorial-body">
-                  Τηλ.: +30 210 72 56 523
-                </p>
-                <p className="editorial-body">
-                  Ηλεκτρονικό ταχυδρομείο:{" "}
-                  <a
-                    href="mailto:info@selekos-gouskou.gr"
-                    className="text-foreground underline"
-                  >
+                  Email:{" "}
+                  <a href="mailto:info@selekos-gouskou.gr" className="text-foreground underline">
                     info@selekos-gouskou.gr
                   </a>
                 </p>
                 <p className="editorial-body mt-2">
-                  Εάν έχετε οποιεσδήποτε ερωτήσεις σχετικά με αυτήν την Πολιτική Απορρήτου ή τις πρακτικές μας για την προστασία δεδομένων, επικοινωνήστε μαζί μας στα παραπάνω στοιχεία.
+                  If you have any questions about this Privacy Policy or our data protection practices, please contact us at the above details.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Προσωπικά Δεδομένα που Συλλέγουμε
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Personal Data We Collect</h2>
                 <p className="editorial-body">
-                  Δεν είστε υποχρεωμένοι να μας παρέχετε τα προσωπικά σας δεδομένα για να αποκτήσετε πρόσβαση σε οποιαδήποτε ενότητα του ιστότοπού μας.
+                  You are not required to provide us with your personal data to access any area of our website.
                 </p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
-                    Κατά την παροχή νομικών υπηρεσιών ή όταν επικοινωνείτε μαζί μας για νομικές συμβουλές, υποβάλλετε αίτηση για εργασία ή ζητάτε πληροφορίες σχετικά με τον ιστότοπό μας, ενδέχεται να συλλέξουμε και να επεξεργαστούμε προσωπικά δεδομένα από εσάς, συμπεριλαμβανομένων των εξής: Όνομα, διεύθυνση, αριθμό τηλεφώνου και διεύθυνση ηλεκτρονικού ταχυδρομείου.
+                    In the course of providing legal services, or when you contact us for legal advice, apply for employment, or request information about our website, we may collect and process personal data from you, including the following: Name, address, telephone number, and email address.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Πληροφορίες που παρέχετε όταν επικοινωνείτε μαζί μας μέσω φορμών, email, τηλεφώνου ή αυτοπροσώπως.
+                    Information you provide when contacting us via forms, email, phone, or in person.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Έγγραφα και λεπτομέρειες σχετικά με το νομικό σας ζήτημα.
+                    Documents and details relating to your legal matter.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Στοιχεία χρέωσης και πληρωμής.
+                    Billing and payment details.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Οποιεσδήποτε άλλες πληροφορίες που σας αφορούν.
+                    Any other information relating to you.
                   </li>
                 </ul>
                 <p className="editorial-body mt-3">
-                  Τεχνικές πληροφορίες που συλλέγονται αυτόματα, όπως διεύθυνση IP, τύπος προγράμματος περιήγησης, λειτουργικό σύστημα, πληροφορίες συσκευής, δεδομένα χρήσης ιστότοπου μέσω cookies (ανατρέξτε στην Πολιτική μας για τα Cookies).
+                  Technical information collected automatically, such as IP address, browser type, operating system, device information, website usage data through cookies (please see our Cookies Policy).
                 </p>
                 <p className="editorial-body mt-3">
-                  Ευαίσθητα προσωπικά δεδομένα (όπως δεδομένα υγείας, ποινικά μητρώα ή άλλες κατηγορίες που ορίζονται στο Άρθρο 9 του ΓΚΠΔ) όταν είναι απαραίτητα για νομικές αξιώσεις, συμμόρφωση με νομικές υποχρεώσεις ή σε σχέση με τις νομικές υπηρεσίες που παρέχουμε.
+                  Sensitive personal data (such as health data, criminal records, or other categories defined under Art. 9 GDPR) when necessary for legal claims, compliance with legal obligations, or in connection with the legal services we provide.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Σκοποί και Νομική Βάση Επεξεργασίας
-                </h2>
-                <p className="editorial-body">
-                  Επεξεργαζόμαστε τα προσωπικά σας δεδομένα για τους ακόλουθους σκοπούς:
-                </p>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Purposes and Legal Basis for Processing</h2>
+                <p className="editorial-body">We process your personal data for the following purposes:</p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
-                    Παροχή νομικών υπηρεσιών (Άρθρο 6(1)(β) ΓΚΠΔ – εκτέλεση σύμβασης).
+                    Provision of legal services (Art. 6(1)(b) GDPR – performance of a contract).
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Συμμόρφωση με τις νομικές και κανονιστικές υποχρεώσεις, συμπεριλαμβανομένων των απαιτήσεων για την καταπολέμηση της νομιμοποίησης εσόδων από παράνομες δραστηριότητες, της λογιστικής και των δικαστικών απαιτήσεων (Άρθρο 6(1)(γ) ΓΚΠΔ).
+                    Compliance with legal and regulatory obligations, including anti-money laundering, accounting, and court requirements (Art. 6(1)(c) GDPR).
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Επικοινωνία και διαχείριση υποθέσεων κατά τη διάρκεια της εκπροσώπησης.
+                    Communication and case management during the course of representation.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Ασφάλεια και αναλυτικά στοιχεία ιστότοπου (Άρθρο 6(1)(στ) ΓΚΠΔ – έννομα συμφέροντα).
+                    Website security and analytics (Art. 6(1)(f) GDPR – legitimate interests).
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Μάρκετινγκ (μόνο με τη ρητή συγκατάθεσή σας – Άρθρο 6(1)(α) ΓΚΠΔ).
+                    Marketing communications (only with your explicit consent – Art. 6(1)(a) GDPR).
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Διατήρηση Δεδομένων
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Data Retention</h2>
                 <p className="editorial-body">
-                  Διατηρούμε τα προσωπικά δεδομένα μόνο για όσο χρονικό διάστημα είναι απαραίτητο για τους σκοπούς για τους οποίους συλλέχθηκαν:
+                  We keep personal data only for as long as necessary for the purposes for which it was collected:
                 </p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
-                    Φάκελοι νομικών υποθέσεων: φυλάσσονται όπως απαιτείται από την ελληνική νομοθεσία και τους κανονισμούς του Δικηγορικού Συλλόγου (συνήθως 5–10 έτη).
+                    Legal case files: retained as required by Greek law and Bar Association regulations (usually 5–10 years).
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Υποβολές φόρμας επικοινωνίας μέσω ιστότοπου: έως 12 μήνες εάν δεν έχει συναφθεί συμβατική σχέση.
+                    Website contact form submissions: up to 12 months if no contractual relationship is formed.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Δεδομένα που υπόκεινται σε νομοθετικές υποχρεώσεις διατήρησης: για όσο διάστημα απαιτείται από την ισχύουσα νομοθεσία.
+                    Data subject to statutory retention obligations: as long as required by applicable legislation.
                   </li>
                 </ul>
                 <p className="editorial-body mt-3">
-                  Μετά τη λήξη αυτών των περιόδων, τα δεδομένα διαγράφονται με ασφάλεια ή ανωνυμοποιούνται.
+                  After expiry of these periods, data is securely deleted or anonymized.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Κοινή χρήση και μεταφορές δεδομένων
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Data Sharing and Transfers</h2>
                 <p className="editorial-body">
-                  Δεν θα αποκαλύψουμε τα προσωπικά σας δεδομένα εκτός των Δικηγορικών Γραφείων Selekos_Gouskou & Co, εκτός από τις ακόλουθες περιπτώσεις:
+                  We will not disclose your personal data outside Selekos_Gouskou & Co Law Offices, except in the following cases:
                 </p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
-                    Δικαστήρια, αρχές ή αντίδικα μέρη, όταν είναι απαραίτητο για νομική εκπροσώπηση ή όταν απαιτείται από τον νόμο.
+                    Courts, authorities, or opposing parties, when necessary for legal representation or when required by law.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Τρίτοι πάροχοι υπηρεσιών (π.χ. λογιστές, υποστήριξη IT, πάροχοι φιλοξενίας, υπηρεσίες email, πάροχοι ασφαλούς αποθήκευσης) που μας υποστηρίζουν στην παροχή των υπηρεσιών μας και δεσμεύονται από συμφωνίες εμπιστευτικότητας και προστασίας δεδομένων.
+                    Third-party service providers (e.g. accountants, IT support, hosting providers, email services, secure storage providers) who support us in delivering our services and are bound by confidentiality and data protection agreements.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Ρυθμιστικές αρχές, όταν απαιτείται από το νόμο.
+                    Regulatory bodies, when required by law.
                   </li>
                 </ul>
                 <p className="editorial-body mt-3">
-                  Δηλώνουμε ρητά ότι δεν πωλούνται ούτε ενοικιάζονται προσωπικά δεδομένα.
+                  We explicitly declare that no personal data is sold or rented.
                 </p>
                 <p className="editorial-body mt-3">
-                  Επιπλέον, καμία προσωπική ημερομηνία δεν μεταφέρεται εκτός του Ευρωπαϊκού Οικονομικού Χώρου, εκτός εάν υπάρχουν επαρκείς διασφαλίσεις (π.χ., Τυποποιημένες Συμβατικές Ρήτρες).
+                  Moreover, no personal data is transferred outside the European Economic Area unless adequate safeguards are in place (e.g., Standard Contractual Clauses).
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Ασφάλεια Δεδομένων
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Data Security</h2>
                 <p className="editorial-body">
-                  Εφαρμόζουμε κατάλληλα τεχνικά και οργανωτικά μέτρα για την προστασία των προσωπικών δεδομένων από μη εξουσιοδοτημένη πρόσβαση, αλλοίωση, αποκάλυψη ή καταστροφή, όπως:
+                  We implement appropriate technical and organizational measures to protect personal data from unauthorized access, alteration, disclosure, or destruction, including:
                 </p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
-                  <li className="font-body text-base text-muted-foreground">
-                    Κρυπτογραφημένες επικοινωνίες όπου είναι δυνατόν.
-                  </li>
-                  <li className="font-body text-base text-muted-foreground">
-                    Περιορισμένη πρόσβαση βάσει της αρχής της «ανάγκης γνώσης».
-                  </li>
-                  <li className="font-body text-base text-muted-foreground">
-                    Ασφαλή συστήματα αποθήκευσης και αντίγραφα ασφαλείας.
-                  </li>
+                  <li className="font-body text-base text-muted-foreground">Encrypted communications where possible.</li>
+                  <li className="font-body text-base text-muted-foreground">Restricted access on a need-to-know basis.</li>
+                  <li className="font-body text-base text-muted-foreground">Secure storage systems and backups.</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Τα Δικαιώματά σας
-                </h2>
-                <p className="editorial-body">
-                  Έχετε τα ακόλουθα δικαιώματα βάσει του ΓΚΠΔ:
-                </p>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Your Rights</h2>
+                <p className="editorial-body">You have the following rights under the GDPR:</p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
-                    Πρόσβαση – ζητήστε αντίγραφο των προσωπικών σας δεδομένων.
+                    Access – request a copy of your personal data.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Διόρθωση – αίτημα διόρθωσης ανακριβών ή ελλιπών δεδομένων.
+                    Rectification – request correction of inaccurate or incomplete data.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Διαγραφή – ζητήστε τη διαγραφή των δεδομένων σας, με την επιφύλαξη των νόμιμων υποχρεώσεων διατήρησης.
+                    Erasure – request deletion of your data, subject to legal retention obligations.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Περιορισμός – αίτημα περιορισμού της επεξεργασίας υπό ορισμένες συνθήκες.
+                    Restriction – request limitation of processing in certain circumstances.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Φορητότητα – ζητήστε τα δεδομένα σας σε δομημένη, κοινώς χρησιμοποιούμενη και αναγνώσιμη από μηχανήματα μορφή και διαβιβάστε τα σε άλλον οργανισμό.
+                    Portability – request your data in a structured, commonly used and machine-readable format, and have it transmitted to another organization.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Αντίρρηση – ένσταση στην επεξεργασία βάσει έννομων συμφερόντων.
+                    Objection – object to processing based on legitimate interests.
                   </li>
                   <li className="font-body text-base text-muted-foreground">
-                    Ανάκληση συγκατάθεσης – όταν η επεξεργασία βασίζεται στη συγκατάθεσή σας.
+                    Withdraw consent – where processing is based on your consent.
                   </li>
                 </ul>
                 <p className="editorial-body mt-4">
-                  Για να ασκήσετε τα δικαιώματά σας, επικοινωνήστε μαζί μας στη διεύθυνση{" "}
-                  <a
-                    href="mailto:info@selekos-gouskou.gr"
-                    className="text-foreground underline"
-                  >
+                  To exercise your rights, please contact us at{" "}
+                  <a href="mailto:info@selekos-gouskou.gr" className="text-foreground underline">
                     info@selekos-gouskou.gr
                   </a>
                   .
                 </p>
                 <p className="editorial-body mt-3">
-                  Εάν θεωρείτε ότι το Δικηγορικό Γραφείο Selekos_Gouskou & Co παραβιάζει την ισχύουσα νομοθεσία περί προστασίας δεδομένων κατά την επεξεργασία των προσωπικών σας δεδομένων, έχετε επίσης το δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (
+                  If you consider that Selekos_Gouskou & Co Law Offices violates the applicable data protection laws when processing your personal data, you also have the right to lodge a complaint with the Hellenic Data Protection Authority (
                   <a
                     href="https://www.dpa.gr/"
                     target="_blank"
@@ -241,49 +204,40 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Μπισκότα
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Cookies</h2>
                 <p className="editorial-body">
-                  Ο ιστότοπός μας χρησιμοποιεί cookies για να διασφαλίσει την ορθή λειτουργία και να βελτιώσει την εμπειρία χρήστη.
+                  Our website uses cookies to ensure proper functionality and improve user experience.
                 </p>
-                <p className="editorial-body mt-2">
-                  Για περισσότερες πληροφορίες, ανατρέξτε στην Πολιτική μας για τα Cookies.
+                <p className="editorial-body mt-3">
+                  For more information, please see our Cookies Policy.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Αλλαγές στην παρούσα Πολιτική
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Changes to this Policy</h2>
                 <p className="editorial-body">
-                  Ενδέχεται να ενημερώνουμε την παρούσα Πολιτική Απορρήτου κατά καιρούς.
+                  We may update this Privacy Policy from time to time.
                 </p>
-                <p className="editorial-body mt-2">
-                  Οι αλλαγές θα αναρτηθούν σε αυτήν τη σελίδα με αναθεωρημένη ημερομηνία «Τελευταίας ενημέρωσης».
+                <p className="editorial-body mt-3">
+                  Changes will be posted on this page with a revised “Last updated” date.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">
-                  Επαφή
-                </h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">Contact</h2>
                 <p className="editorial-body">
-                  Για οποιεσδήποτε ερωτήσεις ή αιτήματα σχετικά με την παρούσα Πολιτική Απορρήτου, επικοινωνήστε με:
+                  For any questions or requests regarding this Privacy Policy, please contact:
                 </p>
-                <p className="editorial-body mt-2">
-                  Δικηγορικά Γραφεία Selekos_Gouskou & Co
-                </p>
+                <p className="editorial-body mt-3">Selekos_Gouskou & Co Law Offices</p>
+                <p className="editorial-body">Skoufa 5-7, Athens, 10673, Attica</p>
                 <p className="editorial-body">
-                  Σκουφά 5-7, Αθήνα, 10673, Αττική
+                  Email:{" "}
+                  <a href="mailto:info@selekos-gouskou.gr" className="text-foreground underline">
+                    info@selekos-gouskou.gr
+                  </a>
                 </p>
+                <p className="editorial-body">Tel: +30 210 72 56 523</p>
               </div>
-            </div>
-
-            <div className="mt-16">
-              <Link to="/" className="editorial-link">
-                <span>←</span> Επιστροφή στην αρχική σελίδα
-              </Link>
             </div>
           </div>
         </section>
