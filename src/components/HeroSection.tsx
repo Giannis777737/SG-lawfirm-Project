@@ -29,14 +29,13 @@ const HeroSection = () => {
       <div className="editorial-container relative z-10 py-28 sm:py-36 md:py-48">
         <AnimatedSection className="flex flex-col gap-8 max-w-2xl">
           <AnimatedItem>
-            <p className="editorial-label text-gold font-semibold" aria-hidden="true">Corporate &amp; Commercial Law</p>
-          </AnimatedItem>
-
-          <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
               Selekos-Gouskou &amp; Co Law Offices
             </h1>
+          </AnimatedItem>
 
+          <AnimatedItem>
+            <p className="editorial-label text-gold font-semibold" aria-hidden="true">Corporate &amp; Commercial Law</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
