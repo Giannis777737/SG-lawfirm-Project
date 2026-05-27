@@ -38,13 +38,8 @@ const HeroSection = () => {
             </h1>
           </AnimatedItem>
 
-          <AnimatedItem>
-            <p className="editorial-body text-white/85">
-              Founded in 1998, Selekos-Gouskou & Co has established itself as a
-              dynamic and specialized firm, providing high-quality legal services across a
-              wide range of sectors.
-            </p>
-          </AnimatedItem>
+
+
 
         </AnimatedSection>
       </div>
