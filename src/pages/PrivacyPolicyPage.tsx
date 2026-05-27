@@ -20,7 +20,7 @@ const PrivacyPolicyPage = () => {
 
             <div className="max-w-3xl flex flex-col gap-8">
               <p className="font-body text-base text-muted-foreground">
-                Selekos_Gouskou & Co Law Offices (“we”, “our”, “us”) is committed to protecting your personal data and respecting your privacy.
+                Selekos-Gouskou & Co Law Offices (“we”, “our”, “us”) is committed to protecting your personal data and respecting your privacy.
               </p>
 
               <p className="font-body text-base text-muted-foreground">
@@ -33,7 +33,7 @@ const PrivacyPolicyPage = () => {
 
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">1. Data Controller</h2>
-                <p className="editorial-body">Selekos – Gouskou Law Office</p>
+                <p className="editorial-body">Selekos-Gouskou &amp; Co Law Offices</p>
                 <p className="editorial-body">Skoufa 5-7, Athens, 10673, Attica</p>
                 <p className="editorial-body">Tel: +30 210 72 56 523</p>
                 <p className="editorial-body">
@@ -123,7 +123,7 @@ const PrivacyPolicyPage = () => {
               <div>
                 <h2 className="font-heading text-2xl text-foreground mb-4">5. Data Sharing and Transfers</h2>
                 <p className="editorial-body">
-                  We will not disclose your personal data outside Selekos_Gouskou & Co Law Offices, except in the following cases:
+                  We will not disclose your personal data outside Selekos-Gouskou & Co Law Offices, except in the following cases:
                 </p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
@@ -190,7 +190,7 @@ const PrivacyPolicyPage = () => {
                   .
                 </p>
                 <p className="editorial-body mt-3">
-                  If you consider that Selekos_Gouskou & Co Law Offices violates the applicable data protection laws when processing your personal data, you also have the right to lodge a complaint with the Hellenic Data Protection Authority (
+                  If you consider that Selekos-Gouskou & Co Law Offices violates the applicable data protection laws when processing your personal data, you also have the right to lodge a complaint with the Hellenic Data Protection Authority (
                   <a
                     href="https://www.dpa.gr/"
                     target="_blank"
@@ -228,7 +228,7 @@ const PrivacyPolicyPage = () => {
                 <p className="editorial-body">
                   For any questions or requests regarding this Privacy Policy, please contact:
                 </p>
-                <p className="editorial-body mt-3">Selekos_Gouskou & Co Law Offices</p>
+                <p className="editorial-body mt-3">Selekos-Gouskou & Co Law Offices</p>
                 <p className="editorial-body">Skoufa 5-7, Athens, 10673, Attica</p>
                 <p className="editorial-body">
                   Email:{" "}
