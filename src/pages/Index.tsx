@@ -7,6 +7,7 @@ const AboutSection = lazy(() => import("@/components/AboutSection"));
 const PhilosophySection = lazy(() => import("@/components/PhilosophySection"));
 const ExpertiseSection = lazy(() => import("@/components/ExpertiseSection"));
 const StrategicProjectsSection = lazy(() => import("@/components/StrategicProjectsSection"));
+const ClientsIndustriesSection = lazy(() => import("@/components/ClientsIndustriesSection"));
 const PeopleSection = lazy(() => import("@/components/PeopleSection"));
 const NewsSection = lazy(() => import("@/components/NewsSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
