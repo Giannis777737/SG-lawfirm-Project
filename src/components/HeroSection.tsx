@@ -34,8 +34,9 @@ const HeroSection = () => {
 
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
-              Selekos-Gouskou & Co
+              Selekos &amp; Gouskou Law Offices
             </h1>
+
           </AnimatedItem>
 
 
