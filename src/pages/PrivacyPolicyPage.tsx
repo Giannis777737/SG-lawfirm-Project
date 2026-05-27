@@ -32,7 +32,7 @@ const PrivacyPolicyPage = () => {
               </p>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Data Controller</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">1. Data Controller</h2>
                 <p className="editorial-body">Selekos – Gouskou Law Office</p>
                 <p className="editorial-body">Skoufa 5-7, Athens, 10673, Attica</p>
                 <p className="editorial-body">Tel: +30 210 72 56 523</p>
