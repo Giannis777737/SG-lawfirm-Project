@@ -61,6 +61,10 @@ export default {
           light: "hsl(var(--gold-light))",
           muted: "hsl(var(--gold-muted))",
         },
+        ivory: {
+          DEFAULT: "hsl(var(--ivory))",
+          deep: "hsl(var(--ivory-deep))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
