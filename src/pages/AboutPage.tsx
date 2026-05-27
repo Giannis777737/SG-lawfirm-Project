@@ -27,7 +27,7 @@ const AboutPage = () => {
     <div className="min-h-screen bg-background">
       <MetaTags
         title="About the Firm | Selekos-Gouskou & Co"
-        description="Founded in 1998, Selekos-Gouskou & Co is a dynamic and specialized firm providing high-quality legal services across a wide range of sectors."
+        description="Founded in 1998, Selekos-Gouskou & Co Law Offices has established itself as a dynamic and specialized firm, providing high-quality legal services across a wide range of sectors. Combining deep academic knowledge with commercial awareness, the firm offers strategic legal solutions tailored to the needs of each client. Our team advises corporations, institutions, and private entities operating in both domestic and international markets. The firm's philosophy is based on professionalism, integrity, and continuous development. We focus on building long-term relationships with our clients, ensuring consistency, discretion, and efficiency in every case."
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
