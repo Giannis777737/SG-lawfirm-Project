@@ -34,7 +34,7 @@ const Footer = () => {
             <nav aria-label="Footer navigation">
               <ul className="flex flex-col gap-3" role="list">
                 <li>
-                  <Link to="/#about-us" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
+                  <Link to="/about" className="font-body text-sm font-medium text-gold-muted hover:text-gold transition-colors duration-300">
                     About Us
                   </Link>
                 </li>
