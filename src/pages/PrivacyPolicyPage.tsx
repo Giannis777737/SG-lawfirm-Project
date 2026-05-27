@@ -48,7 +48,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Personal Data We Collect</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">2. Personal Data We Collect</h2>
                 <p className="editorial-body">
                   You are not required to provide us with your personal data to access any area of our website.
                 </p>
@@ -78,7 +78,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Purposes and Legal Basis for Processing</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">3. Purposes and Legal Basis for Processing</h2>
                 <p className="editorial-body">We process your personal data for the following purposes:</p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
@@ -100,7 +100,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Data Retention</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">4. Data Retention</h2>
                 <p className="editorial-body">
                   We keep personal data only for as long as necessary for the purposes for which it was collected:
                 </p>
@@ -121,7 +121,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Data Sharing and Transfers</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">5. Data Sharing and Transfers</h2>
                 <p className="editorial-body">
                   We will not disclose your personal data outside Selekos_Gouskou & Co Law Offices, except in the following cases:
                 </p>
@@ -145,7 +145,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Data Security</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">6. Data Security</h2>
                 <p className="editorial-body">
                   We implement appropriate technical and organizational measures to protect personal data from unauthorized access, alteration, disclosure, or destruction, including:
                 </p>
@@ -157,7 +157,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Your Rights</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">7. Your Rights</h2>
                 <p className="editorial-body">You have the following rights under the GDPR:</p>
                 <ul className="list-disc list-inside flex flex-col gap-2 ml-4 mt-3">
                   <li className="font-body text-base text-muted-foreground">
@@ -204,7 +204,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Cookies</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">8. Cookies</h2>
                 <p className="editorial-body">
                   Our website uses cookies to ensure proper functionality and improve user experience.
                 </p>
@@ -214,7 +214,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Changes to this Policy</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">9. Changes to this Policy</h2>
                 <p className="editorial-body">
                   We may update this Privacy Policy from time to time.
                 </p>
@@ -224,7 +224,7 @@ const PrivacyPolicyPage = () => {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-foreground mb-4">Contact</h2>
+                <h2 className="font-heading text-2xl text-foreground mb-4">10. Contact</h2>
                 <p className="editorial-body">
                   For any questions or requests regarding this Privacy Policy, please contact:
                 </p>
