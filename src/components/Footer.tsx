@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="font-heading text-2xl font-semibold text-gold mb-4">
-              Demo Company
+              Selekos-Gouskou &amp; Co
             </h3>
             <address className="font-body text-sm font-medium text-gold-muted leading-relaxed not-italic">
-              Demo Company
+              Selekos-Gouskou &amp; Co Law Offices
               <br />
               Skoufa 5-7, Athens, 10673
               <br />
@@ -21,9 +21,10 @@ const Footer = () => {
             </address>
             <p className="font-body text-sm font-medium text-gold-muted mt-3">
               <a href="mailto:info@selekos-gouskou.gr" className="hover:text-gold transition-colors duration-300">
-                info@demo-company.gr
+                info@selekos-gouskou.gr
               </a>
             </p>
+
           </div>
 
           <div>
