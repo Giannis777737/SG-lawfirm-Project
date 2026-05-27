@@ -58,7 +58,7 @@ const NewsSection = () => {
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:opacity-60 transition-opacity duration-300">
+                    <h3 className="font-heading text-2xl text-foreground mb-3">
                       {item.title}
                     </h3>
 
