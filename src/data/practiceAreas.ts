@@ -10,117 +10,74 @@ export interface PracticeArea {
 export const practiceAreas: PracticeArea[] = [
   {
     slug: "banking-finance",
-    title: "Banking, Finance & Capital Markets",
+    title: "Banking & Finance",
     description:
-      "Greek banking, finance and capital markets law expertise: lending, takeover bids, tender offers, investment services and regulatory compliance.",
+      "Regulatory compliance, lending structures, and financial documentation.",
     content: [
-      "We have a broad range of experience in most types of financial transactions and have acted on behalf of both borrowers and lenders.",
-      "We have an excellent understanding of the commercial aspects of finance work with sound and use our experience to help solve problems, which are not ordinarily within the purview of Greek practice. Moreover, we advise on every aspect of the capital markets, including takeover bid, tender offers, and investment services or day-to-day compliance issues.",
-      "By combining our extensive expertise of the relevant industry with our business orientated and practical approach to issues, we remain at the forefront of developments as market regulations and capital flows keep evolving.",
+      "We advise on regulatory compliance, lending structures, and financial documentation. Our team provides strategic counsel to financial institutions, corporates, and investors on complex financing arrangements, regulatory requirements, and the preparation and negotiation of all relevant financial documentation.",
     ],
   },
   {
     slug: "corporate-commercial",
     title: "Corporate & Commercial Law",
     description:
-      "Greek corporate and commercial law: directors' duties, capital requirements, entity formation, shareholder agreements and cross-border transactions.",
+      "M&A, company formation, and contract management.",
     content: [
-      "Commercial and corporate law has been traditionally one of the main areas of our expertise. With our detailed and deep knowledge we advise both national and international clients with respect to issues arising from duties and liabilities of directors and administrators, capital requirements, establishment of legal entities, shareholder agreements, memorandum of understanding etc.",
-      "We proceed with every tax, legal and procedural step which is required for the establishment of Greek legal entities.",
-      "Each member of our company has the practical experience and knowledge required in order to correspond to our client's frequently complicated issues.",
+      "We provide comprehensive corporate and commercial legal services, including mergers and acquisitions, company formation and restructuring, and the management and negotiation of commercial contracts. Our expertise spans due diligence, shareholder agreements, and day-to-day corporate governance matters.",
     ],
   },
   {
     slug: "corporate-governance",
     title: "Corporate Governance",
     description:
-      "Corporate governance advisory: board composition and diversity, codes of ethics, internal investigations, conflicts of interest and regulatory compliance.",
+      "Board advisory and compliance frameworks.",
     content: [
-      "Our lawyers advise on a wide range of domestic and international governance issues, including regulation and investigations, special committees, professional negligence, crisis management, special committees, internal investigations, conflicts of interests etc. Our expertise includes advising on board and committee composition regarding board's diversity, board functions and duties, codes of ethics and every other related matter designed to comply with legal and regulatory requirements and best practices.",
-      'Ms. Angelika Gouskou is the founding member of the Corporate Governance Hub 2020. The CG Hub 2020 is a think tank where executives from Greece and abroad cooperate, interact, network, learn and develop business. Its main objective is to form a critical mass of senior executives, current or potential Board members, so as to disseminate a new culture of "conforming and performing" — a common goal rather than a sole necessity.',
+      "Our corporate governance practice advises boards and senior management on compliance frameworks, ethical standards, and best practices. We assist with board advisory, internal investigations, and the design of governance structures that meet regulatory expectations and support sustainable business growth.",
     ],
   },
   {
     slug: "eu-competition-law",
-    title: "EU, Competition Law & Anti-Trust",
+    title: "EU & Competition Law",
     description:
-      "EU and Greek competition law: mergers, cartels, abuse of dominance, antitrust disputes, state aid, public procurement and market investigations.",
+      "Antitrust matters and cross-border regulatory advice.",
     content: [
-      "We advise on all aspects of EU law, often in collaboration with Brussels-based law firms, as they affect the interests of our clients. We not only advise in relation to a particular case or transaction, but also give more general assistance in relation to developments in particular fields.",
-      "We have particular expertise with respect to the application of Greek competition (anti-trust) law to mergers, cartel and abuse of dominance/monopolisation, antitrust disputes including judicial review and private damages, compliance and counselling, sector regulation and market investigations, public procurement and competitive tendering, and state aid. We also advise on the application of EU competition law to individual agreements, mergers and acquisitions, procurement, state aid and intellectual property rights.",
-    ],
-  },
-  {
-    slug: "hotels-leisure",
-    title: "Hotels & Leisure",
-    description:
-      "Legal advisory for the Greek hotels and leisure sector since 2004, serving major hotel chains and investors across the full range of legal services.",
-    content: [
-      "We are involved in the sector since 2004 and have continuously developed our practice since then. We advise some of the largest and most prestigious hotel chains in Greece such as investors on the full range of legal services.",
+      "We advise on all aspects of EU and Greek competition law, including antitrust matters, mergers and acquisitions, cartel investigations, and abuse of dominance. Our team provides cross-border regulatory advice, often collaborating with leading Brussels-based law firms, to ensure compliance and manage risk across jurisdictions.",
     ],
   },
   {
     slug: "intellectual-property",
-    title: "Intellectual Property & Trademarks",
+    title: "Intellectual Property",
     description:
-      "IP and trademark law: patents, copyrights, designs, IP licensing, due diligence, technology agreements and internet/new media issues.",
+      "IP protection, registration, and enforcement.",
     content: [
-      "Our firm has extensive experience in advising on patent and trademark matters and the closely related fields of computer law and telecommunications. In addition to their legal training, many of our lawyers have particular expertise in the pharmaceutical, biotechnology, chemicals, petrochemicals, computers and electronics industries.",
-      "We advise on contentious and non-contentious aspects of:",
-    ],
-    listItems: [
-      "Patents",
-      "IP portfolio development counseling",
-      "IP due diligence",
-      "Drafting of IP licensing/assignment agreements copyright including piracy, technology, database and design rights",
-      "Acquisitions and divestitures of IP and technology assets",
-      "Copyrights and Designs",
-      "Computer Contracts",
-      "Technology services agreements",
-      "Internet and new media issues",
-    ],
-  },
-  {
-    slug: "litigation-arbitration",
-    title: "Litigation & Arbitration",
-    description:
-      "Litigation, arbitration and mediation services for global businesses, led by Prof. Petros Selekos with extensive institutional arbitration experience.",
-    content: [
-      "Our firm represents high value global businesses on litigation, arbitration and mediation matters.",
-      "Professor Petros Selekos, has acted as president of the Arbitral Tribunal in numerous institutional arbitrations. Under his surveillance, our team of highly qualified lawyers has participated in the arbitration procedures.",
-      "We have broad experience in corporate risk and conflict management, and our team understands the importance of finding practical commercial solutions for their clients and are committed to understand their business and objectives. This enables us to view the issues in their entirety and especially from the business point of view and to provide a high level representation combined with high-quality strategic advice on the handling of the case.",
-      "Our main priority is to resolve disputes quickly and effectively with as little disruption to business as possible – recognition of this is central to how we approach any matter.",
-    ],
-  },
-  {
-    slug: "privatization",
-    title: "Privatization",
-    description:
-      "Privatization advisory for international organisations, governments and agencies, with deep expertise in the Greek energy privatization program.",
-    content: [
-      "We advise international organisations, governments and their agencies. Over the past years we have advised the Greek government's privatization program in mainly the energy program, we are recognized as specialized in the energy field, drafting legislation and advising generally on privatization.",
+      "We offer full-spectrum intellectual property services, including the protection, registration, and enforcement of patents, trademarks, copyrights, and designs. Our team handles IP due diligence, licensing agreements, and disputes, ensuring that our clients' innovations and brands are safeguarded.",
     ],
   },
   {
     slug: "real-estate",
     title: "Real Estate",
     description:
-      "Real estate legal services: development, construction, transactions, leases, planning appeals and disputes for investors, developers and lenders.",
+      "Property acquisitions, leases, and development law.",
     content: [
-      "We provide advanced and intelligent advice that complements the way our clients work. We counsel on and participate actively in all aspects relating to the development, construction and transaction of commercial property and public works.",
-      "Our clients include investors, developers, landlords, tenants and professionals engaged in construction projects, buyers, sellers, institutional and non-institutional lenders, developers, sponsors, public and private funds general and limited partners, and preferred and subordinated equity investors. They rely on our deep experience for their investments in a wide range of real estate-related businesses and asset classes, which have included industrial, office, retail, multi-family, hotel, data center, resort, residential, senior and student housing, timber and agricultural, recreational and mixed-use properties.",
-      "We have the commercial and litigation capacity and expertise to handle a diverse range of problems including the preparation and submission of tenders, lease renewals, rent reviews, service charge disputes, planning appeals, construction disputes and professional negligence claims.",
+      "Our real estate practice covers property acquisitions, leasing, development, and construction. We advise investors, developers, and lenders on all aspects of real estate transactions, from due diligence and contract negotiation to planning appeals and dispute resolution.",
     ],
   },
   {
-    slug: "telecommunications-law",
-    title: "Telecommunication Law",
+    slug: "litigation-arbitration",
+    title: "Litigation & Arbitration",
     description:
-      "Telecommunications law: day-to-day operator advisory, commercial agreements, regulatory and licensing matters, complaints handling and litigation.",
+      "Representation before national and international courts.",
     content: [
-      "We have a wealth of experience in advising telecommunications operators on day-to-day telecoms matters and related commercial agreements and corporate affairs, in a wide variety of matters, as well as in advising operators, the State and regulators on law, policy, regulatory and licensing matters. We have an extensive expertise handling telecoms complaints, and before courts in litigation, including litigation between operators.",
-      "Our team benefits from experience acquired not only in private practice but also in-house at leading telecommunication companies and on corporate and regulatory bodies.",
-      "We provide industry-focused advice, delivered promptly and quickly, ensuring that we add value from day one.",
+      "We represent clients in litigation and arbitration before national and international courts and tribunals. Led by Prof. Petros Selekos, our team brings extensive experience in institutional arbitration, commercial disputes, and strategic conflict management, always aiming for efficient and effective resolution.",
+    ],
+  },
+  {
+    slug: "privatization",
+    title: "Privatization & Investments",
+    description:
+      "Advisory for strategic transactions and investment projects.",
+    content: [
+      "We advise on privatization and strategic investment projects, working with international organisations, governments, and investors. Our expertise includes regulatory frameworks, due diligence, and transaction structuring for complex privatization and investment mandates.",
     ],
   },
 ];
