@@ -11,52 +11,6 @@ const PeopleSection = () => {
 
   return (
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
-      {/* === Leadership Profiles === */}
-      <SectionLogo title="Leadership Profiles" />
-      <div className="editorial-container">
-        <AnimatedSection className="mb-16">
-          <AnimatedItem>
-            <h2 id="people-heading" className="editorial-heading-sm mb-12">
-              Leadership Profiles
-            </h2>
-          </AnimatedItem>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {founders.map((person) => (
-              <AnimatedItem key={person.id}>
-                <Link
-                  to={`/our-people#${person.id}`}
-                  className="flex flex-col gap-5"
-                  aria-label={`${person.name}, ${person.role}`}
-                >
-                  {person.photo && (
-                    <div className="overflow-hidden rounded-sm">
-                      <img
-                        src={person.photo}
-                        alt={person.name}
-                        className="w-full aspect-[4/5] object-cover object-top"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <div>
-                    <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                      {person.role}
-                    </p>
-                    <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3">
-                      {person.name}
-                    </h3>
-                    <p className="editorial-body">
-                      {person.fullBio}
-                    </p>
-                  </div>
-                </Link>
-              </AnimatedItem>
-            ))}
-          </div>
-        </AnimatedSection>
-      </div>
-
       {/* === Meet Our Team === */}
       <SectionLogo title="Meet Our Team" />
       <div className="editorial-container">
