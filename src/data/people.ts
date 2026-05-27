@@ -29,7 +29,7 @@ export const people: Person[] = [
     description:
       "Doctor in Law (Ph.D in Business and Commercial Law, University of Athens). Professor of Business Law at the University Law School.",
     fullBio:
-      "Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.",
+      "Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulation and strategic investment issues.",
     languages: "Greek · English · German",
     photo: petrosPhoto,
   },
