@@ -73,6 +73,8 @@ const AboutPage = () => {
                   </li>
                 </AnimatedItem>
               </ul>
+            </AnimatedSection>
+
 
             <div className="mt-16">
               <Link to="/" className="editorial-link">
