@@ -1,20 +1,19 @@
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import SectionLogo from "@/components/SectionLogo";
-import { Building2, Landmark, TrendingUp, User, Banknote, Factory, HardHat, Plane, Radio } from "lucide-react";
 
 const clients = [
-  { icon: Landmark, label: "Public Institutions" },
-  { icon: Building2, label: "Private Corporations" },
-  { icon: TrendingUp, label: "Investment Funds" },
-  { icon: User, label: "Individuals" },
+  { title: "Public Institutions", description: "Ministries, agencies and regulated bodies operating at the intersection of policy and law." },
+  { title: "Private Corporations", description: "Domestic and multinational enterprises across regulated and competitive markets." },
+  { title: "Investment Funds", description: "Institutional investors, private equity and family offices pursuing strategic mandates." },
+  { title: "Private Individuals", description: "High-net-worth clients and founders seeking discreet, considered counsel." },
 ];
 
 const sectors = [
-  { icon: Banknote, label: "Finance" },
-  { icon: Factory, label: "Manufacturing" },
-  { icon: HardHat, label: "Construction" },
-  { icon: Plane, label: "Tourism" },
-  { icon: Radio, label: "Telecommunications" },
+  "Finance & Banking",
+  "Manufacturing",
+  "Construction",
+  "Tourism & Hospitality",
+  "Telecommunications",
 ];
 
 const ClientsIndustriesSection = () => {
@@ -26,90 +25,91 @@ const ClientsIndustriesSection = () => {
     >
       <SectionLogo title="Clients & Industries" />
       <div className="editorial-container">
-        {/* Header row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20">
-          <AnimatedSection className="lg:col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          {/* Left column — sticky title */}
+          <AnimatedSection className="lg:col-span-4 flex flex-col gap-6 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
-              <span className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                — Reach
-              </span>
+              <span className="editorial-label">— Section IV</span>
             </AnimatedItem>
             <AnimatedItem>
-              <h2
-                id="clients-industries-heading"
-                className="editorial-heading-lg mt-6"
-              >
-                Clients <span className="italic font-light">&</span>
-                <br />
-                Industries
+              <h2 id="clients-industries-heading" className="editorial-heading-sm">
+                Clients & Industries
               </h2>
             </AnimatedItem>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2} className="lg:col-span-7 lg:pt-6">
             <AnimatedItem>
-              <p className="editorial-body text-lg">
-                We advise a diverse client base — from sovereign institutions to
-                private founders — across the sectors shaping the modern Greek
-                and cross-border economy.
+              <p className="editorial-body">
+                We advise a diverse client base across the sectors shaping the
+                Greek and cross-border economy.
               </p>
             </AnimatedItem>
           </AnimatedSection>
+
+          {/* Right column — content */}
+          <AnimatedSection delay={0.15} className="lg:col-span-8 flex flex-col gap-16">
+            {/* Clients */}
+            <div>
+              <AnimatedItem>
+                <div className="flex items-baseline justify-between mb-2">
+                  <span className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                    Whom we represent
+                  </span>
+                  <span className="font-body text-xs tabular-nums text-muted-foreground">
+                    01
+                  </span>
+                </div>
+              </AnimatedItem>
+              <ul className="flex flex-col" role="list">
+                {clients.map((item, i) => (
+                  <AnimatedItem key={item.title}>
+                    <li className="border-t border-border py-6 last:border-b group">
+                      <div className="grid grid-cols-12 gap-6 items-baseline">
+                        <span className="col-span-1 font-body text-xs tabular-nums text-muted-foreground pt-1">
+                          0{i + 1}
+                        </span>
+                        <h3 className="col-span-11 md:col-span-4 font-heading text-xl md:text-2xl text-foreground leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="col-span-12 md:col-span-7 font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </li>
+                  </AnimatedItem>
+                ))}
+              </ul>
+            </div>
+
+            {/* Sectors */}
+            <div>
+              <AnimatedItem>
+                <div className="flex items-baseline justify-between mb-2">
+                  <span className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                    Sectors of expertise
+                  </span>
+                  <span className="font-body text-xs tabular-nums text-muted-foreground">
+                    02
+                  </span>
+                </div>
+              </AnimatedItem>
+              <ul className="flex flex-col" role="list">
+                {sectors.map((sector, i) => (
+                  <AnimatedItem key={sector}>
+                    <li className="border-t border-border py-5 last:border-b">
+                      <div className="flex items-baseline gap-6">
+                        <span className="font-body text-xs tabular-nums text-muted-foreground w-6">
+                          0{i + 1}
+                        </span>
+                        <span className="font-heading text-lg md:text-xl text-foreground">
+                          {sector}
+                        </span>
+                      </div>
+                    </li>
+                  </AnimatedItem>
+                ))}
+              </ul>
+            </div>
+          </AnimatedSection>
         </div>
-
-        {/* Clients */}
-        <AnimatedSection className="mb-20">
-          <AnimatedItem>
-            <div className="flex items-baseline justify-between border-b border-border/40 pb-4 mb-10">
-              <span className="font-heading text-sm uppercase tracking-widest text-muted-foreground">
-                Who we represent
-              </span>
-              <span className="font-body text-xs text-muted-foreground">01 / 02</span>
-            </div>
-          </AnimatedItem>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border/30">
-            {clients.map(({ icon: Icon, label }, i) => (
-              <AnimatedItem key={label}>
-                <div className="group relative h-44 bg-background flex flex-col justify-between p-6 transition-colors duration-500 hover:bg-primary/5">
-                  <Icon
-                    className="w-7 h-7 text-primary/80 transition-transform duration-500 group-hover:-translate-y-1"
-                    strokeWidth={1.2}
-                  />
-                  <div>
-                    <span className="font-body text-[10px] text-muted-foreground tabular-nums">
-                      0{i + 1}
-                    </span>
-                    <h3 className="font-heading text-xl text-foreground leading-tight mt-1">
-                      {label}
-                    </h3>
-                  </div>
-                </div>
-              </AnimatedItem>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        {/* Sectors */}
-        <AnimatedSection>
-          <AnimatedItem>
-            <div className="flex items-baseline justify-between border-b border-border/40 pb-4 mb-10">
-              <span className="font-heading text-sm uppercase tracking-widest text-muted-foreground">
-                Sectors we serve
-              </span>
-              <span className="font-body text-xs text-muted-foreground">02 / 02</span>
-            </div>
-          </AnimatedItem>
-          <div className="flex flex-wrap gap-3">
-            {sectors.map(({ icon: Icon, label }, i) => (
-              <AnimatedItem key={label}>
-                <div className="group inline-flex items-center gap-3 border border-border/60 rounded-full pl-4 pr-6 py-3 transition-all duration-500 hover:border-primary hover:bg-primary hover:text-primary-foreground">
-                  <Icon className="w-4 h-4" strokeWidth={1.4} />
-                  <span className="font-heading text-base">{label}</span>
-                </div>
-              </AnimatedItem>
-            ))}
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   );
