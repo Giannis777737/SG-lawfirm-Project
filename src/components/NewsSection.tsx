@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import SectionLogo from "@/components/SectionLogo";
 
 const NewsSection = () => {
@@ -23,25 +22,21 @@ const NewsSection = () => {
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-16">
           {/* Left column - heading */}
-          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
-            <AnimatedItem>
-              <h2 id="news-heading" className="editorial-heading-sm">News & Insights</h2>
-            </AnimatedItem>
-          </AnimatedSection>
+          <div className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+            <h2 id="news-heading" className="editorial-heading-sm">News & Insights</h2>
+          </div>
 
           {/* Right column - intro text */}
-          <AnimatedSection delay={0.2} className="flex flex-col gap-8">
-            <AnimatedItem>
-              <p className="editorial-body">
-                The firm actively participates in conferences, academic discussions,
-                and policy initiatives. Our partners frequently publish articles on
-                corporate governance, investment law, and business regulation.
-              </p>
-            </AnimatedItem>
-          </AnimatedSection>
+          <div className="flex flex-col gap-8">
+            <p className="editorial-body">
+              The firm actively participates in conferences, academic discussions,
+              and policy initiatives. Our partners frequently publish articles on
+              corporate governance, investment law, and business regulation.
+            </p>
+          </div>
         </div>
 
-        <AnimatedSection>
+        <div>
           {isLoading ? (
             <div className="py-10 text-center text-muted-foreground">Loading…</div>
           ) : (
@@ -80,24 +75,22 @@ const NewsSection = () => {
                 );
 
                 return (
-                  <AnimatedItem key={item.slug}>
-                    <article className="py-4" role="listitem">
-                      {isExternal ? (
-                        <a {...linkProps} className="group block" aria-label={`${item.title} — ${item.date}`}>
-                          {content}
-                        </a>
-                      ) : (
-                        <Link to={`/news/${item.slug}`} className="group block" aria-label={`${item.title} — ${item.date}`}>
-                          {content}
-                        </Link>
-                      )}
-                    </article>
-                  </AnimatedItem>
+                  <article key={item.slug} className="py-4" role="listitem">
+                    {isExternal ? (
+                      <a {...linkProps} className="group block" aria-label={`${item.title} — ${item.date}`}>
+                        {content}
+                      </a>
+                    ) : (
+                      <Link to={`/news/${item.slug}`} className="group block" aria-label={`${item.title} — ${item.date}`}>
+                        {content}
+                      </Link>
+                    )}
+                  </article>
                 );
               })}
             </div>
           )}
-        </AnimatedSection>
+        </div>
       </div>
     </section>
   );
