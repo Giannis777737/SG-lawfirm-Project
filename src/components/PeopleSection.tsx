@@ -26,7 +26,7 @@ const PeopleSection = () => {
               <AnimatedItem key={person.id}>
                 <Link
                   to={`/our-people#${person.id}`}
-                  className="group flex flex-col gap-5"
+                  className="flex flex-col gap-5"
                   aria-label={`${person.name}, ${person.role}`}
                 >
                   {person.photo && (
@@ -34,7 +34,7 @@ const PeopleSection = () => {
                       <img
                         src={person.photo}
                         alt={person.name}
-                        className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                        className="w-full aspect-[4/5] object-cover object-top"
                         loading="lazy"
                       />
                     </div>
@@ -43,7 +43,7 @@ const PeopleSection = () => {
                     <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
                       {person.role}
                     </p>
-                    <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:opacity-70 transition-opacity duration-300">
+                    <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3">
                       {person.name}
                     </h3>
                     <p className="editorial-body">
@@ -91,7 +91,7 @@ const PeopleSection = () => {
                   <li key={person.id}>
                     <Link
                       to={`/our-people#${person.id}`}
-                      className="border-b border-border py-6 first:border-t group flex gap-6 items-start"
+                      className="border-b border-border py-6 first:border-t flex gap-6 items-start"
                       aria-label={`${person.name}, ${person.role}`}
                     >
                       {person.photo && (
@@ -106,7 +106,7 @@ const PeopleSection = () => {
                         <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
                           {person.role}
                         </p>
-                        <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2 group-hover:opacity-60 transition-opacity duration-300">
+                        <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2">
                           {person.name}
                         </h3>
                         <p className="font-body text-sm text-muted-foreground leading-relaxed">
