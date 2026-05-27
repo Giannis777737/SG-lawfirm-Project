@@ -69,7 +69,7 @@ const ClientsIndustriesSection = () => {
           </AnimatedItem>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border/30">
             {clients.map(({ icon: Icon, label }, i) => (
-              <AnimatedItem key={label} delay={i * 0.05}>
+              <AnimatedItem key={label}>
                 <div className="group relative h-44 bg-background flex flex-col justify-between p-6 transition-colors duration-500 hover:bg-primary/5">
                   <Icon
                     className="w-7 h-7 text-primary/80 transition-transform duration-500 group-hover:-translate-y-1"
@@ -101,7 +101,7 @@ const ClientsIndustriesSection = () => {
           </AnimatedItem>
           <div className="flex flex-wrap gap-3">
             {sectors.map(({ icon: Icon, label }, i) => (
-              <AnimatedItem key={label} delay={i * 0.05}>
+              <AnimatedItem key={label}>
                 <div className="group inline-flex items-center gap-3 border border-border/60 rounded-full pl-4 pr-6 py-3 transition-all duration-500 hover:border-primary hover:bg-primary hover:text-primary-foreground">
                   <Icon className="w-4 h-4" strokeWidth={1.4} />
                   <span className="font-heading text-base">{label}</span>

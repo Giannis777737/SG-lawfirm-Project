@@ -117,7 +117,7 @@ const StrategicProjectsSection = () => {
           </AnimatedItem>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 lg:gap-10">
             {stages.map((stage, i) => (
-              <AnimatedItem key={stage} delay={i * 0.08}>
+              <AnimatedItem key={stage}>
                 <div className="relative flex flex-col gap-4">
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-primary" />
