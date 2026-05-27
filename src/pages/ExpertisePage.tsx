@@ -10,7 +10,7 @@ const ExpertisePage = () => {
     <div className="min-h-screen bg-background">
       <MetaTags
         title="Our Expertise | Selekos-Gouskou & Co"
-        description="Specialized legal counsel across banking, corporate, competition, real estate, IP, litigation, hotels, telecommunications and more."
+        description="Specialized legal counsel across banking, corporate, competition, real estate, intellectual property, litigation, privatization and investments."
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">

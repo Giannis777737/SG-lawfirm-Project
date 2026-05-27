@@ -17,7 +17,7 @@ const AboutSection = () => {
 
             <AnimatedItem>
             <p className="editorial-body">
-                Founded in 1998, Selekos & Gouskou Law Offices has established itself as a
+                Founded in 1998, Selekos-Gouskou & Co Law Offices has established itself as a
                 dynamic niche culture Greek law firm, providing high-quality legal services across
                 a wide range of sectors. Combining deep academic knowledge with commercial
                 awareness, the firm offers strategic legal solutions tailored to the needs of each
