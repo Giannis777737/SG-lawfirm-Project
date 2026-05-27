@@ -93,11 +93,11 @@ const AboutPage = () => {
           </div>
         </section>
 
-            <div className="mt-16">
-              <Link to="/" className="editorial-link">
-                <span>←</span> Back to home page
-              </Link>
-            </div>
+        <div className="editorial-container pb-20">
+          <Link to="/" className="editorial-link">
+            <span>←</span> Back to home page
+          </Link>
+        </div>
       </main>
       <Footer />
     </div>
