@@ -17,7 +17,7 @@ const AboutSection = () => {
 
             <AnimatedItem>
             <p className="editorial-body">
-                Founded in 1998, Selekos-Gouskou & Co has established itself as a
+                Founded in 1998, Selekos & Gouskou Law Offices has established itself as a
                 dynamic and specialized firm, providing high-quality legal services across a wide
                 range of sectors. Combining deep academic knowledge with commercial awareness,
                 the firm offers strategic legal solutions tailored to the needs of each client.
@@ -28,7 +28,7 @@ const AboutSection = () => {
 
             <AnimatedItem>
               <p className="editorial-body">
-                The firm's philosophy is based on professionalism, integrity, and continuous
+                The firm’s philosophy is based on professionalism, integrity, and continuous
                 development. We focus on building long-term relationships with our clients,
                 ensuring consistency, discretion, and efficiency in every case.
               </p>
