@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
-      <div className="editorial-container relative z-10 pb-28 sm:pb-36 md:pb-48">
+      <div className="editorial-container relative z-10">
         <AnimatedSection className="flex flex-col gap-8 max-w-2xl">
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
