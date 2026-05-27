@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="font-heading text-2xl font-semibold text-gold mb-4">
-              Selekos Gouskou
+              Demo Company
             </h3>
             <address className="font-body text-sm font-medium text-gold-muted leading-relaxed not-italic">
-              Selekos-Gouskou &amp; Co Law Offices
+              Demo Company
               <br />
               Skoufa 5-7, Athens, 10673
               <br />
@@ -21,7 +21,7 @@ const Footer = () => {
             </address>
             <p className="font-body text-sm font-medium text-gold-muted mt-3">
               <a href="mailto:info@selekos-gouskou.gr" className="hover:text-gold transition-colors duration-300">
-                info@selekos-gouskou.gr
+                info@demo-company.gr
               </a>
             </p>
           </div>
@@ -87,7 +87,7 @@ const Footer = () => {
 
         <div className="border-t border-navy-light mt-16 pt-8">
           <p className="font-body text-xs font-medium text-gold-muted">
-            © {new Date().getFullYear()} Selekos-Gouskou &amp; Co Law Offices. All rights reserved.
+            © {new Date().getFullYear()} Demo Company. All rights reserved.
           </p>
         </div>
       </div>

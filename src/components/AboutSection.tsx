@@ -16,8 +16,8 @@ const AboutSection = () => {
             </AnimatedItem>
 
             <AnimatedItem>
-              <p className="editorial-body">
-                Founded in 1998, Selekos &amp; Gouskou Law Offices has established itself as a
+            <p className="editorial-body">
+                Founded in 1998, Demo Company has established itself as a
                 dynamic and specialized firm, providing high-quality legal services across a wide
                 range of sectors. Combining deep academic knowledge with commercial awareness,
                 the firm offers strategic legal solutions tailored to the needs of each client.
@@ -41,7 +41,7 @@ const AboutSection = () => {
               <div className="overflow-hidden w-full h-[300px] sm:h-[400px] lg:h-[600px]">
                 <img
                   src={officeImage}
-                  alt="Modern interior of the Selekos Gouskou law office with natural lighting"
+                  alt="Modern interior of the Demo Company law office with natural lighting"
                   className="w-full h-full object-cover animate-ken-burns motion-reduce:animate-none transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
                   width={700}
                   height={600}

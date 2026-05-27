@@ -16,12 +16,12 @@ export const newsArticles: NewsArticle[] = [
     category: "News",
     title: "Thessaloniki Summit",
     excerpt:
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit…",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit…",
     content: [
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum. She referred to the legal framework on empowering woman's entrepreneurship and woman's participation in companies' Boards of Directors, as well as to the Corporate Governance Hub.",
-      "The new Law 4688/2020, passed by the Greek parliament, aims to modernize the current legal framework by introducing new forms of tourism. The innovations introduced by the new Law were created by Silia Banou, Attorney at Law – Associate at Selekos-Gouskou & Co Law Offices.",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum. She referred to the legal framework on empowering woman's entrepreneurship and woman's participation in companies' Boards of Directors, as well as to the Corporate Governance Hub.",
+      "The new Law 4688/2020, passed by the Greek parliament, aims to modernize the current legal framework by introducing new forms of tourism. The innovations introduced by the new Law were created by Silia Banou, Attorney at Law – Associate at Demo Company.",
       "Within the next days, applications will be open for any companies wishing to take part in the Business Support Campaign led by the Hellenic Business Guarantee Fund for COVID-19, offering 7 billion € to support businesses' liquidity and financing.",
-      "A comparative table between the Guarantee Fund and the New Guarantee Fund was created by Maria Antoniou, Attorney at Law – Associate at Selekos-Gouskou & Co Law Offices.",
+      "A comparative table between the Guarantee Fund and the New Guarantee Fund was created by Maria Antoniou, Attorney at Law – Associate at Demo Company.",
     ],
   },
   {
@@ -31,9 +31,9 @@ export const newsArticles: NewsArticle[] = [
     category: "News",
     title: "Thessaloniki Summit",
     excerpt:
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit…",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit…",
     content: [
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
     ],
   },
   {
@@ -43,9 +43,9 @@ export const newsArticles: NewsArticle[] = [
     category: "News",
     title: "Thessaloniki Summit",
     excerpt:
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit…",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit…",
     content: [
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
     ],
   },
   {
@@ -55,9 +55,9 @@ export const newsArticles: NewsArticle[] = [
     category: "News",
     title: "Thessaloniki Summit",
     excerpt:
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit…",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit…",
     content: [
-      "The Managing Partner of Selekos-Gouskou & Co Law Offices Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
+      "The Managing Partner of Demo Company Angelika Gouskou, participates at Thessaloniki Summit 2020, which was organized by the Federation of Industries of Greece (SBE) in cooperation with the Delphi Economic Forum.",
     ],
   },
 ];

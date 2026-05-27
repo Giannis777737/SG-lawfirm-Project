@@ -19,8 +19,8 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        title="About the Firm | Selekos-Gouskou & Co Law Offices"
-        description="Founded in 1998, Selekos & Gouskou Law Offices is a dynamic and specialized firm providing high-quality legal services across a wide range of sectors."
+        title="About the Firm | Demo Company"
+        description="Founded in 1998, Demo Company is a dynamic and specialized firm providing high-quality legal services across a wide range of sectors."
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">

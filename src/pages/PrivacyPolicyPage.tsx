@@ -9,8 +9,8 @@ const PrivacyPolicyPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        description="Privacy Policy of Selekos-Gouskou & Co Law Offices: how we collect, use and protect personal data in compliance with the GDPR."
-        title="Privacy Policy | Selekos-Gouskou & Co Law Offices"
+        description="Privacy Policy of Demo Company: how we collect, use and protect personal data in compliance with the GDPR."
+        title="Privacy Policy | Demo Company"
       />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
@@ -29,7 +29,7 @@ const PrivacyPolicyPage = () => {
                   1. Data Controller
                 </h2>
                 <p className="editorial-body">
-                  Selekos Gouskou & Co Law Offices ("we", "us", "our"), located
+                  Demo Company ("we", "us", "our"), located
                   at Skoufa 5-7, Athens, 10673, Attica, Greece, is the data
                   controller responsible for processing your personal data in
                   accordance with the General Data Protection Regulation (EU)
@@ -41,7 +41,7 @@ const PrivacyPolicyPage = () => {
                     href="mailto:info@selekos-gouskou.gr"
                     className="text-foreground underline"
                   >
-                    info@selekos-gouskou.gr
+                    info@demo-company.gr
                   </a>
                 </p>
               </div>
@@ -195,7 +195,7 @@ const PrivacyPolicyPage = () => {
                     href="mailto:info@selekos-gouskou.gr"
                     className="text-foreground underline"
                   >
-                    info@selekos-gouskou.gr
+                    info@demo-company.gr
                   </a>
                   . We will respond within 30 days.
                 </p>
