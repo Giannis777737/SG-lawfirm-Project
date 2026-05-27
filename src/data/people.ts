@@ -29,7 +29,7 @@ export const people: Person[] = [
     description:
       "Doctor in Law (Ph.D in Business and Commercial Law, University of Athens). Professor of Business Law at the University Law School.",
     fullBio:
-      "Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.",
+      "Prof. Petros Selekos – Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.",
     languages: "Greek · English · German",
     photo: petrosPhoto,
   },
@@ -41,7 +41,7 @@ export const people: Person[] = [
     description:
       "Doctor in Law (Ph.D in Business and Commercial Law, University of Athens). Specialized in corporate and banking law.",
     fullBio:
-      "Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.",
+      "Dr. Angelika Gouskou – Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.",
     languages: "Greek · English · French",
     photo: angelikaPhoto,
   },
