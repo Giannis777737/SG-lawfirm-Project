@@ -25,7 +25,7 @@ const PracticeAreaPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <MetaTags description={area.description} title={`${area.title} | Demo Company`} />
+      <MetaTags description={area.description} title={`${area.title} | Selekos-Gouskou & Co`} />
       {serviceSchema && <JsonLd data={serviceSchema} />}
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
       <Navbar />

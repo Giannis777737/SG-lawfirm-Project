@@ -9,8 +9,8 @@ const CookiePolicyPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        description="Cookie Policy of Demo Company: which cookies we use, why we use them and how you can manage your preferences."
-        title="Cookie Policy | Demo Company"
+        description="Cookie Policy of Selekos-Gouskou & Co: which cookies we use, why we use them and how you can manage your preferences."
+        title="Cookie Policy | Selekos-Gouskou & Co"
       />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
@@ -32,7 +32,7 @@ const CookiePolicyPage = () => {
                   Cookies are small text files stored on your device when you
                   visit a website. They help the website remember your
                   preferences and understand how you interact with it. This
-                  Cookie Policy explains how Demo Company
+                  Cookie Policy explains how Selekos-Gouskou & Co
                   uses cookies in compliance with the GDPR (EU) 2016/679, the
                   ePrivacy Directive 2002/58/EC, and Greek Law 4624/2019.
                 </p>
@@ -199,7 +199,7 @@ const CookiePolicyPage = () => {
                     href="mailto:info@selekos-gouskou.gr"
                     className="text-foreground underline"
                   >
-                    info@demo-company.gr
+                    info@selekos-gouskou.gr
                   </a>
                   .
                 </p>

@@ -9,8 +9,8 @@ const NewsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        title="News & Publications | Demo Company"
-        description="Latest news, insights and publications from Demo Company."
+        title="News & Publications | Selekos-Gouskou & Co"
+        description="Latest news, insights and publications from Selekos-Gouskou & Co."
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">

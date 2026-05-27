@@ -34,13 +34,13 @@ const HeroSection = () => {
 
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
-              Demo Company
+              Selekos-Gouskou & Co
             </h1>
           </AnimatedItem>
 
           <AnimatedItem>
             <p className="editorial-body text-white/85">
-              Founded in 1998, Demo Company has established itself as a
+              Founded in 1998, Selekos-Gouskou & Co has established itself as a
               dynamic and specialized firm, providing high-quality legal services across a
               wide range of sectors.
             </p>

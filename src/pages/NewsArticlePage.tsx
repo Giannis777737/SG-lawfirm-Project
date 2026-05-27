@@ -69,7 +69,7 @@ const NewsArticlePage = () => {
     <div className="min-h-screen bg-background">
       <MetaTags
         description={article.excerpt}
-        title={`${article.title} | Demo Company`}
+        title={`${article.title} | Selekos-Gouskou & Co`}
         ogType="article"
       />
       {articleSchema && <JsonLd data={articleSchema} />}
