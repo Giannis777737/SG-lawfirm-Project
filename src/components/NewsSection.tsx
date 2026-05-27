@@ -22,7 +22,7 @@ const NewsSection = () => {
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-16">
           {/* Left column - heading */}
-          <div className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+          <div className="flex flex-col gap-8">
             <h2 id="news-heading" className="editorial-heading-sm">News & Insights</h2>
           </div>
 
