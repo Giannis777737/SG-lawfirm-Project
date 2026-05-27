@@ -107,7 +107,7 @@ const AboutPage = () => {
               <ul className="flex flex-col gap-8" role="list">
                 <AnimatedItem>
                   <li className="font-body text-base md:text-lg text-foreground leading-relaxed">
-                    <strong className="font-semibold">Prof. Petros Selekos</strong> – Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.
+                    <strong className="font-semibold">Prof. Petros Selekos</strong> – Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulation and strategic investment issues.
                   </li>
                 </AnimatedItem>
                 <AnimatedItem>
