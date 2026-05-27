@@ -11,7 +11,7 @@ const scrollToSection = (id: string) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
+    <section className="relative min-h-screen flex items-start pt-[18vh] overflow-hidden" aria-labelledby="hero-heading">
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
-      <div className="editorial-container relative z-10 py-28 sm:py-36 md:py-48">
+      <div className="editorial-container relative z-10 pb-28 sm:pb-36 md:pb-48">
         <AnimatedSection className="flex flex-col gap-8 max-w-2xl">
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
@@ -35,7 +35,7 @@ const HeroSection = () => {
           </AnimatedItem>
 
           <AnimatedItem>
-            <p className="editorial-label text-gold font-semibold" aria-hidden="true">Corporate &amp; Commercial Law</p>
+            <p className="editorial-label text-gold font-semibold text-center" aria-hidden="true">Corporate &amp; Commercial Law</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
