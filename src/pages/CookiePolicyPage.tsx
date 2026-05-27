@@ -32,7 +32,7 @@ const CookiePolicyPage = () => {
                   Cookies are small text files stored on your device when you
                   visit a website. They help the website remember your
                   preferences and understand how you interact with it. This
-                  Cookie Policy explains how Selekos Gouskou & Co Law Offices
+                  Cookie Policy explains how Demo Company
                   uses cookies in compliance with the GDPR (EU) 2016/679, the
                   ePrivacy Directive 2002/58/EC, and Greek Law 4624/2019.
                 </p>

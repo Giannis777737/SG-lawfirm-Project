@@ -9,8 +9,8 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        title="Contact | Selekos-Gouskou & Co Law Offices"
-        description="Get in touch with Selekos-Gouskou & Co Law Offices in Athens, Greece."
+        title="Contact | Demo Company"
+        description="Get in touch with Demo Company in Athens, Greece."
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
