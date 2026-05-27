@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-navy-light mt-16 pt-8">
           <p className="font-body text-xs font-medium text-gold-muted">
-            © {new Date().getFullYear()} Demo Company. All rights reserved.
+            © {new Date().getFullYear()} Selekos-Gouskou &amp; Co Law Offices. All rights reserved.
           </p>
         </div>
       </div>
