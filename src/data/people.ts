@@ -53,7 +53,7 @@ export const people: Person[] = [
     description:
       "Specialized in commercial litigation and corporate advisory with international experience.",
     fullBio:
-      "Ioannis is an Associate at our Law Firm since 2016 specializing in Civil, real estate sale, purchase, financing and development. He possesses substantial experience in litigation on real estate and a broad spectrum of civil disputes, including contractual breaches, corporate and shareholder conflicts, and tort-related claims. His practice extends to advising clients on the negotiation and drafting of commercial agreements and complex business and estate transactions. Ioannis represents clients before all levels of the Greek Courts.",
+      "Ioannis is an Associate at our Law Firm since 2016 specializing in civil law, real estate sale, purchase, financing and development. He possesses substantial experience in litigation on real estate and a broad spectrum of civil disputes, including contractual breaches, corporate and shareholder conflicts, and tort-related claims. His practice extends to advising clients on the negotiation and drafting of commercial agreements and complex business and estate transactions. Ioannis represents clients before all levels of the Greek Courts.",
     memberships: ["Athens Bar Association"],
     languages: "Greek · English",
     photo: ioannisPhoto,
