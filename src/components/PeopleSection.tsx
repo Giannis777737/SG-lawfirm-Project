@@ -57,15 +57,15 @@ const PeopleSection = () => {
         </AnimatedSection>
       </div>
 
-      {/* === Meet our Team === */}
-      <SectionLogo title="Meet our Team" />
+      {/* === Meet Our Team === */}
+      <SectionLogo title="Meet Our Team" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left - sticky heading + intro */}
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
               <h2 className="editorial-heading-sm">
-                Meet our Team
+                Meet Our Team
               </h2>
             </AnimatedItem>
             <AnimatedItem>
