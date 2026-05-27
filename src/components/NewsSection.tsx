@@ -21,9 +21,29 @@ const NewsSection = () => {
     <section id="news" className="editorial-section" aria-labelledby="news-heading">
       <SectionLogo title="News & Insights" />
       <div className="editorial-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-16">
+          {/* Left column - heading */}
+          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+            <AnimatedItem>
+              <h2 id="news-heading" className="editorial-heading-sm">News & Insights</h2>
+            </AnimatedItem>
+          </AnimatedSection>
+
+          {/* Right column - intro text */}
+          <AnimatedSection delay={0.2} className="flex flex-col gap-8">
+            <AnimatedItem>
+              <p className="editorial-body">
+                The firm actively participates in conferences, academic discussions,
+                and policy initiatives. Our partners frequently publish articles on
+                corporate governance, investment law, and business regulation.
+              </p>
+            </AnimatedItem>
+          </AnimatedSection>
+        </div>
+
         <AnimatedSection className="mb-16">
           <AnimatedItem>
-            <h2 id="news-heading" className="editorial-heading-sm">Latest Updates</h2>
+            <h3 className="editorial-heading-sm">Latest Updates</h3>
           </AnimatedItem>
         </AnimatedSection>
 
