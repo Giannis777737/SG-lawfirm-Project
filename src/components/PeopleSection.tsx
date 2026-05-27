@@ -11,17 +11,63 @@ const PeopleSection = () => {
 
   return (
     <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
+      {/* === Leadership Profiles === */}
       <SectionLogo title="Leadership Profiles" />
       <div className="editorial-container">
+        <AnimatedSection className="mb-16">
+          <AnimatedItem>
+            <h2 id="people-heading" className="editorial-heading-sm mb-12">
+              Leadership Profiles
+            </h2>
+          </AnimatedItem>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {founders.map((person) => (
+              <AnimatedItem key={person.id}>
+                <Link
+                  to={`/our-people#${person.id}`}
+                  className="group flex flex-col gap-5"
+                  aria-label={`${person.name}, ${person.role}`}
+                >
+                  {person.photo && (
+                    <div className="overflow-hidden rounded-sm">
+                      <img
+                        src={person.photo}
+                        alt={person.name}
+                        className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                      {person.role}
+                    </p>
+                    <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:opacity-70 transition-opacity duration-300">
+                      {person.name}
+                    </h3>
+                    <p className="editorial-body">
+                      {person.fullBio}
+                    </p>
+                  </div>
+                </Link>
+              </AnimatedItem>
+            ))}
+          </div>
+        </AnimatedSection>
+      </div>
+
+      {/* === Meet our Team === */}
+      <SectionLogo title="Meet our Team" />
+      <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left column - intro + founding partners */}
-          <AnimatedSection className="flex flex-col gap-10">
+          {/* Left - sticky heading + intro */}
+          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
-              <h2 id="people-heading" className="editorial-heading-sm">
+              <h2 className="editorial-heading-sm">
                 Meet our Team
               </h2>
             </AnimatedItem>
-
             <AnimatedItem>
               <p className="editorial-body">
                 The firm's team comprises highly qualified lawyers with international education
@@ -30,45 +76,15 @@ const PeopleSection = () => {
                 support and navigate complex international frameworks effectively.
               </p>
             </AnimatedItem>
-
-            <div className="flex flex-col gap-12 mt-2">
-              {founders.map((person) => (
-                <AnimatedItem key={person.id}>
-                  <Link
-                    to={`/our-people#${person.id}`}
-                    className="group flex flex-col gap-5"
-                    aria-label={`${person.name}, ${person.role}`}
-                  >
-                    {person.photo && (
-                      <div className="overflow-hidden rounded-sm">
-                        <img
-                          src={person.photo}
-                          alt={person.name}
-                          className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                    <div>
-                      <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                        {person.role}
-                      </p>
-                      <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:opacity-70 transition-opacity duration-300">
-                        {person.name}
-                      </h3>
-                      <p className="editorial-body">
-                        {person.fullBio}
-                      </p>
-                    </div>
-                  </Link>
-                </AnimatedItem>
-              ))}
-            </div>
+            <AnimatedItem>
+              <Link to="/our-people" className="editorial-link mt-2">
+                view all team members <span aria-hidden="true">→</span>
+              </Link>
+            </AnimatedItem>
           </AnimatedSection>
 
-
-          {/* Right column - team list */}
-          <AnimatedSection delay={0.2} className="flex flex-col gap-8 lg:sticky lg:top-32 lg:self-start lg:max-h-[calc(100vh-10rem)]">
+          {/* Right - team list */}
+          <AnimatedSection delay={0.2} className="flex flex-col gap-8">
             <AnimatedItem>
               <ul className="flex flex-col" role="list">
                 {displayPeople.map((person) => (
@@ -102,16 +118,11 @@ const PeopleSection = () => {
                 ))}
               </ul>
             </AnimatedItem>
-
-            <AnimatedItem>
-              <Link to="/our-people" className="editorial-link mt-4">
-                view all team members <span aria-hidden="true">→</span>
-              </Link>
-            </AnimatedItem>
           </AnimatedSection>
         </div>
       </div>
     </section>
+
   );
 };
 
