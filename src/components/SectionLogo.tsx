@@ -15,27 +15,22 @@ interface SectionLogoProps {
 const SectionLogo = ({ title, className = "", variant = "navy" }: SectionLogoProps) => {
   if (variant === "elegant") {
     return (
-      <div className={`relative w-full mb-12 ${className}`}>
+      <div className={`relative w-full mb-16 ${className}`}>
         <div className="editorial-container">
-          <div className="flex items-center gap-5 py-8 md:py-10 border-b border-gold/40">
-            <div className="relative overflow-hidden pointer-events-none h-14 w-12 md:h-16 md:w-14 shrink-0">
+          <div className="flex items-center gap-6 py-10 md:py-14 border-b border-gold/40">
+            <div className="relative overflow-hidden pointer-events-none h-16 w-14 md:h-20 md:w-16 shrink-0">
               <img
                 src={logoFull}
                 alt=""
                 aria-hidden="true"
-                className="w-full select-none block"
-                style={{
-                  transform: "scale(4.0)",
-                  transformOrigin: "top center",
-                  filter:
-                    "brightness(0) saturate(100%) invert(13%) sepia(28%) saturate(1800%) hue-rotate(185deg) brightness(95%) contrast(95%)",
-                }}
+                className="w-full brightness-0 invert select-none block"
+                style={{ transform: "scale(4.0)", transformOrigin: "top center" }}
               />
             </div>
-            <span className="font-heading text-xs md:text-sm uppercase tracking-[0.35em] text-navy/80">
+            <span className="font-heading text-sm md:text-base uppercase tracking-[0.4em] text-white">
               {title}
             </span>
-            <span className="ml-auto hidden md:block h-px w-24 bg-gold/50" aria-hidden="true" />
+            <span className="ml-auto hidden md:block h-px w-32 bg-gold" aria-hidden="true" />
           </div>
         </div>
       </div>
