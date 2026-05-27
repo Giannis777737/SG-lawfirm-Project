@@ -43,16 +43,22 @@ const ExpertiseSection = () => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4 flex-1">
                           <Scale
                             size={14}
-                            className="text-gold/60 shrink-0 group-hover:text-gold transition-colors duration-300"
+                            className="text-gold/60 shrink-0 mt-1.5 group-hover:text-gold transition-colors duration-300"
                             aria-hidden="true"
                           />
-                          <span className="font-body text-base md:text-lg text-foreground group-hover:text-gold transition-colors duration-300">
-                            {area.title}
-                          </span>
+                          <div className="flex flex-col gap-1">
+                            <span className="font-body text-base md:text-lg text-foreground group-hover:text-gold transition-colors duration-300">
+                              {area.title}
+                            </span>
+                            <span className="font-body text-sm text-muted-foreground">
+                              {area.description}
+                            </span>
+                          </div>
                         </div>
+
                         <ChevronRight
                           size={16}
                           className={`text-gold shrink-0 transition-all duration-300 ${
