@@ -10,7 +10,7 @@ const PeopleSection = () => {
     .slice(0, 5);
 
   return (
-    <section id="our-people" className="editorial-section" aria-labelledby="people-heading">
+    <section id="our-people" className="editorial-section">
       {/* === Meet Our Team === */}
       <SectionLogo title="Meet Our Team" />
       <div className="editorial-container">
