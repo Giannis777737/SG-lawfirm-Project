@@ -5,11 +5,11 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 import MetaTags from "@/components/MetaTags";
 
 const NewsPage = () => {
-  useDocumentTitle("News & Publications");
+  useDocumentTitle("News & Insights");
   return (
     <div className="min-h-screen bg-background">
       <MetaTags
-        title="News & Publications | Selekos-Gouskou & Co"
+        title="News & Insights | Selekos-Gouskou & Co"
         description="Latest news, insights and publications from Selekos-Gouskou & Co."
       />
       <Navbar />

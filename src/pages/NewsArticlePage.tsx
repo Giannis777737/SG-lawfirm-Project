@@ -42,7 +42,7 @@ const NewsArticlePage = () => {
       articleForSchema
         ? getBreadcrumbSchema([
             { name: "Home", url: "/" },
-            { name: "News & Publications", url: "/#news" },
+            { name: "News & Insights", url: "/#news" },
             { name: articleForSchema.title, url: `/news/${articleForSchema.slug}` },
           ])
         : null,
@@ -82,7 +82,7 @@ const NewsArticlePage = () => {
               to="/#news"
               className="editorial-link mb-12 inline-flex"
             >
-              <span>←</span> Back to News & Publications
+              <span>←</span> Back to News & Insights
             </Link>
 
             <div className="flex items-center gap-4 mb-6">
