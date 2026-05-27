@@ -111,7 +111,7 @@ export const people: Person[] = [
   },
   {
     id: "katerina-malliari",
-    name: "Katerina Maliari",
+    name: "Katerina Malliari",
     initials: "KM",
     role: "Head of IT and Administration",
     description:
