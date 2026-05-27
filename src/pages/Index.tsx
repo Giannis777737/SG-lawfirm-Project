@@ -5,6 +5,7 @@ import NewsSection from "@/components/NewsSection";
 
 // Lazy load below-fold sections
 const AboutSection = lazy(() => import("@/components/AboutSection"));
+const IntroSection = lazy(() => import("@/components/IntroSection"));
 const PhilosophySection = lazy(() => import("@/components/PhilosophySection"));
 const ExpertiseSection = lazy(() => import("@/components/ExpertiseSection"));
 const StrategicProjectsSection = lazy(() => import("@/components/StrategicProjectsSection"));
@@ -24,6 +25,9 @@ const Index = () => {
       <Navbar />
       <main id="main-content" role="main">
         <HeroSection />
+        <Suspense fallback={<SectionFallback />}>
+          <IntroSection />
+        </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <AboutSection />
         </Suspense>
