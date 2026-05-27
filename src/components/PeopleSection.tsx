@@ -16,7 +16,7 @@ const PeopleSection = () => {
           <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
             <AnimatedItem>
               <h2 id="people-heading" className="editorial-heading-sm">
-                The Team
+                Leadership Profiles
               </h2>
             </AnimatedItem>
 
