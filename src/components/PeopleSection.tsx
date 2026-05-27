@@ -6,6 +6,7 @@ import SectionLogo from "@/components/SectionLogo";
 
 const PeopleSection = () => {
   const founderIds = ["petros-selekos", "angelika-gouskou"];
+  const founders = people.filter((p) => founderIds.includes(p.id));
   const displayPeople = people.filter((p) => !founderIds.includes(p.id)).slice(0, 5);
 
   return (
@@ -13,8 +14,8 @@ const PeopleSection = () => {
       <SectionLogo title="Leadership Profiles" />
       <div className="editorial-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left column - sticky heading + intro */}
-          <AnimatedSection className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
+          {/* Left column - intro + founding partners */}
+          <AnimatedSection className="flex flex-col gap-10">
             <AnimatedItem>
               <h2 id="people-heading" className="editorial-heading-sm">
                 Meet our Team
@@ -30,23 +31,41 @@ const PeopleSection = () => {
               </p>
             </AnimatedItem>
 
-            <AnimatedItem>
-              <ul className="flex flex-col gap-6 mt-2" role="list">
-                <li className="flex gap-4">
-                  <span className="font-heading text-primary text-xl leading-none mt-1" aria-hidden="true">•</span>
-                  <p className="editorial-body">
-                    <span className="font-heading text-foreground">Prof. Petros Selekos</span> – Founding Partner and Professor of Business Law at the University (DuTh). He specializes in corporate, commercial, and antitrust law and has extensive experience advising on energy regulatory and strategic investments issues.
-                  </p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="font-heading text-primary text-xl leading-none mt-1" aria-hidden="true">•</span>
-                  <p className="editorial-body">
-                    <span className="font-heading text-foreground">Dr. Angelika Gouskou</span> – Founding Partner with a Ph.D. in Business and Commercial Law. She focuses on corporate governance, commercial transactions, IPOs and privatization frameworks, combining academic rigor with practical expertise.
-                  </p>
-                </li>
-              </ul>
-            </AnimatedItem>
+            <div className="flex flex-col gap-12 mt-2">
+              {founders.map((person) => (
+                <AnimatedItem key={person.id}>
+                  <Link
+                    to={`/our-people#${person.id}`}
+                    className="group flex flex-col gap-5"
+                    aria-label={`${person.name}, ${person.role}`}
+                  >
+                    {person.photo && (
+                      <div className="overflow-hidden rounded-sm">
+                        <img
+                          src={person.photo}
+                          alt={person.name}
+                          className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                        {person.role}
+                      </p>
+                      <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:opacity-70 transition-opacity duration-300">
+                        {person.name}
+                      </h3>
+                      <p className="editorial-body">
+                        {person.fullBio}
+                      </p>
+                    </div>
+                  </Link>
+                </AnimatedItem>
+              ))}
+            </div>
           </AnimatedSection>
+
 
           {/* Right column - team list */}
           <AnimatedSection delay={0.2} className="flex flex-col gap-8">
