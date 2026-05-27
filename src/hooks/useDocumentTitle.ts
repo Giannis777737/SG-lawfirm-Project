@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE_TITLE = "Selekos-Gouskou & Co Law Offices";
+const BASE_TITLE = "Demo Company";
 
 /**
  * Sets document.title on mount and restores the base title on unmount.
