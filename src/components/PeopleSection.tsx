@@ -5,9 +5,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import SectionLogo from "@/components/SectionLogo";
 
 const PeopleSection = () => {
-  const displayPeople = people
-    .filter((p) => !["petros-selekos", "angelika-gouskou"].includes(p.id))
-    .slice(0, 5);
+  const displayPeople = people;
 
   return (
     <section id="our-people" className="editorial-section">
