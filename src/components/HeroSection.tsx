@@ -35,7 +35,7 @@ const HeroSection = () => {
           </AnimatedItem>
 
           <AnimatedItem>
-            <p className="editorial-label text-gold font-semibold text-center" aria-hidden="true">Corporate &amp; Commercial Law</p>
+            <p className="editorial-label text-gold font-semibold text-center">Corporate &amp; Commercial Law</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
