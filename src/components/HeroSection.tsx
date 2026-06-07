@@ -31,7 +31,7 @@ const HeroSection = () => {
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
               <span className="block">Selekos – Gouskou &amp; Co</span>
-              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2">Law Offices</span>
+              <span className="block text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2">Law Offices</span>
             </h1>
           </AnimatedItem>
 
