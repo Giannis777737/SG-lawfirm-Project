@@ -9,8 +9,8 @@ const NewsSection = () => {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("news_articles")
-        .select("slug, date, iso_date, category, title, excerpt, external_url")
-        .order("iso_date", { ascending: false });
+        .select("slug, date, iso_date, category, title, excerpt, external_url, link_label, sort_order")
+        .order("sort_order", { ascending: true });
       if (error) throw error;
       return data;
     },
@@ -68,7 +68,7 @@ const NewsSection = () => {
 
                     {isExternal && (
                       <span className="inline-flex items-center gap-1 mt-3 font-body text-xs text-muted-foreground">
-                        ↗ External article
+                        ↗ {item.link_label || "External article"}
                       </span>
                     )}
                   </>
