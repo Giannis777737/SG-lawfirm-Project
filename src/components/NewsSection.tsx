@@ -53,8 +53,33 @@ const NewsSection = () => {
                   ? { href: item.external_url!, target: "_blank" as const, rel: "noopener noreferrer" }
                   : {};
 
+                const ytId = getYouTubeId(item.youtube_url);
+                const thumb = ytId
+                  ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`
+                  : item.image_urls && item.image_urls.length > 0
+                  ? item.image_urls[0]
+                  : null;
+
                 const content = (
                   <>
+                    {thumb && (
+                      <div className="relative mb-4 overflow-hidden aspect-video bg-muted">
+                        <img
+                          src={thumb}
+                          alt={item.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        {ytId && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center">
+                              <span className="ml-1 border-y-[10px] border-y-transparent border-l-[16px] border-l-foreground" aria-hidden="true" />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
                     <div className="flex items-center gap-4 mb-4">
                       <time className="font-body text-xs text-muted-foreground" dateTime={item.iso_date}>
                         {item.date}
