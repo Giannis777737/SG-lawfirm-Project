@@ -50,11 +50,13 @@ export type Database = {
           excerpt: string
           external_url: string | null
           id: string
+          image_urls: string[]
           iso_date: string
           link_label: string | null
           slug: string
           sort_order: number
           title: string
+          youtube_url: string | null
         }
         Insert: {
           category?: string
@@ -64,11 +66,13 @@ export type Database = {
           excerpt: string
           external_url?: string | null
           id?: string
+          image_urls?: string[]
           iso_date: string
           link_label?: string | null
           slug: string
           sort_order?: number
           title: string
+          youtube_url?: string | null
         }
         Update: {
           category?: string
@@ -78,11 +82,13 @@ export type Database = {
           excerpt?: string
           external_url?: string | null
           id?: string
+          image_urls?: string[]
           iso_date?: string
           link_label?: string | null
           slug?: string
           sort_order?: number
           title?: string
+          youtube_url?: string | null
         }
         Relationships: []
       }
