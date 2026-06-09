@@ -49,7 +49,8 @@ const NewsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" role="list">
               {newsArticles.map((item) => {
                 const hasGallery = (item.image_urls && item.image_urls.length > 0) || !!item.youtube_url;
-                const isExternal = !!item.external_url && !hasGallery;
+                const forceInternal = item.slug === "cghub-mononews-2019";
+                const isExternal = !!item.external_url && !hasGallery && !forceInternal;
                 const linkProps = isExternal
                   ? { href: item.external_url!, target: "_blank" as const, rel: "noopener noreferrer" }
                   : {};

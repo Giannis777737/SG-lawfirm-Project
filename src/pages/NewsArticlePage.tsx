@@ -136,34 +136,33 @@ const NewsArticlePage = () => {
                       </figcaption>
                     </figure>
                   ))}
-
-                  {article.external_url && (
-                    <div className="mt-2">
-                      <a
-                        href={article.external_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
-                      >
-                        Press Release <span aria-hidden="true">↗</span>
-                      </a>
-                    </div>
-                  )}
-
-                  {article.slug === "esed-workshop-2019" && (
-                    <div className="mt-4">
-                      <a
-                        href="https://www.cghub.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
-                      >
-                        Visit the website of CGHub <span aria-hidden="true">↗</span>
-                      </a>
-                    </div>
-                  )}
                 </div>
               )}
+
+              <div className="mt-8 flex flex-col items-start gap-4">
+                {article.external_url && (
+                  <a
+                    href={article.external_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                  >
+                    {article.link_label || "Press Release"} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+
+                {article.slug === "cghub-mononews-2019" && (
+                  <a
+                    href="https://www.cghub.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                  >
+                    Visit the website of CGHub <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
+
             </div>
 
             <div className="mt-16">
