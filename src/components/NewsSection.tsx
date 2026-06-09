@@ -68,7 +68,7 @@ const NewsSection = () => {
 
                     {isExternal && (
                       <span className="inline-flex items-center gap-1 mt-3 font-body text-xs text-muted-foreground">
-                        ↗ External article
+                        ↗ {item.link_label || "External article"}
                       </span>
                     )}
                   </>
