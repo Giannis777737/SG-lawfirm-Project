@@ -102,6 +102,39 @@ const NewsArticlePage = () => {
                   {paragraph}
                 </p>
               ))}
+
+              {article.youtube_url && (() => {
+                const m = article.youtube_url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+                const id = m ? m[1] : null;
+                if (!id) return null;
+                return (
+                  <div className="mt-4 aspect-video w-full overflow-hidden bg-muted">
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${id}`}
+                      title={article.title}
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full border-0"
+                    />
+                  </div>
+                );
+              })()}
+
+              {article.image_urls && article.image_urls.length > 0 && (
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {article.image_urls.map((url, i) => (
+                    <figure key={i} className="overflow-hidden bg-muted">
+                      <img
+                        src={url}
+                        alt={`${article.title} – photo ${i + 1}`}
+                        loading="lazy"
+                        className="w-full h-auto object-cover"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="mt-16">
