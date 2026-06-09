@@ -122,7 +122,7 @@ const NewsArticlePage = () => {
               })()}
 
               {article.image_urls && article.image_urls.length > 0 && (
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="mt-8 flex flex-col gap-6">
                   {article.image_urls.map((url, i) => (
                     <figure key={i} className="overflow-hidden bg-muted">
                       <img
@@ -131,8 +131,24 @@ const NewsArticlePage = () => {
                         loading="lazy"
                         className="w-full h-auto object-cover"
                       />
+                      <figcaption className="px-4 py-3 font-body text-xs uppercase tracking-widest text-muted-foreground border-t border-border/40">
+                        Angelika Gouskou participated at ESED Workshop — 03.09.2019
+                      </figcaption>
                     </figure>
                   ))}
+
+                  {article.external_url && (
+                    <div className="mt-2">
+                      <a
+                        href={article.external_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                      >
+                        Press Release <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
