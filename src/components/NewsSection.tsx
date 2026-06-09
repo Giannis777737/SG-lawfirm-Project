@@ -9,12 +9,18 @@ const NewsSection = () => {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("news_articles")
-        .select("slug, date, iso_date, category, title, excerpt, external_url, link_label, sort_order")
+        .select("slug, date, iso_date, category, title, excerpt, external_url, link_label, sort_order, youtube_url, image_urls")
         .order("sort_order", { ascending: true });
       if (error) throw error;
       return data;
     },
   });
+
+  const getYouTubeId = (url?: string | null) => {
+    if (!url) return null;
+    const m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : null;
+  };
 
   return (
     <section id="news" className="editorial-section" aria-labelledby="news-heading">
