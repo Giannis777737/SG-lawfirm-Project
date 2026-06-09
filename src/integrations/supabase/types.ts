@@ -51,7 +51,9 @@ export type Database = {
           external_url: string | null
           id: string
           iso_date: string
+          link_label: string | null
           slug: string
+          sort_order: number
           title: string
         }
         Insert: {
@@ -63,7 +65,9 @@ export type Database = {
           external_url?: string | null
           id?: string
           iso_date: string
+          link_label?: string | null
           slug: string
+          sort_order?: number
           title: string
         }
         Update: {
@@ -75,7 +79,9 @@ export type Database = {
           external_url?: string | null
           id?: string
           iso_date?: string
+          link_label?: string | null
           slug?: string
+          sort_order?: number
           title?: string
         }
         Relationships: []
