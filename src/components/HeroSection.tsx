@@ -27,16 +27,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
       <div className="editorial-container relative z-10 w-full">
-        <AnimatedSection className="flex flex-col gap-6 max-w-4xl">
+        <AnimatedSection className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
               <span className="block">Selekos – Gouskou &amp; Co</span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 pl-[18%]">Law Offices</span>
+              <span className="block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Law Offices</span>
             </h1>
           </AnimatedItem>
 
           <AnimatedItem>
-            <p className="editorial-label text-gold font-semibold tracking-[0.3em] pl-[10%]">BUSINESS LAWYER OFFICE</p>
+            <p className="editorial-label text-gold font-semibold tracking-[0.3em]">BUSINESS LAWYER OFFICE</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
