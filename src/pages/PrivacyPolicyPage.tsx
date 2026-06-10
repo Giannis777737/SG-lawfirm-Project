@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import MetaTags from "@/components/MetaTags";
+import { Link } from "react-router-dom";
 
 const PrivacyPolicyPage = () => {
   useDocumentTitle("Privacy Policy");
@@ -241,6 +242,11 @@ const PrivacyPolicyPage = () => {
             </div>
           </div>
         </section>
+        <div className="editorial-container pb-20">
+          <Link to="/" className="editorial-link">
+            <span>←</span> Back to home page
+          </Link>
+        </div>
       </main>
       <Footer />
     </div>

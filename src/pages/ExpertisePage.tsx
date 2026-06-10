@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import MetaTags from "@/components/MetaTags";
+import { Link } from "react-router-dom";
 
 const ExpertisePage = () => {
   useDocumentTitle("Our Expertise");
@@ -15,6 +16,11 @@ const ExpertisePage = () => {
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
         <ExpertiseSection />
+        <div className="editorial-container pb-20">
+          <Link to="/" className="editorial-link">
+            <span>←</span> Back to home page
+          </Link>
+        </div>
       </main>
       <Footer />
     </div>
