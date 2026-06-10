@@ -31,6 +31,11 @@ const AboutPage = () => {
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
+        <div className="editorial-container pt-4">
+          <Link to="/#about-us" className="editorial-link">
+            <span>←</span> Back to About on home
+          </Link>
+        </div>
         <AboutSection />
 
         <section className="editorial-section" aria-labelledby="philosophy-heading">

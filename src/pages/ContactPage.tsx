@@ -15,6 +15,11 @@ const ContactPage = () => {
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
+        <div className="editorial-container pt-4">
+          <Link to="/#contact" className="editorial-link">
+            <span>←</span> Back to Contact on home
+          </Link>
+        </div>
         <ContactSection />
         <div className="editorial-container pb-20">
           <Link to="/" className="editorial-link">

@@ -15,6 +15,11 @@ const ExpertisePage = () => {
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
+        <div className="editorial-container pt-4">
+          <Link to="/#areas-of-expertise" className="editorial-link">
+            <span>←</span> Back to Areas of Expertise on home
+          </Link>
+        </div>
         <ExpertiseSection />
         <div className="editorial-container pb-20">
           <Link to="/" className="editorial-link">
