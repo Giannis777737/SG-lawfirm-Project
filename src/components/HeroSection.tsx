@@ -11,7 +11,7 @@ const scrollToSection = (id: string) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
+    <section className="relative min-h-screen flex items-end pb-[14vh] overflow-hidden" aria-labelledby="hero-heading">
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
