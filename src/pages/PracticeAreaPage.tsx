@@ -33,7 +33,7 @@ const PracticeAreaPage = () => {
         <section className="editorial-section">
           <div className="editorial-container">
             <nav aria-label="Breadcrumb" className="mb-12 flex flex-wrap items-center gap-x-4 gap-y-2">
-              <Link to="/expertise" className="editorial-link inline-flex">
+              <Link to="/#areas-of-expertise" className="editorial-link inline-flex">
                 <span>←</span> Back to Areas of Expertise
               </Link>
             </nav>
