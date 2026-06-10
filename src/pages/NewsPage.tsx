@@ -17,7 +17,7 @@ const NewsPage = () => {
       <main className="pt-28 sm:pt-32 md:pt-36">
         <div className="editorial-container pt-4">
           <Link to="/#news" className="editorial-link">
-            <span>←</span> Back to News & Insights on home
+            <span>←</span> Back to News & Insights
           </Link>
         </div>
         <NewsSection />

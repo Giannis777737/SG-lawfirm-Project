@@ -17,7 +17,7 @@ const ExpertisePage = () => {
       <main className="pt-28 sm:pt-32 md:pt-36">
         <div className="editorial-container pt-4">
           <Link to="/#areas-of-expertise" className="editorial-link">
-            <span>←</span> Back to Areas of Expertise on home
+            <span>←</span> Back to Areas of Expertise
           </Link>
         </div>
         <ExpertiseSection />
