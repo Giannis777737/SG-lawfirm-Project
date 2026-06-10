@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import SectionLogo from "@/components/SectionLogo";
+import sectionLogo from "@/assets/section-logo.svg";
+
 
 const NewsSection = () => {
   const { data: newsArticles = [], isLoading } = useQuery({
