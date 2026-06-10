@@ -43,6 +43,11 @@ const OurPeoplePage = () => {
       <JsonLd data={breadcrumbSchema} />
       <Navbar />
       <main className="pt-28 sm:pt-36 md:pt-48">
+        <div className="editorial-container pb-4">
+          <Link to="/#our-people" className="editorial-link">
+            <span>←</span> Back to Our People on home
+          </Link>
+        </div>
         <section className="editorial-section">
           <div className="editorial-container">
             <p className="editorial-label">Our People</p>
