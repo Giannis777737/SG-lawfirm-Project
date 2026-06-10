@@ -15,6 +15,11 @@ const NewsPage = () => {
       />
       <Navbar />
       <main className="pt-28 sm:pt-32 md:pt-36">
+        <div className="editorial-container pt-4">
+          <Link to="/#news" className="editorial-link">
+            <span>←</span> Back to News & Insights on home
+          </Link>
+        </div>
         <NewsSection />
         <div className="editorial-container pb-20">
           <Link to="/" className="editorial-link">
