@@ -242,6 +242,11 @@ const PrivacyPolicyPage = () => {
             </div>
           </div>
         </section>
+        <div className="editorial-container pb-20">
+          <Link to="/" className="editorial-link">
+            <span>←</span> Back to home page
+          </Link>
+        </div>
       </main>
       <Footer />
     </div>
