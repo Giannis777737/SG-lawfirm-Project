@@ -11,7 +11,7 @@ const scrollToSection = (id: string) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-end pb-[12vh] overflow-hidden" aria-labelledby="hero-heading">
+    <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -26,17 +26,17 @@ const HeroSection = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
-      <div className="editorial-container relative z-10">
-        <AnimatedSection className="flex flex-col gap-8 max-w-2xl">
+      <div className="editorial-container relative z-10 w-full">
+        <AnimatedSection className="flex flex-col gap-6 max-w-4xl">
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white">
               <span className="block">Selekos – Gouskou &amp; Co</span>
-              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2 pl-[15%]">Law Offices</span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 pl-[18%]">Law Offices</span>
             </h1>
           </AnimatedItem>
 
           <AnimatedItem>
-            <p className="editorial-label text-gold font-semibold text-center">Business Lawyer Office</p>
+            <p className="editorial-label text-gold font-semibold tracking-[0.3em] pl-[10%]">BUSINESS LAWYER OFFICE</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
