@@ -110,11 +110,29 @@ const NewsArticlePage = () => {
             <h1 className="editorial-heading mb-12">{article.title}</h1>
 
             <div className="max-w-3xl flex flex-col gap-6">
-              {article.content.map((paragraph, i) => (
-                <p key={i} className="editorial-body">
-                  {linkifyText(paragraph)}
-                </p>
-              ))}
+              {article.content.map((paragraph, i) => {
+                const { cleanText, urls } = extractUrls(paragraph);
+                return (
+                  <div key={i} className="flex flex-col gap-3">
+                    {cleanText && (
+                      <p className="editorial-body">{cleanText}</p>
+                    )}
+                    {urls.map((url, j) => (
+                      <a
+                        key={j}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                      >
+                        <Paperclip size={14} aria-hidden="true" />
+                        Read the full text
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                );
+              })}
 
               {article.youtube_url && (() => {
                 const m = article.youtube_url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
