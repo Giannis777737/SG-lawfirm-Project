@@ -126,7 +126,7 @@ const NewsArticlePage = () => {
             <div className="max-w-3xl flex flex-col gap-6">
               {article.content.map((paragraph, i) => (
                 <p key={i} className="editorial-body">
-                  {paragraph}
+                  {linkifyText(paragraph)}
                 </p>
               ))}
 
