@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 import MetaTags from "@/components/MetaTags";
+import { Link } from "react-router-dom";
 
 const PrivacyPolicyPage = () => {
   useDocumentTitle("Privacy Policy");
