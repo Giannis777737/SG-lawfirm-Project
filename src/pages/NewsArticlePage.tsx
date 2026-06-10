@@ -2,6 +2,7 @@ import { useMemo, type ReactNode } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { Paperclip } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
@@ -12,29 +13,14 @@ import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas"
 
 const urlRegex = /(https?:\/\/[^\s]+)/g;
 
-const linkifyText = (text: string): ReactNode[] => {
-  const parts = text.split(urlRegex);
-  const matches = text.match(urlRegex) || [];
-  const nodes: ReactNode[] = [];
-
-  parts.forEach((part, i) => {
-    if (part) nodes.push(part);
-    if (matches[i]) {
-      nodes.push(
-        <a
-          key={i}
-          href={matches[i]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-primary transition-colors"
-        >
-          {matches[i]}
-        </a>
-      );
-    }
+const extractUrls = (text: string): { cleanText: string; urls: string[] } => {
+  const urls = text.match(urlRegex) || [];
+  let cleanText = text;
+  urls.forEach((url) => {
+    cleanText = cleanText.replace(url, "").trim();
   });
-
-  return nodes;
+  cleanText = cleanText.replace(/\s+/g, " ").trim();
+  return { cleanText, urls };
 };
 
 const NewsArticlePage = () => {
