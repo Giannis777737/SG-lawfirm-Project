@@ -10,17 +10,32 @@ import CanonicalTag from "@/components/CanonicalTag";
 import PageTransition from "@/components/PageTransition";
 import Index from "./pages/Index.tsx";
 
+// Reload once on stale chunk errors after a redeploy
+const lazyWithReload = <T,>(factory: () => Promise<{ default: React.ComponentType<T> }>) =>
+  lazy(async () => {
+    try {
+      return await factory();
+    } catch (err) {
+      const key = "lovable:chunk-reloaded";
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
+      }
+      throw err;
+    }
+  });
+
 // Lazy load non-critical routes
-const PracticeAreaPage = lazy(() => import("./pages/PracticeAreaPage.tsx"));
-const OurPeoplePage = lazy(() => import("./pages/OurPeoplePage.tsx"));
-const NewsArticlePage = lazy(() => import("./pages/NewsArticlePage.tsx"));
-const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage.tsx"));
-const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage.tsx"));
-const AboutPage = lazy(() => import("./pages/AboutPage.tsx"));
-const ExpertisePage = lazy(() => import("./pages/ExpertisePage.tsx"));
-const NewsPage = lazy(() => import("./pages/NewsPage.tsx"));
-const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
-const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const PracticeAreaPage = lazyWithReload(() => import("./pages/PracticeAreaPage.tsx"));
+const OurPeoplePage = lazyWithReload(() => import("./pages/OurPeoplePage.tsx"));
+const NewsArticlePage = lazyWithReload(() => import("./pages/NewsArticlePage.tsx"));
+const CookiePolicyPage = lazyWithReload(() => import("./pages/CookiePolicyPage.tsx"));
+const PrivacyPolicyPage = lazyWithReload(() => import("./pages/PrivacyPolicyPage.tsx"));
+const AboutPage = lazyWithReload(() => import("./pages/AboutPage.tsx"));
+const ExpertisePage = lazyWithReload(() => import("./pages/ExpertisePage.tsx"));
+const NewsPage = lazyWithReload(() => import("./pages/NewsPage.tsx"));
+const ContactPage = lazyWithReload(() => import("./pages/ContactPage.tsx"));
+const NotFound = lazyWithReload(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
