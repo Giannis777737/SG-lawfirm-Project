@@ -17,7 +17,7 @@ const PracticeAreaPage = () => {
   const serviceSchema = useMemo(() => area ? getPracticeAreaSchema(area) : null, [area]);
   const breadcrumbSchema = useMemo(() => area ? getBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "Areas of Expertise", url: "/#areas-of-expertise" },
+    { name: "Areas of Expertise", url: "/expertise" },
     { name: area.title, url: `/${area.slug}` },
   ]) : null, [area]);
 
