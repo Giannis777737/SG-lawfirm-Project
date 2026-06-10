@@ -73,7 +73,7 @@ const NewsSection = () => {
                             src={thumb}
                             alt={item.title}
                             loading="lazy"
-                            className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${item.slug === "hellenic-business-guarantee-fund" ? "object-contain p-6 bg-white" : "object-cover"}`}
+                            className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${["hellenic-business-guarantee-fund", "law-4688-2020-tourism"].includes(item.slug) ? "object-contain p-6 bg-white" : "object-cover"}`}
                           />
                           {ytId && (
                             <div className="absolute inset-0 flex items-center justify-center">
