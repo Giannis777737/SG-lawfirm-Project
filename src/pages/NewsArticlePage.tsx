@@ -1,7 +1,8 @@
-import { useMemo, type ReactNode } from "react";
+import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { Paperclip } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NotFound from "./NotFound";
@@ -12,29 +13,14 @@ import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas"
 
 const urlRegex = /(https?:\/\/[^\s]+)/g;
 
-const linkifyText = (text: string): ReactNode[] => {
-  const parts = text.split(urlRegex);
-  const matches = text.match(urlRegex) || [];
-  const nodes: ReactNode[] = [];
-
-  parts.forEach((part, i) => {
-    if (part) nodes.push(part);
-    if (matches[i]) {
-      nodes.push(
-        <a
-          key={i}
-          href={matches[i]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-primary transition-colors"
-        >
-          {matches[i]}
-        </a>
-      );
-    }
+const extractUrls = (text: string): { cleanText: string; urls: string[] } => {
+  const urls = text.match(urlRegex) || [];
+  let cleanText = text;
+  urls.forEach((url) => {
+    cleanText = cleanText.replace(url, "").trim();
   });
-
-  return nodes;
+  cleanText = cleanText.replace(/\s+/g, " ").trim();
+  return { cleanText, urls };
 };
 
 const NewsArticlePage = () => {
@@ -124,11 +110,29 @@ const NewsArticlePage = () => {
             <h1 className="editorial-heading mb-12">{article.title}</h1>
 
             <div className="max-w-3xl flex flex-col gap-6">
-              {article.content.map((paragraph, i) => (
-                <p key={i} className="editorial-body">
-                  {linkifyText(paragraph)}
-                </p>
-              ))}
+              {article.content.map((paragraph, i) => {
+                const { cleanText, urls } = extractUrls(paragraph);
+                return (
+                  <div key={i} className="flex flex-col gap-3">
+                    {cleanText && (
+                      <p className="editorial-body">{cleanText}</p>
+                    )}
+                    {urls.map((url, j) => (
+                      <a
+                        key={j}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                      >
+                        <Paperclip size={14} aria-hidden="true" />
+                        Read the full text
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                );
+              })}
 
               {article.youtube_url && (() => {
                 const m = article.youtube_url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
