@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, type ReactNode } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -9,6 +9,33 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 import JsonLd from "@/components/JsonLd";
 import MetaTags from "@/components/MetaTags";
 import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas";
+
+const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+const linkifyText = (text: string): ReactNode[] => {
+  const parts = text.split(urlRegex);
+  const matches = text.match(urlRegex) || [];
+  const nodes: ReactNode[] = [];
+
+  parts.forEach((part, i) => {
+    if (part) nodes.push(part);
+    if (matches[i]) {
+      nodes.push(
+        <a
+          key={i}
+          href={matches[i]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-primary transition-colors"
+        >
+          {matches[i]}
+        </a>
+      );
+    }
+  });
+
+  return nodes;
+};
 
 const NewsArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
