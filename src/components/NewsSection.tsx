@@ -86,7 +86,7 @@ const NewsSection = () => {
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
                           <img
-                            src="" + sectionLogo + ""
+                            src={sectionLogo}
                             alt=""
                             aria-hidden="true"
                             className="w-16 h-16 opacity-30"
