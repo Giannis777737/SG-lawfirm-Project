@@ -36,10 +36,6 @@ const PracticeAreaPage = () => {
               <Link to="/expertise" className="editorial-link inline-flex">
                 <span>←</span> Back to Areas of Expertise
               </Link>
-              <span className="text-muted-foreground" aria-hidden="true">·</span>
-              <Link to="/" className="editorial-link inline-flex">
-                <span>⌂</span> Home
-              </Link>
             </nav>
 
             <p className="editorial-label">Areas of Expertise</p>
