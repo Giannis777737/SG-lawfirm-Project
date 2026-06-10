@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import SectionLogo from "@/components/SectionLogo";
+import sectionLogo from "@/assets/section-logo.svg";
+
 
 const NewsSection = () => {
   const { data: newsArticles = [], isLoading } = useQuery({
@@ -46,7 +48,7 @@ const NewsSection = () => {
           {isLoading ? (
             <div className="py-10 text-center text-muted-foreground">Loading…</div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" role="list">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14 items-stretch" role="list">
               {newsArticles.map((item) => {
                 const hasGallery = (item.image_urls && item.image_urls.length > 0) || !!item.youtube_url;
                 const forceInternal = item.slug === "cghub-mononews-2019";
@@ -54,8 +56,6 @@ const NewsSection = () => {
                 const linkProps = isExternal
                   ? { href: item.external_url!, target: "_blank" as const, rel: "noopener noreferrer" }
                   : {};
-
-
 
                 const ytId = getYouTubeId(item.youtube_url);
                 const thumb = ytId
@@ -65,26 +65,37 @@ const NewsSection = () => {
                   : null;
 
                 const content = (
-                  <>
-                    {thumb && (
-                      <div className="relative mb-4 overflow-hidden aspect-video bg-muted">
-                        <img
-                          src={thumb}
-                          alt={item.title}
-                          loading="lazy"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {ytId && (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-14 h-14 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center">
-                              <span className="ml-1 border-y-[10px] border-y-transparent border-l-[16px] border-l-foreground" aria-hidden="true" />
+                  <div className="flex h-full flex-col">
+                    <div className="relative mb-5 overflow-hidden aspect-[16/10] bg-muted">
+                      {thumb ? (
+                        <>
+                          <img
+                            src={thumb}
+                            alt={item.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          {ytId && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-14 h-14 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center">
+                                <span className="ml-1 border-y-[10px] border-y-transparent border-l-[16px] border-l-foreground" aria-hidden="true" />
+                              </div>
                             </div>
-                          </div>
-                        )}
-                      </div>
-                    )}
+                          )}
+                        </>
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
+                          <img
+                            src={sectionLogo}
+                            alt=""
+                            aria-hidden="true"
+                            className="w-16 h-16 opacity-30"
+                          />
+                        </div>
+                      )}
+                    </div>
 
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center gap-4 mb-3">
                       <time className="font-body text-xs text-muted-foreground" dateTime={item.iso_date}>
                         {item.date}
                       </time>
@@ -93,36 +104,37 @@ const NewsSection = () => {
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-2xl text-foreground mb-3">
+                    <h3 className="font-heading text-xl md:text-2xl text-foreground mb-3 leading-snug line-clamp-2 min-h-[3.5rem]">
                       {item.title}
                     </h3>
 
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed line-clamp-3">
                       {item.excerpt}
                     </p>
 
                     {isExternal && (
-                      <span className="inline-flex items-center gap-1 mt-3 font-body text-xs text-muted-foreground">
+                      <span className="inline-flex items-center gap-1 mt-4 font-body text-xs uppercase tracking-widest text-muted-foreground">
                         ↗ {item.link_label || "External article"}
                       </span>
                     )}
-                  </>
+                  </div>
                 );
 
                 return (
-                  <article key={item.slug} className="py-4" role="listitem">
+                  <article key={item.slug} className="h-full" role="listitem">
                     {isExternal ? (
-                      <a {...linkProps} className="group block" aria-label={`${item.title} — ${item.date}`}>
+                      <a {...linkProps} className="group flex h-full flex-col" aria-label={`${item.title} — ${item.date}`}>
                         {content}
                       </a>
                     ) : (
-                      <Link to={`/news/${item.slug}`} className="group block" aria-label={`${item.title} — ${item.date}`}>
+                      <Link to={`/news/${item.slug}`} className="group flex h-full flex-col" aria-label={`${item.title} — ${item.date}`}>
                         {content}
                       </Link>
                     )}
                   </article>
                 );
               })}
+
             </div>
           )}
         </div>
