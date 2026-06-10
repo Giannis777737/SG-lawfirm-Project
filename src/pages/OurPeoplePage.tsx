@@ -45,7 +45,7 @@ const OurPeoplePage = () => {
       <main className="pt-28 sm:pt-36 md:pt-48">
         <div className="editorial-container pb-4">
           <Link to="/#our-people" className="editorial-link">
-            <span>←</span> Back to Our People on home
+            <span>←</span> Back to Our People
           </Link>
         </div>
         <section className="editorial-section">
