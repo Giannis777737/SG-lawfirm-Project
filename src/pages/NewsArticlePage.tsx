@@ -92,7 +92,7 @@ const NewsArticlePage = () => {
         <section className="editorial-section">
           <div className="editorial-container">
             <Link
-              to="/#news"
+              to="/news"
               className="editorial-link mb-12 inline-flex"
             >
               <span>←</span> Back to News & Insights
