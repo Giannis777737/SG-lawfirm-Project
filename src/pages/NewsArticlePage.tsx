@@ -112,48 +112,49 @@ const NewsArticlePage = () => {
             <div className="max-w-3xl flex flex-col gap-6">
               {article.content.map((paragraph, i) => {
                 const { cleanText, urls } = extractUrls(paragraph);
+                const paragraphMentionsInterview = /interview/i.test(paragraph);
                 return (
                   <div key={i} className="flex flex-col gap-3">
                     {cleanText && (
                       <p className="editorial-body">{cleanText}</p>
                     )}
                     {urls.map((url, j) => {
-                      const isVideo = /(?:youtube\.com|youtu\.be|vimeo\.com)/.test(url);
+                      const videoMatch = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+                      const videoId = videoMatch ? videoMatch[1] : null;
+                      const isInterview = paragraphMentionsInterview || /Ia9umj9bqOM/.test(url);
+                      const label = videoId
+                        ? (isInterview ? "watch the full interview here" : "watch the full video here")
+                        : "Read the full text";
                       return (
-                        <a
-                          key={j}
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
-                        >
-                          <Paperclip size={14} aria-hidden="true" />
-                          {isVideo ? "watch the full video here" : "Read the full text"}
-                          <span aria-hidden="true">↗</span>
-                        </a>
+                        <div key={j} className="flex flex-col gap-3">
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                          >
+                            <Paperclip size={14} aria-hidden="true" />
+                            {label}
+                            <span aria-hidden="true">↗</span>
+                          </a>
+                          {videoId && (
+                            <div className="mt-2 aspect-video w-full overflow-hidden bg-muted">
+                              <iframe
+                                src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                                title={article.title}
+                                loading="lazy"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full border-0"
+                              />
+                            </div>
+                          )}
+                        </div>
                       );
                     })}
                   </div>
                 );
               })}
-
-              {article.youtube_url && (() => {
-                const m = article.youtube_url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
-                const id = m ? m[1] : null;
-                if (!id) return null;
-                return (
-                  <div className="mt-4 aspect-video w-full overflow-hidden bg-muted">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${id}`}
-                      title={article.title}
-                      loading="lazy"
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full border-0"
-                    />
-                  </div>
-                );
-              })()}
 
               {article.image_urls && article.image_urls.length > 0 && (
                 <div className="mt-8 flex flex-col gap-6">
