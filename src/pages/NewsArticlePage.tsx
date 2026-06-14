@@ -165,9 +165,6 @@ const NewsArticlePage = () => {
                         loading="lazy"
                         className="w-full h-auto object-cover"
                       />
-                      <figcaption className="px-4 py-3 font-body text-xs uppercase tracking-widest text-muted-foreground border-t border-border/40">
-                        Angelika Gouskou participated at ESED Workshop — 03.09.2019
-                      </figcaption>
                     </figure>
                   ))}
                 </div>
