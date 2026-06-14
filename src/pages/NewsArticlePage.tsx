@@ -117,19 +117,22 @@ const NewsArticlePage = () => {
                     {cleanText && (
                       <p className="editorial-body">{cleanText}</p>
                     )}
-                    {urls.map((url, j) => (
-                      <a
-                        key={j}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
-                      >
-                        <Paperclip size={14} aria-hidden="true" />
-                        Read the full text
-                        <span aria-hidden="true">↗</span>
-                      </a>
-                    ))}
+                    {urls.map((url, j) => {
+                      const isVideo = /(?:youtube\.com|youtu\.be|vimeo\.com)/.test(url);
+                      return (
+                        <a
+                          key={j}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 self-start border border-foreground px-5 py-2.5 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                        >
+                          <Paperclip size={14} aria-hidden="true" />
+                          {isVideo ? "watch the full video here" : "Read the full text"}
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      );
+                    })}
                   </div>
                 );
               })}
