@@ -172,6 +172,33 @@ const NewsArticlePage = () => {
               )}
 
               <div className="mt-8 flex flex-col items-start gap-4">
+                {article.pdf_url && (
+                  <div className="w-full">
+                    <div className="w-full border border-border overflow-hidden" style={{ height: '700px' }}>
+                      <object
+                        data={article.pdf_url}
+                        type="application/pdf"
+                        className="w-full h-full"
+                        title="Press Release PDF"
+                      >
+                        <p className="p-6 text-center text-muted-foreground font-body text-sm">
+                          Your browser does not support embedded PDFs.
+                          <a href={article.pdf_url} target="_blank" rel="noopener noreferrer" className="underline ml-1">Open the PDF</a>
+                        </p>
+                      </object>
+                    </div>
+                    <a
+                      href={article.pdf_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 border border-foreground px-6 py-3 font-body text-xs uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+                    >
+                      <Paperclip size={14} aria-hidden="true" />
+                      Download PDF <span aria-hidden="true">↓</span>
+                    </a>
+                  </div>
+                )}
+
                 {article.external_url && (
                   <a
                     href={article.external_url}
