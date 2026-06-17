@@ -53,6 +53,7 @@ export type Database = {
           image_urls: string[]
           iso_date: string
           link_label: string | null
+          pdf_url: string | null
           slug: string
           sort_order: number
           title: string
@@ -69,6 +70,7 @@ export type Database = {
           image_urls?: string[]
           iso_date: string
           link_label?: string | null
+          pdf_url?: string | null
           slug: string
           sort_order?: number
           title: string
@@ -85,6 +87,7 @@ export type Database = {
           image_urls?: string[]
           iso_date?: string
           link_label?: string | null
+          pdf_url?: string | null
           slug?: string
           sort_order?: number
           title?: string
