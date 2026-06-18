@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="editorial-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="font-heading text-2xl font-semibold text-gold mb-4">
+            <h3 className="font-heading text-2xl font-semibold text-gold-muted mb-4">
               Selekos-Gouskou &amp; Co
             </h3>
             <address className="font-body text-sm font-medium text-gold-muted leading-relaxed not-italic">
