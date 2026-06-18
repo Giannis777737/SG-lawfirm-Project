@@ -13,6 +13,8 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const isHashLink = (href: string) => href.includes("#");
 
