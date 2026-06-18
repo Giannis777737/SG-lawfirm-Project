@@ -45,14 +45,16 @@ const AnimatedSection = ({ children, className = "", delay = 0 }: AnimatedSectio
 export const AnimatedItem = ({
   children,
   className = "",
+  as: Component = "div",
 }: {
   children: ReactNode;
   className?: string;
+  as?: "div" | "li" | "span";
 }) => {
   return (
-    <div className={`animated-item ${className}`}>
+    <Component className={`animated-item ${className}`}>
       {children}
-    </div>
+    </Component>
   );
 };
 
