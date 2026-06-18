@@ -33,46 +33,44 @@ const ExpertiseSection = () => {
           {/* Right column - practice area links */}
           <AnimatedSection delay={0.2}>
             <nav aria-label="Practice areas">
-              <ul className="flex flex-col" role="list">
-                {practiceAreas.map((area, index) => (
-                  <AnimatedItem key={area.slug}>
-                    <li>
-                      <Link
-                        to={`/${area.slug}`}
-                        className="border-b border-border py-5 first:border-t group flex items-center justify-between gap-4"
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                      >
-                        <div className="flex items-start gap-4 flex-1">
-                          <Scale
-                            size={14}
-                            className="text-gold/60 shrink-0 mt-1.5 group-hover:text-gold transition-colors duration-300"
-                            aria-hidden="true"
-                          />
-                          <div className="flex flex-col gap-1">
-                            <span className="font-body text-base md:text-lg text-foreground group-hover:text-gold transition-colors duration-300">
-                              {area.title}
-                            </span>
-                            <span className="font-body text-sm text-muted-foreground">
-                              {area.description}
-                            </span>
-                          </div>
-                        </div>
+            <ul className="flex flex-col" role="list">
+              {practiceAreas.map((area, index) => (
+                <AnimatedItem as="li" key={area.slug}>
+                  <Link
+                    to={`/${area.slug}`}
+                    className="border-b border-border py-5 first:border-t group flex items-center justify-between gap-4"
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <div className="flex items-start gap-4 flex-1">
+                      <Scale
+                        size={14}
+                        className="text-gold/60 shrink-0 mt-1.5 group-hover:text-gold transition-colors duration-300"
+                        aria-hidden="true"
+                      />
+                      <div className="flex flex-col gap-1">
+                        <span className="font-body text-base md:text-lg text-foreground group-hover:text-gold transition-colors duration-300">
+                          {area.title}
+                        </span>
+                        <span className="font-body text-sm text-muted-foreground">
+                          {area.description}
+                        </span>
+                      </div>
+                    </div>
 
-                        <ChevronRight
-                          size={16}
-                          className={`text-gold shrink-0 transition-all duration-300 ${
-                            hoveredIndex === index
-                              ? "opacity-100 translate-x-0"
-                              : "opacity-0 -translate-x-2"
-                          }`}
-                          aria-hidden="true"
-                        />
-                      </Link>
-                    </li>
-                  </AnimatedItem>
-                ))}
-              </ul>
+                    <ChevronRight
+                      size={16}
+                      className={`text-gold shrink-0 transition-all duration-300 ${
+                        hoveredIndex === index
+                          ? "opacity-100 translate-x-0"
+                          : "opacity-0 -translate-x-2"
+                      }`}
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </AnimatedItem>
+              ))}
+            </ul>
             </nav>
           </AnimatedSection>
         </div>

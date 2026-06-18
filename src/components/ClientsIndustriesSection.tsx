@@ -54,13 +54,11 @@ const ClientsIndustriesSection = () => {
               </AnimatedItem>
               <ul className="flex flex-col" role="list">
                 {clients.map((label) => (
-                  <AnimatedItem key={label}>
-                    <li className="border-b border-border py-5 first:border-t flex items-center gap-4">
-                      <Scale size={14} className="text-gold/60 shrink-0" aria-hidden="true" />
-                      <span className="font-body text-base md:text-lg text-foreground">
-                        {label}
-                      </span>
-                    </li>
+                  <AnimatedItem as="li" key={label} className="border-b border-border py-5 first:border-t flex items-center gap-4">
+                    <Scale size={14} className="text-gold/60 shrink-0" aria-hidden="true" />
+                    <span className="font-body text-base md:text-lg text-foreground">
+                      {label}
+                    </span>
                   </AnimatedItem>
                 ))}
               </ul>
@@ -74,13 +72,11 @@ const ClientsIndustriesSection = () => {
               </AnimatedItem>
               <ul className="flex flex-col" role="list">
                 {sectors.map((label) => (
-                  <AnimatedItem key={label}>
-                    <li className="border-b border-border py-5 first:border-t flex items-center gap-4">
-                      <Scale size={14} className="text-gold/60 shrink-0" aria-hidden="true" />
-                      <span className="font-body text-base md:text-lg text-foreground">
-                        {label}
-                      </span>
-                    </li>
+                  <AnimatedItem as="li" key={label} className="border-b border-border py-5 first:border-t flex items-center gap-4">
+                    <Scale size={14} className="text-gold/60 shrink-0" aria-hidden="true" />
+                    <span className="font-body text-base md:text-lg text-foreground">
+                      {label}
+                    </span>
                   </AnimatedItem>
                 ))}
               </ul>

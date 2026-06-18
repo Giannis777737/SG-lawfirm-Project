@@ -28,17 +28,15 @@ const PhilosophySection = () => {
           </AnimatedItem>
           <ul className="flex flex-col" role="list">
             {coreValues.map((item) => (
-              <AnimatedItem key={item.title}>
-                <li className="border-b border-border py-5 first:border-t">
-                  <div className="flex flex-col gap-1">
-                    <span className="font-body text-base md:text-lg font-semibold text-foreground">
-                      {item.title}
-                    </span>
-                    <span className="font-body text-base md:text-lg text-muted-foreground">
-                      {item.description}
-                    </span>
-                  </div>
-                </li>
+              <AnimatedItem as="li" key={item.title} className="border-b border-border py-5 first:border-t">
+                <div className="flex flex-col gap-1">
+                  <span className="font-body text-base md:text-lg font-semibold text-foreground">
+                    {item.title}
+                  </span>
+                  <span className="font-body text-base md:text-lg text-muted-foreground">
+                    {item.description}
+                  </span>
+                </div>
               </AnimatedItem>
             ))}
           </ul>
