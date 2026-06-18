@@ -58,14 +58,21 @@ const Navbar = () => {
 
       {/* Centered logo + hamburger (all viewports) */}
       <div className="flex flex-col items-center justify-center h-full relative z-20">
-        <Link to="/" aria-label="Selekos-Gouskou & Co — Home">
+        {isHome ? (
           <img
             src={logoFull}
             alt="Selekos-Gouskou & Co Law Offices"
-
             className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
           />
-        </Link>
+        ) : (
+          <Link to="/" aria-label="Selekos-Gouskou & Co — Home">
+            <img
+              src={logoFull}
+              alt="Selekos-Gouskou & Co Law Offices"
+              className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
+            />
+          </Link>
+        )}
         <button
           className="mt-0.5 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
