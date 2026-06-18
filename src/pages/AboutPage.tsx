@@ -85,10 +85,8 @@ const AboutPage = () => {
             <AnimatedSection>
               <ul className="flex flex-col" role="list">
                 {strategicCases.map((item) => (
-                  <AnimatedItem key={item}>
-                    <li className="border-b border-border py-5 first:border-t font-body text-base md:text-lg text-foreground">
-                      {item}
-                    </li>
+                  <AnimatedItem as="li" key={item} className="border-b border-border py-5 first:border-t font-body text-base md:text-lg text-foreground">
+                    {item}
                   </AnimatedItem>
                 ))}
               </ul>
