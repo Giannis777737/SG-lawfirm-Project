@@ -30,7 +30,7 @@ const HeroSection = () => {
         <AnimatedSection className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
           <AnimatedItem>
             <h1 id="hero-heading" className="editorial-heading text-white" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, letterSpacing: "0.02em" }}>
-              <span className="block">Selekos-Gouskou &amp; Co</span>
+              <span className="block">Selekos_Gouskou &amp; Co</span>
               <span className="block mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Law Offices</span>
             </h1>
           </AnimatedItem>
