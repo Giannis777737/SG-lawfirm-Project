@@ -14,9 +14,8 @@ const IntroSection = () => {
               Introduction
             </h2>
             <p className="editorial-body mx-auto">
-              Selekos-Gouskou &amp; Co Law Offices was established in 1998 with the aim to
-              be a dynamic, &ldquo;niche&rdquo; culture law firm and has since grown steadily.
-              Our clients operate in many different fields, notably financial services,
+              Selekos_Gouskou &amp; Co Law Offices was established in 1998 with the aim to
+              be a dynamic, &ldquo;niche&rdquo; culture law firm and has since established itself as a leading corporate and commercial law practice. Our clients operate in many different fields, notably financial services,
               international trade and commodities, manufacturing and broadcasting. They
               include large public corporations, Greek private corporations, institutions,
               private foundations and individuals as well as companies with international
