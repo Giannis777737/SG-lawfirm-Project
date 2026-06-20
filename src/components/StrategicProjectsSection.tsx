@@ -8,8 +8,8 @@ const stages = [
   "Due Diligence",
   "Structuring",
   "Negotiation",
-  "Compliance",
   "Execution",
+  "Compliance",
 ];
 
 const StrategicProjectsSection = () => {
