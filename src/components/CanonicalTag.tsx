@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const SITE_URL = "https://saisit.gr";
+const SITE_URL = "https://selekos-gouskou.gr";
 
 const CanonicalTag = () => {
   const { pathname } = useLocation();

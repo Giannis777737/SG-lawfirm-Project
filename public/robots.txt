@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://saisit.gr/sitemap.xml
+Sitemap: https://selekos-gouskou.gr/sitemap.xml
