@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['Cinzel', 'serif'],
-        body: ['Mulish', 'system-ui', 'sans-serif'],
+        body: ['Cinzel', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
