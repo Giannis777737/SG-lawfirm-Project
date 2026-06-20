@@ -36,7 +36,7 @@ const HeroSection = () => {
           </AnimatedItem>
 
           <AnimatedItem>
-            <p className="text-sm font-semibold tracking-[0.3em] uppercase text-gold" style={{ fontFamily: "'Montserrat', sans-serif" }}>BUSINESS LAW FIRM</p>
+            <p className="text-sm font-semibold tracking-[0.3em] uppercase text-gold" style={{ fontFamily: "'League Spartan', sans-serif" }}>BUSINESS LAW FIRM</p>
           </AnimatedItem>
         </AnimatedSection>
       </div>
