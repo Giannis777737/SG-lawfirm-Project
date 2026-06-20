@@ -6,7 +6,7 @@
       "name": "vite_react_shadcn_ts",
       "dependencies": {
         "@emailjs/browser": "^4.4.1",
-        "@fontsource/alegreya-sc": "^5.2.8",
+        "@fontsource/cinzel": "^5.2.8",
         "@fontsource/league-spartan": "^5.2.8",
         "@fontsource/montserrat": "^5.2.8",
         "@hookform/resolvers": "^3.10.0",
@@ -176,7 +176,7 @@
 
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
-    "@fontsource/alegreya-sc": ["@fontsource/alegreya-sc@5.2.8", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@fontsource/alegreya-sc/-/alegreya-sc-5.2.8.tgz", {}, "sha512-28ZMhxJ/bx7f9S2oTTPeXvKchAu5VxPbEG95RI+EI9l3/1YyomEXzUqX0lCdCQb5fDXhdmVwHSD07P0BL4ueQA=="],
+    "@fontsource/cinzel": ["@fontsource/cinzel@5.2.8", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@fontsource/cinzel/-/cinzel-5.2.8.tgz", {}, "sha512-B9WeF/jPlOJOrcXfX96cy4KfM+s1QcU2C9W2hE3azBOBzPvzFkNpBovT5JmhAeicE/s4HZWKF9LF5hmEcqlbsw=="],
 
     "@fontsource/league-spartan": ["@fontsource/league-spartan@5.2.8", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@fontsource/league-spartan/-/league-spartan-5.2.8.tgz", {}, "sha512-83zacDd4BcvLwQ5JLjMg9s81MybTGKLsQJTihXSy4iQZEhMOofIvfhpe6udE7xk4l29NaQCK59DAzv1HfdIbLw=="],
 

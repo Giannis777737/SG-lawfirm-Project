@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Alegreya SC', 'serif'],
+        heading: ['Cinzel', 'serif'],
         body: ['Mulish', 'system-ui', 'sans-serif'],
       },
       colors: {
