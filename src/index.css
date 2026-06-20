@@ -171,7 +171,7 @@
     --sidebar-ring: 45 60% 52%;
 
     --font-heading: 'Cinzel', serif;
-    --font-body: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
+    --font-body: 'Cinzel', serif;
 
     --section-padding: 4rem;
     --content-max-width: 1400px;
@@ -230,7 +230,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    text-transform: uppercase;
   }
 
   /* WCAG AA: Visible focus indicators for all interactive elements */
