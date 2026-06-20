@@ -2,7 +2,7 @@ import { PracticeArea } from "./practiceAreas";
 import { NewsArticle } from "./newsArticles";
 import { Person } from "./people";
 
-const BASE_URL = "https://www.selekos-gouskou.gr";
+const BASE_URL = "https://saisit.gr";
 
 const orgBase = {
   "@type": "LegalService",
