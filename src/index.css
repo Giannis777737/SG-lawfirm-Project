@@ -170,8 +170,8 @@
     --sidebar-border: 220 25% 20%;
     --sidebar-ring: 45 60% 52%;
 
-    --font-heading: 'Cinzel', serif;
-    --font-body: 'Mulish', system-ui, -apple-system, Segoe UI, sans-serif;
+    --font-heading: Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: Tahoma, Geneva, Verdana, sans-serif;
 
     --section-padding: 4rem;
     --content-max-width: 1400px;
@@ -231,7 +231,6 @@
   h1, h2, h3, h4, h5, h6,
   .font-heading {
     font-family: var(--font-heading);
-    text-transform: uppercase;
   }
 
   /* WCAG AA: Visible focus indicators for all interactive elements */
