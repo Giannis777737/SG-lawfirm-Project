@@ -14,7 +14,6 @@ const navLinks = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
 
   const logoImg = (
     <img
@@ -67,13 +66,9 @@ const Navbar = () => {
 
       {/* Centered logo + hamburger (all viewports) */}
       <div className="flex flex-col items-center justify-center h-full relative z-20">
-        {isHome ? (
-          logoImg
-        ) : (
-          <Link to="/" aria-label="Selekos-Gouskou & Co — Home" className="block">
-            {logoImg}
-          </Link>
-        )}
+        <Link to="/" aria-label="Selekos-Gouskou & Co — Home" className="block">
+          {logoImg}
+        </Link>
         <button
           className="mt-0.5 text-gold-light"
           onClick={() => setMobileOpen(!mobileOpen)}
