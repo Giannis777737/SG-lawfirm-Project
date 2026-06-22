@@ -16,6 +16,15 @@ const Navbar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
+  const logoImg = (
+    <img
+      src={logoFull}
+      alt="Selekos-Gouskou & Co Law Offices"
+      className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert block"
+    />
+  );
+
+
   const isHashLink = (href: string) => href.includes("#");
 
   const renderLink = (link: { label: string; href: string }, onClick?: () => void) => {
