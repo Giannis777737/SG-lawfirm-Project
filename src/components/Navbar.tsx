@@ -62,14 +62,14 @@ const Navbar = () => {
           <img
             src={logoFull}
             alt="Selekos-Gouskou & Co Law Offices"
-            className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
+            className="block h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
           />
         ) : (
-          <Link to="/" aria-label="Selekos-Gouskou & Co — Home">
+          <Link to="/" aria-label="Selekos-Gouskou & Co — Home" className="block leading-none">
             <img
               src={logoFull}
               alt="Selekos-Gouskou & Co Law Offices"
-              className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
+              className="block h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
             />
           </Link>
         )}
