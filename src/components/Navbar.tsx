@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoFull from "@/assets/logo-full.png";
 
@@ -13,8 +13,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === "/";
 
   const isHashLink = (href: string) => href.includes("#");
 
@@ -57,30 +55,26 @@ const Navbar = () => {
       </div>
 
       {/* Centered logo + hamburger (all viewports) */}
-      <div className="flex flex-col items-center justify-center h-full relative z-20">
-        {isHome ? (
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
+        <Link
+          to="/"
+          aria-label="Selekos-Gouskou & Co — Home"
+          className="grid h-[5.25rem] w-full place-items-center leading-none md:h-[6.25rem]"
+        >
           <img
             src={logoFull}
             alt="Selekos-Gouskou & Co Law Offices"
-            className="block h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
+            className="block h-full w-auto brightness-0 invert"
           />
-        ) : (
-          <Link to="/" aria-label="Selekos-Gouskou & Co — Home" className="block leading-none">
-            <img
-              src={logoFull}
-              alt="Selekos-Gouskou & Co Law Offices"
-              className="block h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
-            />
-          </Link>
-        )}
+        </Link>
         <button
-          className="mt-0.5 text-gold-light"
+          className="mt-0.5 grid h-6 w-6 place-items-center text-gold-light leading-none"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
         >
-          {mobileOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+          {mobileOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
         </button>
       </div>
 
