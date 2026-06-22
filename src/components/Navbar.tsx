@@ -16,6 +16,15 @@ const Navbar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
+  const logoImg = (
+    <img
+      src={logoFull}
+      alt="Selekos-Gouskou & Co Law Offices"
+      className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert block"
+    />
+  );
+
+
   const isHashLink = (href: string) => href.includes("#");
 
   const renderLink = (link: { label: string; href: string }, onClick?: () => void) => {
@@ -59,18 +68,10 @@ const Navbar = () => {
       {/* Centered logo + hamburger (all viewports) */}
       <div className="flex flex-col items-center justify-center h-full relative z-20">
         {isHome ? (
-          <img
-            src={logoFull}
-            alt="Selekos-Gouskou & Co Law Offices"
-            className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
-          />
+          logoImg
         ) : (
-          <Link to="/" aria-label="Selekos-Gouskou & Co — Home">
-            <img
-              src={logoFull}
-              alt="Selekos-Gouskou & Co Law Offices"
-              className="h-[5.25rem] md:h-[6.25rem] w-auto brightness-0 invert"
-            />
+          <Link to="/" aria-label="Selekos-Gouskou & Co — Home" className="block">
+            {logoImg}
           </Link>
         )}
         <button
