@@ -46,6 +46,11 @@ const initiatives: Initiative[] = [
       "I LIVE FOR ME is a non-profit organization based in Athens, Greece, that helps patients with serious illnesses, such as cancer, and their families cope with the psychological and everyday challenges associated with the disease. Our Firm proudly supports its valuable work.",
     url: "https://www.drmetaxotos.com/i-live-for-me.html",
     linkLabel: "Visit I LIVE FOR ME's website",
+    image: iLiveForMeImage.url,
+  },
+      "I LIVE FOR ME is a non-profit organization based in Athens, Greece, that helps patients with serious illnesses, such as cancer, and their families cope with the psychological and everyday challenges associated with the disease. Our Firm proudly supports its valuable work.",
+    url: "https://www.drmetaxotos.com/i-live-for-me.html",
+    linkLabel: "Visit I LIVE FOR ME's website",
   },
 ];
 
