@@ -78,8 +78,9 @@ const GivingBackSection = () => {
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      className="w-full h-full object-contain p-6 bg-white transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
+
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
                       <img
