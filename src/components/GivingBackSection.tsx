@@ -30,6 +30,15 @@ const initiatives: Initiative[] = [
       "DYNAME is a non-profit organization based in Athens, Greece, that develops evidence-based educational programs and tools to promote healthy, equal, and non-violent relationships across society. Our Firm proudly supports its mission and initiatives.",
     url: "https://dyname.org/",
     linkLabel: "Visit DYNAME's website",
+    image: dynameImage.url,
+  },
+  {
+    name: "I LIVE FOR ME",
+    description:
+      "I LIVE FOR ME is a non-profit organization based in Athens, Greece, that helps patients with serious illnesses, such as cancer, and their families cope with the psychological and everyday challenges associated with the disease. Our Firm proudly supports its valuable work.",
+    url: "https://www.drmetaxotos.com/i-live-for-me.html",
+    linkLabel: "Visit I LIVE FOR ME's website",
+    image: iLiveForMeImage.url,
   },
   {
     name: "I LIVE FOR ME",
