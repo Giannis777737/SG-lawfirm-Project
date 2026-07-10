@@ -72,15 +72,14 @@ const GivingBackSection = () => {
                 className="group flex h-full flex-col"
                 aria-label={item.name}
               >
-                <div className="relative mb-5 overflow-hidden aspect-[16/10] bg-muted flex items-center justify-center p-6">
+                <div className="relative mb-5 overflow-hidden aspect-[16/10] bg-muted">
                   {item.image ? (
                     <img
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
-
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
                       <img
