@@ -12,6 +12,7 @@ type Initiative = {
   linkLabel: string;
   image?: string;
   imageClassName?: string;
+  aspectRatio?: string;
 };
 
 const initiatives: Initiative[] = [
@@ -24,7 +25,8 @@ const initiatives: Initiative[] = [
     url: "https://eliza.org.gr/forese-tin-kardia/",
     linkLabel: "Visit ELIZA's website",
     image: elizaImage.url,
-    imageClassName: "object-contain p-6",
+    aspectRatio: "aspect-[359/448]",
+    imageClassName: "object-cover",
   },
   {
     name: "DYNAME",
@@ -33,6 +35,8 @@ const initiatives: Initiative[] = [
     url: "https://dyname.org/",
     linkLabel: "Visit DYNAME's website",
     image: dynameImage.url,
+    aspectRatio: "aspect-[920/668]",
+    imageClassName: "object-cover",
   },
   {
     name: "I LIVE FOR ME",
@@ -41,7 +45,8 @@ const initiatives: Initiative[] = [
     url: "https://www.drmetaxotos.com/i-live-for-me.html",
     linkLabel: "Visit I LIVE FOR ME's website",
     image: iLiveForMeImage.url,
-    imageClassName: "object-contain p-6",
+    aspectRatio: "aspect-[800/375]",
+    imageClassName: "object-cover",
   },
 ];
 
@@ -75,7 +80,7 @@ const GivingBackSection = () => {
                 className="group flex h-full flex-col"
                 aria-label={item.name}
               >
-                <div className="relative mb-5 overflow-hidden aspect-[16/10] bg-muted">
+                <div className={`relative mb-5 overflow-hidden ${item.aspectRatio || "aspect-[16/10]"} bg-muted`}>
                   {item.image ? (
                     <img
                       src={item.image}
