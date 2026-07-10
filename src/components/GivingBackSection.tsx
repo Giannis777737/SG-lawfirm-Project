@@ -81,7 +81,6 @@ const GivingBackSection = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
                       <img
                         src={sectionLogo}
