@@ -12,6 +12,7 @@ type Initiative = {
   linkLabel: string;
   image?: string;
   imageClassName?: string;
+  aspectRatio?: string;
 };
 
 const initiatives: Initiative[] = [
