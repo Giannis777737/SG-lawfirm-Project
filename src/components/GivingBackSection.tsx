@@ -41,6 +41,7 @@ const initiatives: Initiative[] = [
     url: "https://www.drmetaxotos.com/i-live-for-me.html",
     linkLabel: "Visit I LIVE FOR ME's website",
     image: iLiveForMeImage.url,
+    imageClassName: "object-contain p-6",
   },
 ];
 
