@@ -11,6 +11,7 @@ type Initiative = {
   url: string;
   linkLabel: string;
   image?: string;
+  imageClassName?: string;
 };
 
 const initiatives: Initiative[] = [
@@ -23,6 +24,7 @@ const initiatives: Initiative[] = [
     url: "https://eliza.org.gr/forese-tin-kardia/",
     linkLabel: "Visit ELIZA's website",
     image: elizaImage.url,
+    imageClassName: "object-contain p-6",
   },
   {
     name: "DYNAME",
@@ -39,6 +41,7 @@ const initiatives: Initiative[] = [
     url: "https://www.drmetaxotos.com/i-live-for-me.html",
     linkLabel: "Visit I LIVE FOR ME's website",
     image: iLiveForMeImage.url,
+    imageClassName: "object-contain p-6",
   },
 ];
 
@@ -78,7 +81,7 @@ const GivingBackSection = () => {
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full ${item.imageClassName || "object-cover"}`}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
