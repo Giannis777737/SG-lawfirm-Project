@@ -80,7 +80,7 @@ const GivingBackSection = () => {
                 className="group flex h-full flex-col"
                 aria-label={item.name}
               >
-                <div className="relative mb-5 overflow-hidden aspect-[16/10] bg-muted">
+                <div className={`relative mb-5 overflow-hidden ${item.aspectRatio || "aspect-[16/10]"} bg-muted`}>
                   {item.image ? (
                     <img
                       src={item.image}
