@@ -11,6 +11,7 @@ type Initiative = {
   url: string;
   linkLabel: string;
   image?: string;
+  imageClassName?: string;
 };
 
 const initiatives: Initiative[] = [
