@@ -35,6 +35,8 @@ const initiatives: Initiative[] = [
     url: "https://dyname.org/",
     linkLabel: "Visit DYNAME's website",
     image: dynameImage.url,
+    aspectRatio: "aspect-[920/668]",
+    imageClassName: "object-cover",
   },
   {
     name: "I LIVE FOR ME",
