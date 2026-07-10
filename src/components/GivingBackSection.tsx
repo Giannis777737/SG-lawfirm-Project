@@ -81,7 +81,7 @@ const GivingBackSection = () => {
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full ${item.imageClassName || "object-cover"}`}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/40">
