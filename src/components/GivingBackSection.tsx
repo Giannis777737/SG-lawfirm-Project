@@ -25,7 +25,8 @@ const initiatives: Initiative[] = [
     url: "https://eliza.org.gr/forese-tin-kardia/",
     linkLabel: "Visit ELIZA's website",
     image: elizaImage.url,
-    imageClassName: "object-contain p-6",
+    aspectRatio: "aspect-[359/448]",
+    imageClassName: "object-cover",
   },
   {
     name: "DYNAME",
