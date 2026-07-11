@@ -1,8 +1,8 @@
 import SectionLogo from "@/components/SectionLogo";
 import sectionLogo from "@/assets/section-logo.svg";
 import elizaImage from "@/assets/eliza-forese-tin-kardia.png.asset.json";
-import dynameImage from "@/assets/dyname-upscaled.png.asset.json";
-import iLiveForMeImage from "@/assets/i-live-for-me-upscaled.png.asset.json";
+import dynameImage from "@/assets/dyname-hd.png.asset.json";
+import iLiveForMeImage from "@/assets/i-live-for-me-hd.png.asset.json";
 
 type Initiative = {
   name: string;
