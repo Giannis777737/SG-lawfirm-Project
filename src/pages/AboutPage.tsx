@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import GivingBackSection from "@/components/GivingBackSection";
+import CodeOfEthicsSection from "@/components/CodeOfEthicsSection";
 import SectionLogo from "@/components/SectionLogo";
 import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
@@ -38,7 +39,9 @@ const AboutPage = () => {
           </Link>
         </div>
         <AboutSection />
+        <CodeOfEthicsSection />
         <GivingBackSection />
+
 
         <section className="editorial-section" aria-labelledby="philosophy-heading">
           <SectionLogo title="Philosophy & Core Values" />
