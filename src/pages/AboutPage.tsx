@@ -39,7 +39,9 @@ const AboutPage = () => {
           </Link>
         </div>
         <AboutSection />
+        <CodeOfEthicsSection />
         <GivingBackSection />
+
 
         <section className="editorial-section" aria-labelledby="philosophy-heading">
           <SectionLogo title="Philosophy & Core Values" />
