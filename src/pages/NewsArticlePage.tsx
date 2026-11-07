@@ -13,6 +13,11 @@ import { getNewsArticleSchema, getBreadcrumbSchema } from "@/data/jsonLdSchemas"
 
 const urlRegex = /(https?:\/\/[^\s]+)/g;
 
+// Keep small source images at their native size so they don't upscale and pixelate.
+const IMAGE_MAX_WIDTH: Record<string, number> = {
+  "compliance-awards-2026-judging-committee": 412,
+};
+
 const extractUrls = (text: string): { cleanText: string; urls: string[] } => {
   const urls = text.match(urlRegex) || [];
   let cleanText = text;
