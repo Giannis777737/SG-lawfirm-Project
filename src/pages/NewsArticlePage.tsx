@@ -164,7 +164,15 @@ const NewsArticlePage = () => {
               {article.image_urls && article.image_urls.length > 0 && (
                 <div className="mt-8 flex flex-col gap-6">
                   {article.image_urls.map((url, i) => (
-                    <figure key={i} className="overflow-hidden bg-muted">
+                    <figure
+                      key={i}
+                      className="w-full overflow-hidden bg-muted"
+                      style={
+                        IMAGE_MAX_WIDTH[article.slug]
+                          ? { maxWidth: `${IMAGE_MAX_WIDTH[article.slug]}px`, marginLeft: "auto", marginRight: "auto" }
+                          : undefined
+                      }
+                    >
                       <img
                         src={url}
                         alt={`${article.title} – photo ${i + 1}`}
